@@ -1,13 +1,16 @@
 --- 
 title: "Вступ до R"
 author: "Юрій Клебан"
-date: "2021-02-28"
+date: "2021-03-07"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+description: "Курс вступ до програмування в R, Проект DataClass"
+favicon: "favicon.ico"
+cover-image: "images/cover.png"
+github-repo: "kleban/r-intro"
 ---
 
 ```r
@@ -16,7 +19,10 @@ Sys.setlocale("LC_CTYPE", "ukrainian")
 
 # Загальна інформація {-}
 
-<div class="alert-danger text-center">Увага. Курс у процесі розробки. Матеріали додаватимуться по мірі їх написання та рецензування.</div>
+<div class="alert alert-danger">
+<i class="far fa-bell fa-alert fa-2x"></i>
+Увага. Курс у процесі розробки. Матеріали додаватимуться по мірі їх написання та рецензування.
+</div>
 
 <div class="text-center">
 ![](images/cover.png){#id .class width=75%}
