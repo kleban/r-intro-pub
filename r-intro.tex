@@ -108,6 +108,8 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
+\usepackage{fontspec}
+\setmainfont{Arial}
 \ifluatex
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -116,7 +118,7 @@
 
 \title{Вступ до R}
 \author{Юрій Клебан}
-\date{2021-02-28}
+\date{2021-03-08}
 
 \begin{document}
 \maketitle
@@ -135,102 +137,1006 @@
 
 Курс створено у межах проекту ``Підготовка, обробка та ефективне використання даних для наукових досліджень (на основі R)'', що підтримує Європейський союз за програмою \href{https://houseofeurope.org.ua/}{House of Europe}.
 
-\hypertarget{intro}{%
-\chapter{Introduction}\label{intro}}
+\hypertarget{chapter1}{%
+\chapter{Вступ до курсу}\label{chapter1}}
 
-You can label chapter and section titles using \texttt{\{\#label\}} after them, e.g., we can reference Chapter \ref{intro}. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \ref{methods}.
+\hypertarget{ux43fux43bux430ux43d}{%
+\section*{План}\label{ux43fux43bux430ux43d}}
+\addcontentsline{toc}{section}{План}
 
-Figures and tables with captions will be placed in \texttt{figure} and \texttt{table} environments, respectively.
+\begin{itemize}
+\tightlist
+\item
+  \protect\hyperlink{chapter11}{Що таке R?}
+\item
+  \protect\hyperlink{chapter12}{Історія створення R}
+\item
+  \protect\hyperlink{chapter13}{Основи роботи з R}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \protect\hyperlink{chapter131}{R Project}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \protect\hyperlink{chapter1311}{Завантаження та інсталяція R}
+    \item
+      \protect\hyperlink{chapter1312}{Перший запуск R GUI}
+    \item
+      \protect\hyperlink{chapter1313}{Поняття робочого простору}
+    \item
+      \protect\hyperlink{chapter1314}{Поняття робочого каталогу}
+    \item
+      \protect\hyperlink{chapter1315}{Допомога (help/?)}
+    \end{itemize}
+  \item
+    \protect\hyperlink{chapter132}{Робота з R Studio}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \protect\hyperlink{chapter1321}{Завантаження та інсталяція RStudio Desktop}
+    \item
+      \protect\hyperlink{chapter1322}{Створення першого проекту в RStudio}
+    \end{itemize}
+  \item
+    \protect\hyperlink{chapter133}{Робота з Jupyter Notebook}
+  \item
+    \protect\hyperlink{chapter134}{Огляд додаткових IDE та сервісів для роботи з R}
+  \end{itemize}
+\item
+  \protect\hyperlink{chapter14}{Основи роботи з пакетами в R}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \protect\hyperlink{chapter141}{Команди для роботи з пакетами}
+  \item
+    \protect\hyperlink{chapter142}{Робота з пакетами в RStudio}
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{chapter11}{%
+\section{Що таке R?}\label{chapter11}}
+
+R є поширеною мовою програмування для роботи з даними (\texttt{DataScience}) та машинного навчання (\texttt{Machine\ Learning}). Але Ви можете скористатися засобами R і для простіших задач: обчислення, візуалізація даних.
+
+Синтаксис мови програмування R є досить простим для вивчення та використання, а широкий набір готових пакетів дозволяє використати готові розробки для виіршення широкого спектру задач від статистичних обчислень до навчання нейронних мереж для розпізнавання/класифікації зображень.
+
+Важливо відмітити, що мова програмування R є безкоштовною (\texttt{free}) і має відкритий код (\texttt{open\ source}).
+
+R має ряд корисних властивостей, серед яких варто виділити:
+
+\begin{itemize}
+\item
+  \textbf{Візуалізація даних}. Побудова різноманітих видів графіків, робота з мапами, широкий спектр бібліотек та налаштувань до них.
+\item
+  \textbf{Повторне використання коду}. На відміну від електронних таблиць, що мають обмеження на кількість спостережень (наприклад, MS Excel), R дозволяє працювати з великими масивами даних та перезапускати обчислення у потрібний момент не створюючи додаткових копій даних.
+\item
+  \textbf{Машинне навчання}. R дозволяє використати для побудови, навчання та тестування моделей, а також оптимізації гіперпараметрів та відбору факторів дуже велику кількість алгоритмів. Існують також спеціальні пакети, що об'єднують у собі усі описані функції та алгоритми, наприклад, \texttt{caret} та \texttt{mlr}.
+\item
+  \textbf{Автоматизація}. Написаний код та проекти можна перетворити у готові до публікації та впровадження продукти (deployment) або використовувати напрацьовані алгоритми для швидкого вирішення схожих задач (pipeline).
+\end{itemize}
+
+Також можна виділити досить корисні фічі \textbf{Розробка веб-застосунків} та \textbf{Звітність}, адже, використовуючи спеціальні бібліотеки (\texttt{shiny}, \texttt{shinydashboard}, \texttt{flexdashboard}, \texttt{rmarkdown}, \texttt{knitr} тощо), результати виконаної роботи можна ``оживити'' або сформувати ``на льоту'' готові до презентації документи.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{chapter12}{%
+\section{Історія створення R}\label{chapter12}}
+
+Мова програмування \texttt{R} виникла як продовження статистичної мови \texttt{S}. Назва мови \texttt{S} була обрана аналогічно до \texttt{C}. Створена \texttt{S} була у 1976 році компанією \texttt{Bell\ Labs}. Мова \texttt{S} мала кілька версій і широко використовувалася для комерційного програмування. Найпотужнішою була версія \texttt{S-Plus}, що мала реалізацію за досить немалу кількість функцій під \texttt{Windows} та \texttt{Unix}-платформи, що стримувало її розвиток. Саме в цей момент розпочинається історія \texttt{R}.
+
+Влітку 1993 року двоє молодих новозеландських вчених анонсували свлю нову розробку, яку вони назвали \texttt{R} (є інформація, що буква ``R'' була обрана тому, що вона стоїть перед ``S'' у латинському алфавіті, тут є аналогія з мовою ``C'', якій передувала мова ``B'') \citep{R-stats-book}. За задумом авторів (Robert Gentelman та Ross Ihaka) це повинна була бути нова реалізація мови \texttt{S}, що відрізнялася від \texttt{S-Plus} деякими деталями, наприклад, роботою з локальними та глобальними змінними, пам'яттю тощо. Фактично було створено нову мову, що відгалуджується від \texttt{S}.
+
+Проект з самого початку розвивався досить повільно, але коли у команди розробників \texttt{R} з'явлися ресурси, в тому числі зручна системи створення розширень (пакетів), все більше аналітиків, статистиків, вчених, програмістів почало переходити з \texttt{S-Plus} на \texttt{R}. Коли були усунуті проблеми роботи з пам'яттю перших версій \texttt{R}, на цю мову почали переходити користувачі інших статистичних пакетів (SAS, Stata, SYSSTAT).
+
+Кількість книг та публікацій у мережі Інтернет по роботі з R постійно зростає разом із зацікавленням молодих і вже досвідчених спеціалістів зі сфери ІТ темою науки про дані, машинним навчанням, аналітикою для бізнесу, охорони здоров'я тощо.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{chapter13}{%
+\section{Основи роботи з R}\label{chapter13}}
+
+\hypertarget{chapter131}{%
+\subsection{R Project}\label{chapter131}}
+
+\texttt{R} є безкоштовним програмним забезпеченням, що розповсюджується за умовами \href{https://www.r-project.org/COPYING}{GNU General Public License}. Код, написаний на \texttt{R} компілюється та запускається на різних платформах: UNIX, Windows, MacOS \citep{R-base}.
+
+\hypertarget{chapter1311}{%
+\subsubsection{Завантаження та інсталяція R}\label{chapter1311}}
+
+Для завантаження актуальної версії R варто перейти на сайт проекту \url{https://cran.r-project.org/}.
+
+На сайті обираємо завантаження \texttt{R} для потрібної операційної системи. У межах курсу ми вокристовуємо \texttt{ОС\ Windows}, проте на синтаксис мови програмування та процес написання коду це не впливає:
+
+\begin{figure}
+\centering
+\includegraphics{images/chapter1/r_gui_1.png}
+\caption{\label{fig:unnamed-chunk-1}Завантаження R. Вибір ОС}
+\end{figure}
+
+У наступному вікні клікаємо на \textbf{install R for the first time}:
+
+\begin{figure}
+\centering
+\includegraphics{images/chapter1/r_gui_2.png}
+\caption{\label{fig:unnamed-chunk-2}Завантаження R. Перша інсталяція}
+\end{figure}
+
+Далі обираємо \textbf{Download R 4.X.X for Windows}, де \texttt{4.X.X} версія \texttt{R}, яка може бути відмінною на момент вивчення курсу:
+
+\begin{figure}
+\centering
+\includegraphics{images/chapter1/r_gui_3.png}
+\caption{\label{fig:unnamed-chunk-3}Завантаження R. Завантаження версії для ОС}
+\end{figure}
+
+Після завантаження файлу інсталяції потрібно його запустити. Зазвичай завантажений файл можна побачити у лівому нижному кутку браузера або у розділі ``Завантаження'' Вашого браузера. Наприклад, у браузері \texttt{Google\ Chrome} знайти цей пункт меню так:
+
+\begin{figure}
+\centering
+\includegraphics{images/chapter1/chrome_download_button.png}
+\caption{\label{fig:unnamed-chunk-4}Завантаження R. Розділ ``Завантаження'' у Google Chrome}
+\end{figure}
+
+Процес інсталяції ПЗ не відрізняється від інших програм і детального опису не потребує. Основним тут є запам'ятати шлях встановлення проекту або ``відмітити галочками'' пункти щодо публікації на \emph{Робочий стіл} чи у меню швидкого доступу ярликів для того, щоб знайти файли запуску.
+
+\hypertarget{chapter1312}{%
+\subsubsection{Перший запуск R GUI}\label{chapter1312}}
+
+За замовчуванням під час інсталяції пропонується шлях \texttt{C:\textbackslash{}Program\ Files\textbackslash{}R\textbackslash{}R-4.X.X}.
+
+Для запуску \texttt{R\ GUI} (стандартного графічного інтерфейсу для роботи з \texttt{R}) потрібно зайти у папку \texttt{bin\textbackslash{}x64} (або \texttt{i386}, якщо у Вас 32-х розрядна ОС) та запустити файл \texttt{Rgui.exe}.
+
+Вигляд вікна \texttt{R\ GUI} зображено нижче:
+
+\begin{figure}
+\centering
+\includegraphics{images/chapter1/r_gui_4.png}
+\caption{\label{fig:unnamed-chunk-5}Вигляд головного вікна RGui}
+\end{figure}
+
+\emph{GUI} (\emph{G}raphical \emph{U}ser \emph{I}nterface) - набір візуальних компонентів для інтерактивної взаємодії користувача з програмним забезпеченням.
+
+У вікні \texttt{R\ Console} можна вводити команди/інструкції \texttt{R}, що будуть виконуватися:
+
+Результати виконання команд зберігаються у памяті програми і можуть бути використані у наступних блоках коду:
+
+\includegraphics{images/chapter1/r_gui_5.png}
+Середовище \texttt{R\ GUI} має широкий спектр функцій і дозволяє написати будь-якого рівня складності проекти на R, проте він є лише базовою графічною обгорткою для \texttt{R}. Розглянемо інші зручніші середовища для написання \texttt{R}-коду.
+
+\hypertarget{chapter1313}{%
+\subsubsection{Поняття робочого простору}\label{chapter1313}}
+
+У процесі виконання коду створені об'єкти/змінні та функції зберігаються у поточній сесії. У \texttt{R} є можливість переглянути список збережних елментів, видалити усі або окремі, зберегти стан поточної сесії диск та завантажити його пізніше, щоб не проходти усі етапи виконання коду повторно \emph{(інколи дуже складний код може виконувати досить довго і збереження проміжних результатів може бути хорошим рішенням)}.
+
+Для прикладу створимо дві змінні \texttt{var1}, \texttt{var2} та виведемо на консоль їх значення:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
-\FunctionTok{plot}\NormalTok{(pressure, }\AttributeTok{type =} \StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{)}
+\NormalTok{var1 }\OtherTok{\textless{}{-}} \DecValTok{10}
+\NormalTok{var2 }\OtherTok{\textless{}{-}} \FunctionTok{sqrt}\NormalTok{(}\DecValTok{15}\NormalTok{)}
+\NormalTok{var1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{var2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3.872983
+\end{verbatim}
+
+Для того аби переглянути список змінних у поточній сесії варто скористатися \textbf{\texttt{ls()}}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ls}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "var1" "var2"
+\end{verbatim}
+
+Якщо виникає потреба очистити робочий простір і звільними пам'ять використовується команда \texttt{rm()}. Так, щоб очистити усі змінні можна скористатися \texttt{rm(list\ =\ ls())}, якщо ж Ви хочете видалити якусь одну/дві змінних, то просто вкажіть імена:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{rm}\NormalTok{(}\AttributeTok{list =} \FunctionTok{c}\NormalTok{(}\StringTok{"var1"}\NormalTok{))}
+\FunctionTok{ls}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "var2"
+\end{verbatim}
+
+Таким чином, після виконання коду вище, залишиться лише змінна \texttt{var2}.
+
+Зберігання образу (\texttt{image}) робочого простору на диск здыйснюэться за допомогою команди \texttt{save.image("шлях\ до\ файлу.RData")}, а його зчитування за допомогою \texttt{load("шлях\ до\ файлу.RData")}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Clear workspace}
+\FunctionTok{rm}\NormalTok{(}\AttributeTok{list =} \FunctionTok{ls}\NormalTok{())}
+
+\CommentTok{\# declare data}
+\NormalTok{a }\OtherTok{\textless{}{-}} \DecValTok{10}
+\NormalTok{b }\OtherTok{\textless{}{-}}\NormalTok{ a }\SpecialCharTok{+} \DecValTok{15}
+
+\CommentTok{\# Save image to file}
+\FunctionTok{save.image}\NormalTok{(}\StringTok{"tmp.RData"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Clear workspace}
+\FunctionTok{rm}\NormalTok{(}\AttributeTok{list =} \FunctionTok{ls}\NormalTok{())}
+
+\CommentTok{\# load image to file}
+\FunctionTok{load}\NormalTok{(}\StringTok{"tmp.RData"}\NormalTok{)}
+
+\FunctionTok{print}\NormalTok{(a)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(b)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 25
+\end{verbatim}
+
+У прикладі 2 не створюєть жодного параметра, проте вони збережні у файлі сесії.
+
+Для того аби зберегти та зчитати окремий об'єкт, а не всі елементи сесії у \texttt{R} э спеціальний формат \texttt{.RDS}, який реалізовується методами \texttt{saveRDS(об\textquotesingle{}єкт,\ file="шлях\_файлу.rds")} та \texttt{readRDS(file="шлях\_файлу.rds")}.
+
+\hypertarget{chapter1314}{%
+\subsubsection{Поняття робочого каталогу}\label{chapter1314}}
+
+Робота в будь-якому середовищі передбачає зв'язок із поточним каталогом, відносно якого будуються шляхи до файлів. Звичайно можна писати завжди повний шлях до файла, проте такий підхід є досить негнучким і під час перенесення коду між ПК створює чимало проблем розробникам.
+
+Для визначення базового каталогу \texttt{R} в поточній сесії використовують команду \texttt{getwd()}. Якщо Ви користуєтеся \texttt{RStudio} та створили проект, то цей каталог буде відповідати повному шляху до папки проекту:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{getwd}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "E:/Repos/YuRa/r-intro"
+\end{verbatim}
+
+Для того аби змінити поточний робочий каталог використовують команду \texttt{setwd(шлях)}. Після запуску цієї команди функцій \texttt{getwd()} буде вказутивати уже на нову адресу/шлях.
+
+Варто знати та вміти будувати \textbf{абсолютні} та \textbf{відносні} шляхи до каталогів та файлів, ці знання корисні для роботи з усіма мовами програмування та більшістю ПЗ для роботи з даними.
+
+Для запису шляху у ОС Windows можна скористатися 2-ма способами:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{/} - \textbf{\emph{слеш}}, записується як один знак;
+\item
+  \texttt{\textbackslash{}\textbackslash{}} - \textbf{\emph{бекслеш}}, записується як два знаки.
+\end{itemize}
+
+У прикладі нижче обидва шляхи ведуть до тієї ж папки (\texttt{drive} - буква диска):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{setwd}\NormalTok{(}\StringTok{"drive:/folder1/folder2/"}\NormalTok{)}
+\FunctionTok{setwd}\NormalTok{(}\StringTok{"drive:}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{folder1}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{folder2}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Для перегляду інформації про наявні каталоги та файли у поточній робочій папці можна скористатися командою \texttt{dir()} або \texttt{list.files()}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dir}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "_bookdown.yml"       "_bookdown_files"     "_output.yml"        
+##  [4] "01-chapter1.Rmd"     "01-chapter1_files"   "01-intro_files"     
+##  [7] "02-chapter2.Rmd"     "02-chapter2_files"   "02-references.Rmd"  
+## [10] "book.bib"            "css"                 "favicon.ico"        
+## [13] "images"              "inc"                 "index.md"           
+## [16] "index.Rmd"           "index.utf8.md"       "packages.bib"       
+## [19] "preamble.tex"        "r-intro.rds"         "README.md"          
+## [22] "render_commands"     "rendere0c5e3b48.rds" "RIntro.Rproj"       
+## [25] "tmp.RData"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{list.files}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "_bookdown.yml"       "_bookdown_files"     "_output.yml"        
+##  [4] "01-chapter1.Rmd"     "01-chapter1_files"   "01-intro_files"     
+##  [7] "02-chapter2.Rmd"     "02-chapter2_files"   "02-references.Rmd"  
+## [10] "book.bib"            "css"                 "favicon.ico"        
+## [13] "images"              "inc"                 "index.md"           
+## [16] "index.Rmd"           "index.utf8.md"       "packages.bib"       
+## [19] "preamble.tex"        "r-intro.rds"         "README.md"          
+## [22] "render_commands"     "rendere0c5e3b48.rds" "RIntro.Rproj"       
+## [25] "tmp.RData"
+\end{verbatim}
+
+\hypertarget{chapter1315}{%
+\subsubsection{Допомога (help/?)}\label{chapter1315}}
+
+Для отримання швидкої довідки в \texttt{R} варто скористатися функціє \texttt{help(назва\_об\textquotesingle{}єкта\_або\_функції)} або \texttt{?назва\_об\textquotesingle{}єкта\_або\_функції}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Get help for intersect() function}
+\FunctionTok{help}\NormalTok{(intersect)}
+\end{Highlighting}
+\end{Shaded}
+
+Якщо є потреба отримати інформацію про пакет скористайтеся:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{help}\NormalTok{(}\AttributeTok{package =} \StringTok{"stats"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{chapter132}{%
+\subsection{Робота з R Studio}\label{chapter132}}
+
+\hypertarget{chapter1321}{%
+\subsubsection{Завантаження та інсталяція RStudio Desktop}\label{chapter1321}}
+
+\textbf{RStudio} - це інтегроване середовище розробки для \texttt{R}. Воно включає у себе консоль, підсвічування синтаксису (підказки), прямий запуск коду, інструменти для візуалізації графіків, html-коду, історію виконаних команд, відлагоджування коду, управління робочими просторами, підтримка різних видів розмітки та багато іншого. RStudio має версію з відкритим кодом та комерційну версію для \texttt{Windows}, \texttt{Linux} та \texttt{Mac}, а також веб-версію для серверів на Linux \texttt{RStudio\ Server} та \texttt{RStudio\ Server\ Pro} \citep{R-studio-site}.
+
+IDE (\texttt{integrated\ development\ environment}) - комплексне програмне рішення для розробки програмного забезпечення. Зазвичай, складається з редактора початкового коду, інструментів для автоматизації складання та відлагодження програм. Більшість сучасних середовищ розробки мають можливість автодоповнення коду. Wikipedia
+
+Завантажити продукти можна з сайту \url{https://rstudio.com}. Щоб знайти середовище, яке ми будемо використовувати під час вивчення курсу варто виконати наступні кроки:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  У головному меню сайту обрати \texttt{Products\ \textgreater{}\ RStudio}.
+\item
+  Знаходимо на сторінці кнопку для завантаження програми \texttt{RStudio\ Desktop} версії \texttt{Open\ Source} та натискаємо \textbf{DOWNLOAD RSTUDIO DESKTOP}:
+  \includegraphics{images/chapter1/rstudio_1.png}
+\item
+  Далі обираємо завантаження безкоштовної версії \texttt{RStudio\ Desktop} з наданого переліку:
+  \includegraphics{images/chapter1/rstudio_2.png}
+  Після завантаження запускаємо інсталятор \texttt{RStudio}. Особливих кроків у цьому процесі немає.
+\end{enumerate}
+
+Після запуску IDE RStudio зазвичай складається з 3-х або 4-х блоків:
+
+\begin{itemize}
+\tightlist
+\item
+  Файл, з яким працювали останнім (зліва зверху).
+\item
+  Консоль для введення коду та виведення результатів (зліва знизу).
+\item
+  Змінні середовища (\texttt{Environment}) (справа зверху) + Історія команд (\texttt{History}), Зєднання з зовнішніми ресурсами даних, наприклад, бази даних (\texttt{Connections}), навчальна інструкція (\texttt{Tutorial}).
+\item
+  Файли каталогу або проекту (\texttt{Files}), Інстальовані пакети (\texttt{Packages}), Допомога (\texttt{Help}), Візуалізація результатів (\texttt{Plots}, \texttt{Viewer}).
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics{images/chapter1/rstudio_3.png}
+\caption{\label{fig:unnamed-chunk-15}Головне вікно RStudio Desktop}
+\end{figure}
+
+Для першої демонстрації роботи виконаємо у консолі 2 рядки коду:
+\includegraphics{images/chapter1/rstudio_4.png}
+
+Перший рядок з кодом \texttt{data\ \textless{}-\ c(3,7,1,6,3,4,5,4,2)} створює у пам'яті колекцію чисел. Зверніть увагу, що у блоці \textbf{Environments} відобраюаться усі змінні, що уснують у поточному робочому просторі (про це буде далі).
+
+Другий рядок \texttt{plot(data,\ type="l")} дозволяє побудувати простий лінійний графік (\texttt{type="l"\ -\ linear,\ "p"\ -\ point}, \texttt{help(plot)} для деталей). Графіки, що ``промальовуються'' як картинки выдображаються у блоці \textbf{Plots}. Якщо ж графік має більш складну візуалізацію з інтерактивними елементами, що використовують уже засоби html/css/js, то він буде відображений у блоці \textbf{View}.
+
+Якщо перемкнутися на вкладку \textbf{History}, то ми побачимо перелік раніше виконаних команд.
+
+Для швидкого ``гортання'' уже виконаних раніше команд на консолі (\emph{Console}) можна скористатися клавішами Up/Down на клавіатурі:
+\includegraphics{images/chapter1/arrow_keys.png}
+
+\hypertarget{ux441ux442ux432ux43eux440ux435ux43dux43dux44f-ux43fux435ux440ux448ux43eux433ux43e-ux43fux440ux43eux435ux43aux442ux443-ux432-rstudio-chapter1322}{%
+\subsubsection{Створення першого проекту в RStudio \{chapter1322\}}\label{ux441ux442ux432ux43eux440ux435ux43dux43dux44f-ux43fux435ux440ux448ux43eux433ux43e-ux43fux440ux43eux435ux43aux442ux443-ux432-rstudio-chapter1322}}
+
+На відміну від \texttt{R\ Gui} в \texttt{RStudio} реалізовано концепцію проектів, що дозволяє організувати код та поєднати різні його частини у межах певного рішення.
+
+Створимо наш перший проект.
+
+Для початку оберемо з верхнього меню пункт \texttt{File\ \textgreater{}\ New\ Project}. У вікні вибору способу створення проекту клікаємо \texttt{New\ Directory}. Такий спосіб передбачає, що жодного файлу проекту поки не існує або ми пізніше туди скопіюємо уже готовий код.
+
+\begin{figure}
+\centering
+\includegraphics{images/chapter1/rstudio_6.png}
+\caption{\label{fig:unnamed-chunk-17}RStudio Desktop. Новий проект}
+\end{figure}
+
+На наступному кроці обираємо \texttt{New\ Project}:
+\includegraphics{images/chapter1/rstudio_7.png}
+
+Після кліку на \texttt{Create\ Project} буде створено папку за попередньо обраним шляхом. Для запуску проекту або швидкого перемикання між проектами можна скористатися як пунктами головного меню, так і підменю проектів справа. Також відкрити проект можна запуском файлу \texttt{*.Rproj} у провіднику \texttt{Windows}.
+
+\includegraphics{images/chapter1/rstudio_8.png}
+Щоб додати новий файл з кодом \texttt{R} потрібно обрати з головного меню \texttt{File\ \textgreater{}\ New\ file\ \textgreater{}\ R\ Script} або скористатися командою \texttt{Ctrl+Shift+N}. Новий файл буде створено з назвою \texttt{Untitled{[}X{]}}, тому рекомендую одразу його зберегти, наприклад, як \texttt{TestCode.R}
+
+Для першого проекту розвяжемо наступну задачу:
+
+\begin{quote}
+Написати програму, що генерує вектор з 20-ти випадкових чисел у межах {[}1;5{]}, обчислює середнє та суму чисел, а також виводить гістограму частоти кожного значення (скільки разів дане число повторюється у векторі).
+\end{quote}
+
+Код для генерації 20-ти випадкових чесел у діапазоні {[}1;5{]} матиме наступний вигляд:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{vtr }\OtherTok{\textless{}{-}} \FunctionTok{sample}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\DecValTok{5}\NormalTok{, }\DecValTok{20}\NormalTok{, }\AttributeTok{replace=}\ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{vtr}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] 5 1 4 4 1 3 3 2 1 2 4 4 4 3 3 2 1 2 3 1
+\end{verbatim}
+
+Результати виконання на Вашому ПК будуть іншими, адже \textbf{псевдо}генератор випадкових чисел буде брати іншу ``точку відліку'' для генерування чисел. Рекомендую перегляду функцію \texttt{set.seed(точка\ відліку\ -\ число)}.
+
+\emph{P.S. Також зустрічав у мережі інформацію, що робота \texttt{set.seed()} для \texttt{R} у \texttt{4+} версії може відрізнятися від \texttt{3+}. Після перевірки інформації оновлю даний текст.}
+
+Обчислення та виведення на консоль інформації про суму та середнє значення:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{vtr\_sum }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{(vtr)}
+\NormalTok{vtr\_mean }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(vtr)}
+
+\FunctionTok{print}\NormalTok{(}\FunctionTok{paste0}\NormalTok{(}\StringTok{"Sum: "}\NormalTok{, vtr\_sum))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Sum: 53"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(}\FunctionTok{paste0}\NormalTok{(}\StringTok{"Mean: "}\NormalTok{, vtr\_mean))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Mean: 2.65"
+\end{verbatim}
+
+Виведемо гістограму:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hist}\NormalTok{(vtr, }\AttributeTok{breaks =} \DecValTok{5}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{01-intro_files/figure-latex/nice-fig-1} 
-
-}
-
-\caption{Here is a nice figure!}\label{fig:nice-fig}
+\centering
+\includegraphics{01-chapter1_files/figure-latex/unnamed-chunk-22-1.pdf}
+\caption{\label{fig:unnamed-chunk-22}Приклад візуалізації гістрограми в R}
 \end{figure}
 
-Reference a figure by its code chunk label with the \texttt{fig:} prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can reference tables generated from \texttt{knitr::kable()}, e.g., see Table \ref{tab:nice-tab}.
+\emph{Примітка. Детальніше про параметри функції \texttt{hist()} можна почитати тут: \url{https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/hist}}.
+
+Орієнтовний вигляд вікна \texttt{RStudio} після викоання усіх описаних вище операцій матиме настпуний вигляд:
+\includegraphics{images/chapter1/rstudio_10.png}
+Варто звернути увагу на виділений блок \texttt{Environment}, де можна переглянути усі доступні змінні, що є на даний момент у \texttt{пам\textquotesingle{}яті}. До цих параметрів можна звертатися у коді чи з консолі у будь, який момент. \emph{Детальну інформацію про робоче середовище розглянуто нижче.}
+
+\hypertarget{chapter133}{%
+\subsection{Робота з Jupyter Notebook}\label{chapter133}}
+
+Ноутбуки стали зручним та поширеним інструментом для аналізу даних, а також послідовного викладення матеріалів чи результатів дослідження. Перевагою такого інструменту є перемішування коду, результатів його виконання та іншого текстового наповнення, що дозволяє сформувати ``на льоту'' готові до читання документи.
+
+\_*Примітка. Лекційні матеріали даного курсу виконані саме у ноутбуках.\_
+
+Використання ноутбуків у навчальному процесі дозволяє описати не лише теоретичний матеріал, але приклади коду, що будуть виконувати безпосередньо під час ознайомлення з лекцією. Також слухач курсу може відредагувати наявний код та перевірити результати його виконання.
+
+Розгялнемо процес інсталяції та запуску \texttt{Anaconda} (середовище з відкритим кодом для вирішення задач \texttt{Data\ Science}) та \texttt{Jupyter\ Notebook} на ПК.
+
+Для встановлення середовища \texttt{Anaconda} потрібно перейти на сайт проекту та завантажити індивідуальну версію продукту: \url{https://www.anaconda.com/products/individual} \citep{Anaconda-site}.
+
+\_*Примітка. Усі операції у даному курсі виконуються під операційну систему \texttt{Windows\ 10\ Education}\_.
+
+Процес інсталяції середовища Anaconda не відрізняється від стандарного покрокового вставнолення програм у \texttt{Windows}.
+
+Після запуску \texttt{Anaconda\ Navigator} для початку потрібно створити нове середовище та налаштувати роботу \texttt{R}:
+\includegraphics{images/chapter1/anaconda_1.png}
+
+Для початку потрібно перейти на вкладку \texttt{Environments} та натиснути \texttt{Create}:
+\includegraphics{images/chapter1/anaconda_2.png}
+
+У вікні, що відкрилося потрібно відмітити {[}x{]} вставновлення інструментів для роботи з \texttt{R}:
+
+\begin{figure}
+\centering
+\includegraphics{images/chapter1/anaconda_3.png}
+\caption{\label{fig:unnamed-chunk-25}Anaconda. Створення нового середовища на основі R}
+\end{figure}
+
+Після встановлення R-інструментів оптрібно переключитися на вкладку \texttt{Home} та робочий простір:
+\includegraphics{images/chapter1/anaconda_4.png}
+
+Після завантаження робочого простору оберіть \texttt{Launch} для запуску \texttt{Jupyter\ Notebook} з переліку встановлених засобів. \texttt{Jupyter\ Notebook} буде запущено у браузері за замовчеванням Вашого ПК. Відкрити ноутбук можна обравши потрібний файл, а створити новий у меню справа \texttt{New} \textgreater{} \texttt{Notebook} \textgreater{} \texttt{R}:
+\includegraphics{images/chapter1/anaconda_6.png}
+\#\#\# Огляд додаткових IDE та сервісів для роботи з R \{\#chapter134\}
+
+Окрім середовищ описаних вище існує ряд досить цікавих інструментів, що роблять досить зручною роботу з \texttt{R}-кодом. Розглянемо ці інструменти.
+
+\textbf{Visual Studio Code} - безкоштовний редактор коду від \texttt{Microsoft}, орієнтовний на велику кількість мов програмування та фреймворків \citep{vs-code}. Серед інших іструментів у VS Code доступні також розширення для роботи з \texttt{R}:
+
+\begin{figure}
+\centering
+\includegraphics{images/chapter1/vs_code.png}
+\caption{\label{fig:unnamed-chunk-28}Visual Studio Code. Інсталяція RTools}
+\end{figure}
+
+\textbf{Visual Studio Community Edition} - безкоштовне середовище розробки від компаній Microsoft. VS створено з самого початку для розробки під платформу .NET та мови програмування C\#, VB.NET, F\# тощо, але з часом отримало багато розширень, що дозволяють у тому числі, працювати і з проектами в \texttt{R} \citep{visual-studio}.
+
+\textbf{Google Collab} - онлайн сервіс для роботи з ноутбуками для \texttt{Data\ Science} від компанії \texttt{Google} \citep{google-collab}:
+\includegraphics{images/chapter1/google_collab.png}
+
+\emph{Примітка. Код у прикладі вище написаний на \texttt{Python}.}
+
+\href{https://kaggle.com}{\textbf{kaggle.com}} - сервіс для змагань з \texttt{Data\ Science} та \texttt{Machine\ Learning}. Окрім переліку змагань, наборів даних сервіс має досить зручні ноутбуки.
+
+\begin{figure}
+\centering
+\includegraphics{images/chapter1/kaggle.png}
+\caption{\label{fig:unnamed-chunk-30}Kaggle.com}
+\end{figure}
+
+Загалом сервісів та середовищ для розробки в \texttt{R} існує досить багато і їх кількість зростає, але це не впливає на принципи написання коду та роботу з даними.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{chapter14}{%
+\section{Основи роботи з пакетами в R}\label{chapter14}}
+
+\hypertarget{chapter141}{%
+\subsection{Команди для роботи з пакетами}\label{chapter141}}
+
+Своєю популярністю \texttt{R} завдячує, у тому числі, і можливості швидко реалізувати досить складні дослідження за допомогою наборів уже готових функції. Такі функції обєднуються у пакети та публікуються вченими, досліджниками та розробниками зі всього світу.
+
+\textbf{Пакети в R} - організовані набори методів та класів для виконання вузького набору задач під час програмування на \texttt{R}. Вони містять як функції так і опис способів їх використання, а чтакож дані для відтворення прикладів коду.
+
+Пакети можуть бути завантажені з офіційного сайту проекту \href{https://cran.r-project.org/web/packages/available_packages_by_name.html}{cran.r-project.org} / \citep{R-base} або інших джерел (dev-версії є доступні на \texttt{github}). Завантаження пакетів у \texttt{R} можна здійснювати як з локального диска, так і з серверів у мережі інтернет.
+
+Для встановлення пакету використовується команда \textbf{\texttt{install.packages()}}:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}
-  \FunctionTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\AttributeTok{caption =} \StringTok{\textquotesingle{}Here is a nice table!\textquotesingle{}}\NormalTok{,}
-  \AttributeTok{booktabs =} \ConstantTok{TRUE}
-\NormalTok{)}
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"fun"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{table}
+Для підключення пакету та його використання варто скористатися \texttt{library()}:
 
-\caption{\label{tab:nice-tab}Here is a nice table!}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{packageDescription}\NormalTok{(}\StringTok{"fun"}\NormalTok{)}
+\FunctionTok{help}\NormalTok{(}\AttributeTok{package =} \StringTok{"fun"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Дуже рекомендую почитати детальніше про пакети у статті на \texttt{DataCamp}:
+R Packages: A Beginner's Guide.
+
+\hypertarget{chapter142}{%
+\subsection{Робота з пакетами в RStudio}\label{chapter142}}
+
+Робота з пакетами в RStudio організована досить зручно і дозволяє швидко переглянути інформацію про пакет та функції, які він дозволяє використати.
+
+Для інсталяції та оновлення пакетів можна скористатися меню \texttt{Tools}:
+\includegraphics{images/chapter1/packages_1.png}
+
+Після вибору \texttt{Install\ Packages...} відкриється вікно, де можна обрати як джерело інсталяції пакету так і сам пакет з переліку, ввівши кілька перших букв його назви:
+\includegraphics{images/chapter1/packages_2.png}
+
+\texttt{RStudio} дозволяє також переглянути інстальовані пакети/бібліотеки, розроблені іншими користувачами та завантажені у пам'ять (``галочка'' навпроти назви пакету):
+
+\begin{figure}
 \centering
-\begin{tabular}[t]{rrrrl}
+\includegraphics{images/chapter1/packages_3.png}
+\caption{\label{fig:unnamed-chunk-33}RStudio Desktop. Перегляд інстальованих пакетів}
+\end{figure}
+
+Доступ до функцій та інших елементів пакету можна здійснювати використавши запис \texttt{назва\_пакету::назва\_функції()} без підключення бібліотеки за допомогою \texttt{library()}:
+
+\begin{figure}
+\centering
+\includegraphics{images/chapter1/packages_4.png}
+\caption{\label{fig:unnamed-chunk-34}RStudio Desktop. Приклад використання пакету \texttt{fun}}
+\end{figure}
+
+Користувачі можуть не тільки завантажувати існуючі пакети,але істворювати власні та роботи їх доступними для дослідників зі всього світу.
+
+\hypertarget{chapter2}{%
+\chapter{Базові конструкції мови R}\label{chapter2}}
+
+\hypertarget{ux43fux43bux430ux43d-1}{%
+\section*{План}\label{ux43fux43bux430ux43d-1}}
+\addcontentsline{toc}{section}{План}
+
+\begin{itemize}
+\tightlist
+\item
+  \protect\hyperlink{chapter21}{Оголошення та ініціалізація змінних}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \protect\hyperlink{chapter211}{Поняття змінних та оператор присвоєння}
+  \item
+    \protect\hyperlink{chapter212}{Правила іменування змінних}
+  \end{itemize}
+\item
+  \protect\hyperlink{chapter22}{Базові типи даних}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \protect\hyperlink{chapter221}{Типізація в R}
+  \item
+    \protect\hyperlink{chapter222}{Перевірка та привдення типів даних}
+  \end{itemize}
+\item
+  \protect\hyperlink{chapter23}{Оператори}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \protect\hyperlink{chapter231}{Арифметичні оператори}
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{chapter21}{%
+\section{Оголошення та ініціалізація змінних}\label{chapter21}}
+
+\hypertarget{chapter211}{%
+\subsection{Поняття змінних та оператор присвоєння}\label{chapter211}}
+
+Базовим поняттям практично усіх мов програмування є \textbf{змінна}. Змінна дозволяє записати значення або об'єкт та назвати його для подальшого доступу, зміни, видалення по імені.
+
+Наприклад, присвоєння змінній \texttt{my\_variable} значення \texttt{10} записується так: \texttt{my\_variable\ \textless{}-\ 5} або \texttt{my\_variable\ =\ 5}.
+
+Операція надання змінній певного значення у програмуванні називається \textbf{присвоєнням}.
+
+\emph{Важливо! Зверніть увагу, що присвоєння (\texttt{\textless{}-}, \texttt{=}) та рівність (\texttt{==}) це різні поняття. Оператор \texttt{==} здіснює перевірку співпадіння значення двох змінних/об'єктів та повертає результат у вигляді логічного значення \texttt{TRUE} (якщо значення рівні) або \texttt{FALSE} (якщо значення не рівні)}.
+
+Знак \texttt{\textless{}-} не є часто використовуваним у різних мовах програмування, зазвичай для присвоєння користуються \texttt{=}. Проте в R освновним способом засобом початкової ініціалізації змінних є \texttt{\textless{}-}.
+
+\emph{Також у програмуванні на R використовуються оператори присвоєння \texttt{\textless{}\textless{}-}, \texttt{-\textgreater{}}, \texttt{-\textgreater{}\textgreater{}}. Про них можна прочитати за лыками нижче.}
+
+Рекомендую почитати про різницю між операторами присвоєння у R \textless- та = тут:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{https://colinfay.me/r-assignment/}{Why do we use arrow as an assignment operator? (Colin FAY)}.
+\item
+  \href{https://renkun.me/2014/01/28/difference-between-assignment-operators-in-r/}{Difference between assignment operators in R (Ren Kun)}.
+\item
+  \href{https://stat.ethz.ch/R-manual/R-devel/library/base/html/assignOps.html}{Assignment Operators}.
+\end{enumerate}
+
+Приклад:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{\textless{}{-}} \DecValTok{45}
+\NormalTok{y }\OtherTok{\textless{}{-}} \DecValTok{10}
+\NormalTok{z }\OtherTok{\textless{}{-}}\NormalTok{ x }\SpecialCharTok{+}\NormalTok{ y }\CommentTok{\# z = 45 + 10}
+\NormalTok{z}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 55
+\end{verbatim}
+
+Розберемо приклад, описаний вище:
+
+\begin{itemize}
+\tightlist
+\item
+  У першому рядку оголошується змінна \texttt{x} і їй присвоюється значення \texttt{45}.
+\item
+  У другому рядку оголошується змінна \texttt{y} і їй присвоюється значення \texttt{10}.
+\item
+  У третьому рядку оголошується змінна \texttt{z} і їй присвоюється значення суми \texttt{x} + \texttt{y}.
+  \texttt{\#} у R використовується як коментар коду, текст написаний після нього ігнорується.
+\item
+  У четвертому рядку відбувається виведення на консоль змінної \texttt{z}.
+\end{itemize}
+
+\hypertarget{chapter212}{%
+\subsection{Правила іменування змінних}\label{chapter212}}
+
+Є кілька основних правил іменування змінних у R:
+1. Ім'я змінної може складатися з \textbf{букв} {[}a-z, A-z{]}, \textbf{цифр} {[}0-9{]}, \textbf{крапки} \texttt{.} та нижнього \textbf{підкреслювання} \texttt{\_}.
+2. Ім'я змінної повинно починатися з \textbf{букви або крапки}. Якщо воно починається з крапки, то наступним символом повинна бути буква.
+3. Не можна використовувати зарезервовані ключові слова мови програмування для іменування змінних, наприклад, \texttt{TRUE}/\texttt{FALSE}.
+
+Ім'я змінної не може містити пробіл (\texttt{space}). Якщо є потреба назвати об'єкт кількома словами, то їх зазвичай розділяють підкресленням \texttt{\_} або крапкою \texttt{.}. Наприклад, змінну можна назвати \texttt{my\_variable\_name} або \texttt{my.variable.name}. Назва \texttt{myVariableName} (\href{https://en.wikipedia.org/wiki/Camel_case}{camel case}) теж буде коректно сприйнята мовою програмування R, проте такий запис тут вживається не часто.
+
+{Приклад коректного іменування змінних:} \texttt{total}, \texttt{zminna}, \texttt{Sum}, \texttt{.length\_of\_something}, \texttt{Number123,\ x\_1}.
+
+{Приклад неправильного іменування змінних:} \texttt{tot@l}, \texttt{5x\_1}, \texttt{\_variable}, \texttt{FALSE}, \texttt{.0ne}.
+
+\hypertarget{chapter22}{%
+\section{Базові типи даних}\label{chapter22}}
+
+\hypertarget{chapter221}{%
+\subsection{Типізація в R}\label{chapter221}}
+
+Усі мови програмування мають власну типізацію даних з якими працюють. Тип даних - це набір властивостей певних об'єктів та операцій, що можна з ними виконувати. Так, наприклад, з \textbf{цілими числами} можна виконувати арифметичні операції додавання, віднімання та інші. Набори символів (простими словами \textbf{текст}) зазвичай можуть використовуватися для пошуку у них елементів, редагування (шляхом видалення частини існуючого або додавання нового тексту), склеювання та розділення на частини.
+
+У \texttt{R}, на відміну від строго типізованих мов програмування, тип даних визначається на основі поточного значення елемента і може змінюватися у процесі виконання.
+
+Розгялнемо приклад коду з мови програмування \texttt{C\#} (мова родом із \texttt{C}/\texttt{Java}):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DataTypeTok{int}\NormalTok{ a = }\DecValTok{10}\NormalTok{;}
+\NormalTok{a = }\StringTok{"some text"}\NormalTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+Подібний код у \texttt{C\#} передбачає створення нової змінної \texttt{a} типу \texttt{int} (\texttt{integer} - ціле число), а потім відбувається присвоєння для \texttt{a} текстового фрагмента (тип \texttt{string} у \texttt{С\#}). Такий код не буде запущено і виникне {\textbf{помилка компіляції}}.
+
+Розглянемо приклад коду з \texttt{R}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OtherTok{\textless{}{-}} \DecValTok{10}
+\NormalTok{a }\OtherTok{\textless{}{-}} \StringTok{"some text"}
+\NormalTok{a}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "some text"
+\end{verbatim}
+
+Такий код виконається і на консоль буде виведено \texttt{some\ text}, адже у 1 першому рядку було присвоєно ціле число, у другому - текст. Таким чином \texttt{R} має \textbf{динамічну типізацію}, що дозволяє у ту ж саму змінну записати значення різних типів. Проте варто пам'ятати, що попереднє значення буде втрачено.
+
+До базових типів даних у R варто віднести:
+
+\begin{itemize}
+\tightlist
+\item
+  Числа з дробовою частиною (\texttt{decimal\ numbers}), як наприклад, \texttt{4.0}, \texttt{15.214}, що називаються \textbf{\texttt{numeric(s)}}.
+\item
+  Натуральні числа (\texttt{natural\ numbers}), як наприклад, \texttt{4}, \texttt{15}, що називаються \textbf{\texttt{integer(s)}}.
+\item
+  Логічні значення (\texttt{boolean\ values}), тобто \texttt{TRUE} та \texttt{FALSE} (які також можна скорочено записувати \texttt{T} та \texttt{F}), що називаються \textbf{\texttt{logical}}.
+\item
+  Текст або рядки (\texttt{string\ values}), як наприклад, \texttt{"Hello"}, \texttt{"12\ is\ number"}, що називаються \textbf{\texttt{character(s)}}.
+\end{itemize}
+
+Оголосимо для прикладу три змінні: \texttt{my\_numeric} - число, \texttt{my\_character} - текст, \texttt{my\_logical} - логічне значення.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_numeric }\OtherTok{\textless{}{-}} \DecValTok{5}
+\NormalTok{my\_character }\OtherTok{\textless{}{-}} \StringTok{"universe"}
+\NormalTok{my\_logical }\OtherTok{\textless{}{-}} \ConstantTok{FALSE}
+\end{Highlighting}
+\end{Shaded}
+
+Замінимо значення \texttt{my\_character\ \textless{}-\ "5"} та спробуємо знайти суму значень:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_character }\OtherTok{\textless{}{-}} \StringTok{"5"}
+\NormalTok{my\_sum }\OtherTok{\textless{}{-}}\NormalTok{ my\_numeric }\SpecialCharTok{+}\NormalTok{ my\_character}
+\end{Highlighting}
+\end{Shaded}
+
+У результаті виклання даного коду ми отримаємо помилку, адже значення \texttt{5} та \texttt{"5"} є елементами різних типів даних, перевіримо типи за допомогю функції \texttt{class()}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{class}\NormalTok{(}\DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{class}\NormalTok{(}\StringTok{"5"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "character"
+\end{verbatim}
+
+Виконання коду \texttt{class(5)} показує нам, що \texttt{5}є значенням числового типу даних \texttt{numeric}, а \texttt{class("5")} відповідає тексту \texttt{character}, тому арифметична операція додавання між цими значеннями неможлива.
+
+\hypertarget{chapter222}{%
+\subsection{Перевірка та привдення типів даних}\label{chapter222}}
+
+У випадку коли тип даних потрібно визначити у процесі виконання програми/коду та перетворити значення використовується приведння типів даних.
+
+\emph{Приведення типів даних} - операція перетворення значення з одного типу даних в інший. Важливо памятати, що не завжди приведення типів даних може бути здійснено. Так, наприклад, значення \texttt{"5"} (\texttt{character}) можна досить просто привести до \texttt{5} (\texttt{numeric}), проте \texttt{"five"} не буде зрозумілим для інтерпритатора.
+
+Для перевірки належності елемента до певного типу даних використовують спеціальну функцію \texttt{is.назва\_типу(значення)}. Ця функція повертає \texttt{TRUE}, якщо елемент належить даному типу і \texttt{FALSE}, якщо не належить.
+
+Розглянемо приклад:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_numeric }\OtherTok{\textless{}{-}} \DecValTok{5}
+\NormalTok{my\_character }\OtherTok{\textless{}{-}} \StringTok{"five"}
+\NormalTok{my\_logical }\OtherTok{\textless{}{-}} \ConstantTok{FALSE}
+
+\FunctionTok{is.numeric}\NormalTok{(my\_numeric)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{is.character}\NormalTok{(my\_numeric)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+
+Для перетворення типу даних можна скористатися функцією \texttt{as.назва\_типу(значення)}. У результаті виконання функції буде повернуто значення потрібного типу або пусте значення \texttt{NA}, якщо таке приведення не є можливим:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OtherTok{\textless{}{-}} \DecValTok{5}
+\NormalTok{b }\OtherTok{\textless{}{-}} \StringTok{"10"}
+\NormalTok{c }\OtherTok{\textless{}{-}} \StringTok{"10, 20"}
+\FunctionTok{as.numeric}\NormalTok{(b)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{as.numeric}\NormalTok{(c)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: NAs introduced by coercion
+\end{verbatim}
+
+\begin{verbatim}
+## [1] NA
+\end{verbatim}
+
+Результат виконання функцій можна записувати у змінні і використовувати у наступних обчисленнях:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OtherTok{\textless{}{-}} \DecValTok{5}
+\NormalTok{b }\OtherTok{\textless{}{-}} \StringTok{"10"}
+\NormalTok{b }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(b)}
+\NormalTok{a }\SpecialCharTok{+}\NormalTok{ b}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 15
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{number }\OtherTok{\textless{}{-}} \FunctionTok{as.integer}\NormalTok{(}\DecValTok{54}\NormalTok{)}
+\FunctionTok{typeof}\NormalTok{(number)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "integer"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{class}\NormalTok{(number)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "integer"
+\end{verbatim}
+
+Повний перелік типів та методів перевірки і приведення їх типів ображений нижче:
+
+\begin{longtable}[]{@{}lll@{}}
 \toprule
-Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
+Назва типу & Метод перевірки типу & Метод приведення типу\tabularnewline
 \midrule
-5.1 & 3.5 & 1.4 & 0.2 & setosa\\
-4.9 & 3.0 & 1.4 & 0.2 & setosa\\
-4.7 & 3.2 & 1.3 & 0.2 & setosa\\
-4.6 & 3.1 & 1.5 & 0.2 & setosa\\
-5.0 & 3.6 & 1.4 & 0.2 & setosa\\
-\addlinespace
-5.4 & 3.9 & 1.7 & 0.4 & setosa\\
-4.6 & 3.4 & 1.4 & 0.3 & setosa\\
-5.0 & 3.4 & 1.5 & 0.2 & setosa\\
-4.4 & 2.9 & 1.4 & 0.2 & setosa\\
-4.9 & 3.1 & 1.5 & 0.1 & setosa\\
-\addlinespace
-5.4 & 3.7 & 1.5 & 0.2 & setosa\\
-4.8 & 3.4 & 1.6 & 0.2 & setosa\\
-4.8 & 3.0 & 1.4 & 0.1 & setosa\\
-4.3 & 3.0 & 1.1 & 0.1 & setosa\\
-5.8 & 4.0 & 1.2 & 0.2 & setosa\\
-\addlinespace
-5.7 & 4.4 & 1.5 & 0.4 & setosa\\
-5.4 & 3.9 & 1.3 & 0.4 & setosa\\
-5.1 & 3.5 & 1.4 & 0.3 & setosa\\
-5.7 & 3.8 & 1.7 & 0.3 & setosa\\
-5.1 & 3.8 & 1.5 & 0.3 & setosa\\
+\endhead
+Array & is.array & as.array\tabularnewline
+\textbf{Character} & is.character & as.character\tabularnewline
+Complex & is.complex & as.complex\tabularnewline
+Dataframe & is.data.frame & as.data.frame\tabularnewline
+\textbf{Double} & is.double & as.double\tabularnewline
+Factor & is.factor & as.factor\tabularnewline
+List & is.list & as.list\tabularnewline
+\textbf{Logical} & is.logical & as.logical\tabularnewline
+Matrix & is.matrix & as.matrix\tabularnewline
+\textbf{Numeric} & is.numeric & as.numeric\tabularnewline
+Raw & is.raw & as.raw\tabularnewline
+Time series (ts) & is.ts & as.ts\tabularnewline
+Vector & is.vector & as.vector\tabularnewline
 \bottomrule
-\end{tabular}
-\end{table}
+\end{longtable}
 
-You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{literature}{%
-\chapter{Literature}\label{literature}}
+\hypertarget{chapter23}{%
+\section{Оператори}\label{chapter23}}
 
-Here is a review of existing methods.
+\hypertarget{chapter231}{%
+\subsection{Арифметичні оператори}\label{chapter231}}
 
-\hypertarget{methods}{%
-\chapter{Methods}\label{methods}}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{Sys.setlocale}\NormalTok{(}\StringTok{"LC\_CTYPE"}\NormalTok{, }\StringTok{"ukrainian"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
-We describe our methods in this chapter.
-
-\hypertarget{applications}{%
-\chapter{Applications}\label{applications}}
-
-Some \emph{significant} applications are demonstrated in this chapter.
-
-\hypertarget{example-one}{%
-\section{Example one}\label{example-one}}
-
-\hypertarget{example-two}{%
-\section{Example two}\label{example-two}}
-
-\hypertarget{final-words}{%
-\chapter{Final Words}\label{final-words}}
-
-We have finished a nice book.
+\hypertarget{ux434ux436eux440ux435ux43bux430}{%
+\chapter*{Джeрела}\label{ux434ux436eux440ux435ux43bux430}}
+\addcontentsline{toc}{chapter}{Джeрела}
 
   \bibliography{book.bib,packages.bib}
 

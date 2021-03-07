@@ -20,6 +20,14 @@ h1, h2 {
 .header-section-number {
   color:#777 !important;
 }
+.sourceCode {
+  background:#eee !important;
+  margin:0 !important;
+}
+pre.sourceCode {
+  border-left:none !important;
+   margin:0 !important;
+}
 
 p.caption {
   color: #777;
@@ -31,7 +39,9 @@ p code {
 pre {
   word-break: normal;
   word-wrap: normal;
+  border-left:3px solid #777 !important;
 }
+
 pre code {
   white-space: inherit;
 }
@@ -52,6 +62,24 @@ strong {
   float:left;
   margin: 2px 15px 0 0;
 }
+.csl-entry {
+  margin: 10px 0 !important;
+}
+div.figure {
+  text-align: center !important;
+}
+.toc-logo {
+  text-align:center;
+}
+
+p.figure img {
+   border:1px solid #ccc !important;
+    -webkit-border-radius: 5px !important;
+-moz-border-radius: 5px !important;
+border-radius: 5px !important;
+}
+
+
 /*.alert-danger {
   border: 2px solid #e53b49;
   background:#e53b49;

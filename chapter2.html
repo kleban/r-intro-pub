@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Розділ 2 Базові конструкції мови R | Вступ до R</title>
+  <meta name="description" content="Курс вступ до програмування в R, Проект DataClass" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Розділ 2 Базові конструкції мови R | Вступ до R" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="images/cover.png" />
+  <meta property="og:description" content="Курс вступ до програмування в R, Проект DataClass" />
+  <meta name="github-repo" content="kleban/r-intro" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Розділ 2 Базові конструкції мови R | Вступ до R" />
+  
+  <meta name="twitter:description" content="Курс вступ до програмування в R, Проект DataClass" />
+  <meta name="twitter:image" content="images/cover.png" />
+
+<meta name="author" content="Юрій Клебан" />
+
+
+<meta name="date" content="2021-03-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="prev" href="chapter1.html"/>
+<link rel="next" href="-e-.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SQNMJRY3XS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SQNMJRY3XS');
+</script>
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="toc-logo"><a  style="margin: 7px 0 5px 0;padding:0" href="https://dataclass.org.ua" target="_blank"><img src="https://dataclass.org.ua/assets/template/images/dataclass_logo.png"></a><a href="./" style="font-weight:600; font-size:18px; padding:0">Вступ до R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Загальна інформація</a></li>
+<li class="chapter" data-level="1" data-path="chapter1.html"><a href="chapter1.html"><i class="fa fa-check"></i><b>1</b> Вступ до курсу</a>
+<ul>
+<li class="chapter" data-level="" data-path="chapter1.html"><a href="chapter1.html#план"><i class="fa fa-check"></i>План</a></li>
+<li class="chapter" data-level="1.1" data-path="chapter1.html"><a href="chapter1.html#chapter11"><i class="fa fa-check"></i><b>1.1</b> Що таке R?</a></li>
+<li class="chapter" data-level="1.2" data-path="chapter1.html"><a href="chapter1.html#chapter12"><i class="fa fa-check"></i><b>1.2</b> Історія створення R</a></li>
+<li class="chapter" data-level="1.3" data-path="chapter1.html"><a href="chapter1.html#chapter13"><i class="fa fa-check"></i><b>1.3</b> Основи роботи з R</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="chapter1.html"><a href="chapter1.html#chapter131"><i class="fa fa-check"></i><b>1.3.1</b> R Project</a></li>
+<li class="chapter" data-level="1.3.2" data-path="chapter1.html"><a href="chapter1.html#chapter132"><i class="fa fa-check"></i><b>1.3.2</b> Робота з R Studio</a></li>
+<li class="chapter" data-level="1.3.3" data-path="chapter1.html"><a href="chapter1.html#chapter133"><i class="fa fa-check"></i><b>1.3.3</b> Робота з Jupyter Notebook</a></li>
+<li class="chapter" data-level="1.3.4" data-path="chapter1.html"><a href="chapter1.html#chapter134"><i class="fa fa-check"></i><b>1.3.4</b> Огляд додаткових IDE та сервісів для роботи з R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="chapter1.html"><a href="chapter1.html#chapter14"><i class="fa fa-check"></i><b>1.4</b> Основи роботи з пакетами в R</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="chapter1.html"><a href="chapter1.html#chapter141"><i class="fa fa-check"></i><b>1.4.1</b> Команди для роботи з пакетами</a></li>
+<li class="chapter" data-level="1.4.2" data-path="chapter1.html"><a href="chapter1.html#chapter142"><i class="fa fa-check"></i><b>1.4.2</b> Робота з пакетами в RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="chapter2.html"><a href="chapter2.html"><i class="fa fa-check"></i><b>2</b> Базові конструкції мови R</a>
+<ul>
+<li class="chapter" data-level="" data-path="chapter2.html"><a href="chapter2.html#план-1"><i class="fa fa-check"></i>План</a></li>
+<li class="chapter" data-level="2.1" data-path="chapter2.html"><a href="chapter2.html#chapter21"><i class="fa fa-check"></i><b>2.1</b> Оголошення та ініціалізація змінних</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="chapter2.html"><a href="chapter2.html#chapter211"><i class="fa fa-check"></i><b>2.1.1</b> Поняття змінних та оператор присвоєння</a></li>
+<li class="chapter" data-level="2.1.2" data-path="chapter2.html"><a href="chapter2.html#chapter212"><i class="fa fa-check"></i><b>2.1.2</b> Правила іменування змінних</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="chapter2.html"><a href="chapter2.html#chapter22"><i class="fa fa-check"></i><b>2.2</b> Базові типи даних</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="chapter2.html"><a href="chapter2.html#chapter221"><i class="fa fa-check"></i><b>2.2.1</b> Типізація в R</a></li>
+<li class="chapter" data-level="2.2.2" data-path="chapter2.html"><a href="chapter2.html#chapter222"><i class="fa fa-check"></i><b>2.2.2</b> Перевірка та привдення типів даних</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="chapter2.html"><a href="chapter2.html#chapter23"><i class="fa fa-check"></i><b>2.3</b> Оператори</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="chapter2.html"><a href="chapter2.html#chapter231"><i class="fa fa-check"></i><b>2.3.1</b> Арифметичні оператори</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="-e-.html"><a href="-e-.html"><i class="fa fa-check"></i>Джeрела</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Створено з bookdown</a></li>
+<li><a href="https://dataclass.org.ua" target="blank">Сайт проекту DataCalss</a></li>  
+<li><a href="https://github.com/kleban/r-intro-pub/issues" style="color:#e53b49" target="blank"><i class="fas fa-bug"></i> Знайшли помилку?</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Вступ до R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chapter2" class="section level1" number="2">
+<h1><span class="header-section-number">Розділ 2</span> Базові конструкції мови R</h1>
+<div id="план-1" class="section level2 unnumbered">
+<h2>План</h2>
+<ul>
+<li><a href="chapter2.html#chapter21">Оголошення та ініціалізація змінних</a>
+<ul>
+<li><a href="chapter2.html#chapter211">Поняття змінних та оператор присвоєння</a></li>
+<li><a href="chapter2.html#chapter212">Правила іменування змінних</a></li>
+</ul></li>
+<li><a href="chapter2.html#chapter22">Базові типи даних</a>
+<ul>
+<li><a href="chapter2.html#chapter221">Типізація в R</a></li>
+<li><a href="chapter2.html#chapter222">Перевірка та привдення типів даних</a></li>
+</ul></li>
+<li><a href="chapter2.html#chapter23">Оператори</a>
+<ul>
+<li><a href="chapter2.html#chapter231">Арифметичні оператори</a></li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="chapter21" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Оголошення та ініціалізація змінних</h2>
+<div id="chapter211" class="section level3" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Поняття змінних та оператор присвоєння</h3>
+<p>Базовим поняттям практично усіх мов програмування є <strong>змінна</strong>. Змінна дозволяє записати значення або об’єкт та назвати його для подальшого доступу, зміни, видалення по імені.</p>
+<p>Наприклад, присвоєння змінній <code>my_variable</code> значення <code>10</code> записується так: <code>my_variable &lt;- 5</code> або <code>my_variable = 5</code>.</p>
+<p>Операція надання змінній певного значення у програмуванні називається <strong>присвоєнням</strong>.</p>
+<p><em>Важливо! Зверніть увагу, що присвоєння (<code>&lt;-</code>, <code>=</code>) та рівність (<code>==</code>) це різні поняття. Оператор <code>==</code> здіснює перевірку співпадіння значення двох змінних/об’єктів та повертає результат у вигляді логічного значення <code>TRUE</code> (якщо значення рівні) або <code>FALSE</code> (якщо значення не рівні)</em>.</p>
+<p>Знак <code>&lt;-</code> не є часто використовуваним у різних мовах програмування, зазвичай для присвоєння користуються <code>=</code>. Проте в R освновним способом засобом початкової ініціалізації змінних є <code>&lt;-</code>.</p>
+<p><em>Також у програмуванні на R використовуються оператори присвоєння <code>&lt;&lt;-</code>, <code>-&gt;</code>, <code>-&gt;&gt;</code>. Про них можна прочитати за лыками нижче.</em></p>
+<div class="alert alert-success">
+<p><i class="fas fa-alrt fa-2x fa-link"></i>
+Рекомендую почитати про різницю між операторами присвоєння у R <code>&lt;-</code> та <code>=</code> тут:</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://colinfay.me/r-assignment/">Why do we use arrow as an assignment operator? (Colin FAY)</a>.</li>
+<li><a href="https://renkun.me/2014/01/28/difference-between-assignment-operators-in-r/">Difference between assignment operators in R (Ren Kun)</a>.</li>
+<li><a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/assignOps.html">Assignment Operators</a>.</li>
+</ol>
+</div>
+<p>Приклад:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="chapter2.html#cb32-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">45</span></span>
+<span id="cb32-2"><a href="chapter2.html#cb32-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb32-3"><a href="chapter2.html#cb32-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> x <span class="sc">+</span> y <span class="co"># z = 45 + 10</span></span>
+<span id="cb32-4"><a href="chapter2.html#cb32-4" aria-hidden="true" tabindex="-1"></a>z</span></code></pre></div>
+<pre><code>## [1] 55</code></pre>
+<p>Розберемо приклад, описаний вище:</p>
+<ul>
+<li>У першому рядку оголошується змінна <code>x</code> і їй присвоюється значення <code>45</code>.</li>
+<li>У другому рядку оголошується змінна <code>y</code> і їй присвоюється значення <code>10</code>.</li>
+<li>У третьому рядку оголошується змінна <code>z</code> і їй присвоюється значення суми <code>x</code> + <code>y</code>. <br>
+<small><i><code>#</code> у R використовується як коментар коду, текст написаний після нього ігнорується.</i></small></li>
+<li>У четвертому рядку відбувається виведення на консоль змінної <code>z</code>.</li>
+</ul>
+</div>
+<div id="chapter212" class="section level3" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Правила іменування змінних</h3>
+<p>Є кілька основних правил іменування змінних у R:
+1. Ім’я змінної може складатися з <strong>букв</strong> [a-z, A-z], <strong>цифр</strong> [0-9], <strong>крапки</strong> <code>.</code> та нижнього <strong>підкреслювання</strong> <code>_</code>.
+2. Ім’я змінної повинно починатися з <strong>букви або крапки</strong>. Якщо воно починається з крапки, то наступним символом повинна бути буква.
+3. Не можна використовувати зарезервовані ключові слова мови програмування для іменування змінних, наприклад, <code>TRUE</code>/<code>FALSE</code>.</p>
+<p>Ім’я змінної не може містити пробіл (<code>space</code>). Якщо є потреба назвати об’єкт кількома словами, то їх зазвичай розділяють підкресленням <code>_</code> або крапкою <code>.</code>. Наприклад, змінну можна назвати <code>my_variable_name</code> або <code>my.variable.name</code>. Назва <code>myVariableName</code> (<a href="https://en.wikipedia.org/wiki/Camel_case">camel case</a>) теж буде коректно сприйнята мовою програмування R, проте такий запис тут вживається не часто.</p>
+<p><span class="text-success">Приклад коректного іменування змінних:</span> <code>total</code>, <code>zminna</code>, <code>Sum</code>, <code>.length_of_something</code>, <code>Number123, x_1</code>.</p>
+<p><span class="text-danger">Приклад неправильного іменування змінних:</span> <code>tot@l</code>, <code>5x_1</code>, <code>_variable</code>, <code>FALSE</code>, <code>.0ne</code>.</p>
+</div>
+</div>
+<div id="chapter22" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Базові типи даних</h2>
+<div id="chapter221" class="section level3" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Типізація в R</h3>
+<p>Усі мови програмування мають власну типізацію даних з якими працюють. Тип даних - це набір властивостей певних об’єктів та операцій, що можна з ними виконувати. Так, наприклад, з <strong>цілими числами</strong> можна виконувати арифметичні операції додавання, віднімання та інші. Набори символів (простими словами <strong>текст</strong>) зазвичай можуть використовуватися для пошуку у них елементів, редагування (шляхом видалення частини існуючого або додавання нового тексту), склеювання та розділення на частини.</p>
+<p>У <code>R</code>, на відміну від строго типізованих мов програмування, тип даних визначається на основі поточного значення елемента і може змінюватися у процесі виконання.</p>
+<p>Розгялнемо приклад коду з мови програмування <code>C#</code> (мова родом із <code>C</code>/<code>Java</code>):</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode csharp"><code class="sourceCode cs"><span id="cb34-1"><a href="chapter2.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> a = <span class="dv">10</span>;</span>
+<span id="cb34-2"><a href="chapter2.html#cb34-2" aria-hidden="true" tabindex="-1"></a>a = <span class="st">&quot;some text&quot;</span>;</span></code></pre></div>
+<p>Подібний код у <code>C#</code> передбачає створення нової змінної <code>a</code> типу <code>int</code> (<code>integer</code> - ціле число), а потім відбувається присвоєння для <code>a</code> текстового фрагмента (тип <code>string</code> у <code>С#</code>). Такий код не буде запущено і виникне <span class="text-danger"><strong>помилка компіляції</strong></span>.</p>
+<p>Розглянемо приклад коду з <code>R</code>:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="chapter2.html#cb35-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb35-2"><a href="chapter2.html#cb35-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="st">&quot;some text&quot;</span></span>
+<span id="cb35-3"><a href="chapter2.html#cb35-3" aria-hidden="true" tabindex="-1"></a>a</span></code></pre></div>
+<pre><code>## [1] &quot;some text&quot;</code></pre>
+<p>Такий код виконається і на консоль буде виведено <code>some text</code>, адже у 1 першому рядку було присвоєно ціле число, у другому - текст. Таким чином <code>R</code> має <strong>динамічну типізацію</strong>, що дозволяє у ту ж саму змінну записати значення різних типів. Проте варто пам’ятати, що попереднє значення буде втрачено.</p>
+<p>До базових типів даних у R варто віднести:</p>
+<ul>
+<li>Числа з дробовою частиною (<code>decimal numbers</code>), як наприклад, <code>4.0</code>, <code>15.214</code>, що називаються <strong><code>numeric(s)</code></strong>.</li>
+<li>Натуральні числа (<code>natural numbers</code>), як наприклад, <code>4</code>, <code>15</code>, що називаються <strong><code>integer(s)</code></strong>.</li>
+<li>Логічні значення (<code>boolean values</code>), тобто <code>TRUE</code> та <code>FALSE</code> (які також можна скорочено записувати <code>T</code> та <code>F</code>), що називаються <strong><code>logical</code></strong>.</li>
+<li>Текст або рядки (<code>string values</code>), як наприклад, <code>"Hello"</code>, <code>"12 is number"</code>, що називаються <strong><code>character(s)</code></strong>.</li>
+</ul>
+<p>Оголосимо для прикладу три змінні: <code>my_numeric</code> - число, <code>my_character</code> - текст, <code>my_logical</code> - логічне значення.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="chapter2.html#cb37-1" aria-hidden="true" tabindex="-1"></a>my_numeric <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb37-2"><a href="chapter2.html#cb37-2" aria-hidden="true" tabindex="-1"></a>my_character <span class="ot">&lt;-</span> <span class="st">&quot;universe&quot;</span></span>
+<span id="cb37-3"><a href="chapter2.html#cb37-3" aria-hidden="true" tabindex="-1"></a>my_logical <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span></code></pre></div>
+<p>Замінимо значення <code>my_character &lt;- "5"</code> та спробуємо знайти суму значень:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="chapter2.html#cb38-1" aria-hidden="true" tabindex="-1"></a>my_character <span class="ot">&lt;-</span> <span class="st">&quot;5&quot;</span></span>
+<span id="cb38-2"><a href="chapter2.html#cb38-2" aria-hidden="true" tabindex="-1"></a>my_sum <span class="ot">&lt;-</span> my_numeric <span class="sc">+</span> my_character</span></code></pre></div>
+<p>У результаті виклання даного коду ми отримаємо помилку, адже значення <code>5</code> та <code>"5"</code> є елементами різних типів даних, перевіримо типи за допомогю функції <code>class()</code>:</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="chapter2.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="chapter2.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="st">&quot;5&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>Виконання коду <code>class(5)</code> показує нам, що <code>5</code>є значенням числового типу даних <code>numeric</code>, а <code>class("5")</code> відповідає тексту <code>character</code>, тому арифметична операція додавання між цими значеннями неможлива.</p>
+</div>
+<div id="chapter222" class="section level3" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Перевірка та привдення типів даних</h3>
+<p>У випадку коли тип даних потрібно визначити у процесі виконання програми/коду та перетворити значення використовується приведння типів даних.</p>
+<p><em>Приведення типів даних</em> - операція перетворення значення з одного типу даних в інший. Важливо памятати, що не завжди приведення типів даних може бути здійснено. Так, наприклад, значення <code>"5"</code> (<code>character</code>) можна досить просто привести до <code>5</code> (<code>numeric</code>), проте <code>"five"</code> не буде зрозумілим для інтерпритатора.</p>
+<p>Для перевірки належності елемента до певного типу даних використовують спеціальну функцію <code>is.назва_типу(значення)</code>. Ця функція повертає <code>TRUE</code>, якщо елемент належить даному типу і <code>FALSE</code>, якщо не належить.</p>
+<p>Розглянемо приклад:</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="chapter2.html#cb43-1" aria-hidden="true" tabindex="-1"></a>my_numeric <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb43-2"><a href="chapter2.html#cb43-2" aria-hidden="true" tabindex="-1"></a>my_character <span class="ot">&lt;-</span> <span class="st">&quot;five&quot;</span></span>
+<span id="cb43-3"><a href="chapter2.html#cb43-3" aria-hidden="true" tabindex="-1"></a>my_logical <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb43-4"><a href="chapter2.html#cb43-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-5"><a href="chapter2.html#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(my_numeric)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="chapter2.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.character</span>(my_numeric)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<p>Для перетворення типу даних можна скористатися функцією <code>as.назва_типу(значення)</code>. У результаті виконання функції буде повернуто значення потрібного типу або пусте значення <code>NA</code>, якщо таке приведення не є можливим:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="chapter2.html#cb47-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb47-2"><a href="chapter2.html#cb47-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="st">&quot;10&quot;</span></span>
+<span id="cb47-3"><a href="chapter2.html#cb47-3" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="st">&quot;10, 20&quot;</span></span>
+<span id="cb47-4"><a href="chapter2.html#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(b)</span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="chapter2.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(c)</span></code></pre></div>
+<pre><code>## Warning: NAs introduced by coercion</code></pre>
+<pre><code>## [1] NA</code></pre>
+<p>Результат виконання функцій можна записувати у змінні і використовувати у наступних обчисленнях:</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="chapter2.html#cb52-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb52-2"><a href="chapter2.html#cb52-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="st">&quot;10&quot;</span></span>
+<span id="cb52-3"><a href="chapter2.html#cb52-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(b)</span>
+<span id="cb52-4"><a href="chapter2.html#cb52-4" aria-hidden="true" tabindex="-1"></a>a <span class="sc">+</span> b</span></code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="chapter2.html#cb54-1" aria-hidden="true" tabindex="-1"></a>number <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="dv">54</span>)</span>
+<span id="cb54-2"><a href="chapter2.html#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(number)</span></code></pre></div>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="chapter2.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(number)</span></code></pre></div>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p>Повний перелік типів та методів перевірки і приведення їх типів ображений нижче:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Назва типу</th>
+<th>Метод перевірки типу</th>
+<th>Метод приведення типу</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Array</td>
+<td>is.array</td>
+<td>as.array</td>
+</tr>
+<tr class="even">
+<td><strong>Character</strong></td>
+<td>is.character</td>
+<td>as.character</td>
+</tr>
+<tr class="odd">
+<td>Complex</td>
+<td>is.complex</td>
+<td>as.complex</td>
+</tr>
+<tr class="even">
+<td>Dataframe</td>
+<td>is.data.frame</td>
+<td>as.data.frame</td>
+</tr>
+<tr class="odd">
+<td><strong>Double</strong></td>
+<td>is.double</td>
+<td>as.double</td>
+</tr>
+<tr class="even">
+<td>Factor</td>
+<td>is.factor</td>
+<td>as.factor</td>
+</tr>
+<tr class="odd">
+<td>List</td>
+<td>is.list</td>
+<td>as.list</td>
+</tr>
+<tr class="even">
+<td><strong>Logical</strong></td>
+<td>is.logical</td>
+<td>as.logical</td>
+</tr>
+<tr class="odd">
+<td>Matrix</td>
+<td>is.matrix</td>
+<td>as.matrix</td>
+</tr>
+<tr class="even">
+<td><strong>Numeric</strong></td>
+<td>is.numeric</td>
+<td>as.numeric</td>
+</tr>
+<tr class="odd">
+<td>Raw</td>
+<td>is.raw</td>
+<td>as.raw</td>
+</tr>
+<tr class="even">
+<td>Time series (ts)</td>
+<td>is.ts</td>
+<td>as.ts</td>
+</tr>
+<tr class="odd">
+<td>Vector</td>
+<td>is.vector</td>
+<td>as.vector</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+</div>
+<div id="chapter23" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Оператори</h2>
+<div id="chapter231" class="section level3" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Арифметичні оператори</h3>
+
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="chapter2.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setlocale</span>(<span class="st">&quot;LC_CTYPE&quot;</span>, <span class="st">&quot;ukrainian&quot;</span>)</span></code></pre></div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chapter1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="-e-.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["r-intro.epub", "r-intro.pdf", "r-intro.docx"],
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+</body>
+
+</html>
