@@ -13,9 +13,7 @@ cover-image: "images/cover.png"
 github-repo: "kleban/r-intro"
 ---
 
-```r
-Sys.setlocale("LC_CTYPE", "ukrainian")
-```
+
 
 # Загальна інформація {-}
 

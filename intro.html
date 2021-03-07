@@ -213,7 +213,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">1.3</span> Основи роботи з R</h2>
 <div id="r-project" class="section level3" number="1.3.1">
 <h3><span class="header-section-number">1.3.1</span> R Project</h3>
-<p><code>R</code> є безкоштовним програмним забезпеченням, що розповсюджується за умовами <a href="https://www.r-project.org/COPYING">GNU General Public License</a>. Код, написаний на <code>R</code> компілюється та запускається на різних платформах: UNIX, Windows, MacOS.</p>
+<p><code>R</code> є безкоштовним програмним забезпеченням, що розповсюджується за умовами <a href="https://www.r-project.org/COPYING">GNU General Public License</a>. Код, написаний на <code>R</code> компілюється та запускається на різних платформах: UNIX, Windows, MacOS <span class="citation">(<a href="-e-.html#ref-R-base" role="doc-biblioref">R Core Team 2020</a>)</span>.</p>
 <div id="завантаження-та-інсталяція-r" class="section level4" number="1.3.1.1">
 <h4><span class="header-section-number">1.3.1.1</span> Завантаження та інсталяція R</h4>
 <p>Для завантаження актуальної версії R варто перейти на сайт проекту <a href="https://cran.r-project.org/">https://cran.r-project.org/</a>.</p>
@@ -258,39 +258,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4><span class="header-section-number">1.3.1.3</span> Поняття робочого простору</h4>
 <p>У процесі виконання коду створені об’єкти/змінні та функції зберігаються у поточній сесії. У <code>R</code> є можливість переглянути список збережних елментів, видалити усі або окремі, зберегти стан поточної сесії диск та завантажити його пізніше, щоб не проходти усі етапи виконання коду повторно <em>(інколи дуже складний код може виконувати досить довго і збереження проміжних результатів може бути хорошим рішенням)</em>.</p>
 <p>Для прикладу створимо дві змінні <code>var1</code>, <code>var2</code> та виведемо на консоль їх значення:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro.html#cb2-1" aria-hidden="true" tabindex="-1"></a>var1 <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb2-2"><a href="intro.html#cb2-2" aria-hidden="true" tabindex="-1"></a>var2 <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="dv">15</span>)</span>
-<span id="cb2-3"><a href="intro.html#cb2-3" aria-hidden="true" tabindex="-1"></a>var1</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="intro.html#cb1-1" aria-hidden="true" tabindex="-1"></a>var1 <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb1-2"><a href="intro.html#cb1-2" aria-hidden="true" tabindex="-1"></a>var2 <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="dv">15</span>)</span>
+<span id="cb1-3"><a href="intro.html#cb1-3" aria-hidden="true" tabindex="-1"></a>var1</span></code></pre></div>
 <pre><code>## [1] 10</code></pre>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="intro.html#cb4-1" aria-hidden="true" tabindex="-1"></a>var2</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="intro.html#cb3-1" aria-hidden="true" tabindex="-1"></a>var2</span></code></pre></div>
 <pre><code>## [1] 3.872983</code></pre>
 <p>Для того аби переглянути список змінних у поточній сесії варто скористатися <strong><code>ls()</code></strong>:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="intro.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="intro.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;var1&quot; &quot;var2&quot;</code></pre>
 <p>Якщо виникає потреба очистити робочий простір і звільними пам’ять використовується команда <code>rm()</code>. Так, щоб очистити усі змінні можна скористатися <code>rm(list = ls())</code>, якщо ж Ви хочете видалити якусь одну/дві змінних, то просто вкажіть імена:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="intro.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">c</span>(<span class="st">&quot;var1&quot;</span>))</span>
-<span id="cb8-2"><a href="intro.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="intro.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">c</span>(<span class="st">&quot;var1&quot;</span>))</span>
+<span id="cb7-2"><a href="intro.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;var2&quot;</code></pre>
 <p>Таким чином, після виконання коду вище, залишиться лише змінна <code>var2</code>.</p>
 <p>Зберігання образу (<code>image</code>) робочого простору на диск здыйснюэться за допомогою команди <code>save.image("шлях до файлу.RData")</code>, а його зчитування за допомогою <code>load("шлях до файлу.RData")</code>:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="intro.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clear workspace</span></span>
+<span id="cb9-2"><a href="intro.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb9-3"><a href="intro.html#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="intro.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># declare data</span></span>
+<span id="cb9-5"><a href="intro.html#cb9-5" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb9-6"><a href="intro.html#cb9-6" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> a <span class="sc">+</span> <span class="dv">15</span></span>
+<span id="cb9-7"><a href="intro.html#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="intro.html#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Save image to file</span></span>
+<span id="cb9-9"><a href="intro.html#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">save.image</span>(<span class="st">&quot;tmp.RData&quot;</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="intro.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clear workspace</span></span>
 <span id="cb10-2"><a href="intro.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
 <span id="cb10-3"><a href="intro.html#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="intro.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># declare data</span></span>
-<span id="cb10-5"><a href="intro.html#cb10-5" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb10-6"><a href="intro.html#cb10-6" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> a <span class="sc">+</span> <span class="dv">15</span></span>
-<span id="cb10-7"><a href="intro.html#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-8"><a href="intro.html#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Save image to file</span></span>
-<span id="cb10-9"><a href="intro.html#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">save.image</span>(<span class="st">&quot;tmp.RData&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="intro.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clear workspace</span></span>
-<span id="cb11-2"><a href="intro.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
-<span id="cb11-3"><a href="intro.html#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="intro.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># load image to file</span></span>
-<span id="cb11-5"><a href="intro.html#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;tmp.RData&quot;</span>)</span>
-<span id="cb11-6"><a href="intro.html#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="intro.html#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(a)</span></code></pre></div>
+<span id="cb10-4"><a href="intro.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># load image to file</span></span>
+<span id="cb10-5"><a href="intro.html#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;tmp.RData&quot;</span>)</span>
+<span id="cb10-6"><a href="intro.html#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="intro.html#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(a)</span></code></pre></div>
 <pre><code>## [1] 10</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="intro.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(b)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="intro.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(b)</span></code></pre></div>
 <pre><code>## [1] 25</code></pre>
 <p>У прикладі 2 не створюєть жодного параметра, проте вони збережні у файлі сесії.</p>
 <p>Для того аби зберегти та зчитати окремий об’єкт, а не всі елементи сесії у <code>R</code> э спеціальний формат <code>.RDS</code>, який реалізовується методами <code>saveRDS(об'єкт, file="шлях_файлу.rds")</code> та <code>readRDS(file="шлях_файлу.rds")</code>.</p>
@@ -299,7 +299,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4><span class="header-section-number">1.3.1.4</span> Поняття робочого каталогу</h4>
 <p>Робота в будь-якому середовищі передбачає зв’язок із поточним каталогом, відносно якого будуються шляхи до файлів. Звичайно можна писати завжди повний шлях до файла, проте такий підхід є досить негнучким і під час перенесення коду між ПК створює чимало проблем розробникам.</p>
 <p>Для визначення базового каталогу <code>R</code> в поточній сесії використовують команду <code>getwd()</code>. Якщо Ви користуєтеся <code>RStudio</code> та створили проект, то цей каталог буде відповідати повному шляху до папки проекту:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="intro.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="intro.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;E:/Repos/YuRa/r-intro&quot;</code></pre>
 <p>Для того аби змінити поточний робочий каталог використовують команду <code>setwd(шлях)</code>. Після запуску цієї команди функцій <code>getwd()</code> буде вказутивати уже на нову адресу/шлях.</p>
 <div class="alert aler-warning">
@@ -312,42 +312,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>\\</code> - <strong><em>бекслеш</em></strong>, записується як два знаки.</li>
 </ul>
 <p>У прикладі нижче обидва шляхи ведуть до тієї ж папки (<code>drive</code> - буква диска):</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="intro.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;drive:/folder1/folder2/&quot;</span>)</span>
-<span id="cb17-2"><a href="intro.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;drive:</span><span class="sc">\\</span><span class="st">folder1</span><span class="sc">\\</span><span class="st">folder2</span><span class="sc">\\</span><span class="st">&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="intro.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;drive:/folder1/folder2/&quot;</span>)</span>
+<span id="cb16-2"><a href="intro.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;drive:</span><span class="sc">\\</span><span class="st">folder1</span><span class="sc">\\</span><span class="st">folder2</span><span class="sc">\\</span><span class="st">&quot;</span>)</span></code></pre></div>
 <p>Для перегляду інформації про наявні каталоги та файли у поточній робочій папці можна скористатися командою <code>dir()</code> або <code>list.files()</code>:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="intro.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dir</span>()</span></code></pre></div>
-<pre><code>##  [1] &quot;_bookdown.yml&quot;          &quot;_bookdown_files&quot;        &quot;_output.yml&quot;           
-##  [4] &quot;01-chapter1.Rmd&quot;        &quot;01-chapter1_files&quot;      &quot;01-intro_files&quot;        
-##  [7] &quot;02-references.Rmd&quot;      &quot;02-references.utf8.md&quot;  &quot;book.bib&quot;              
-## [10] &quot;css&quot;                    &quot;favicon.ico&quot;            &quot;images&quot;                
-## [13] &quot;inc&quot;                    &quot;index.md&quot;               &quot;index.Rmd&quot;             
-## [16] &quot;index.utf8.md&quot;          &quot;packages.bib&quot;           &quot;preamble.tex&quot;          
-## [19] &quot;r-intro.rds&quot;            &quot;README.md&quot;              &quot;render_commands&quot;       
-## [22] &quot;render23a07c814e58.rds&quot; &quot;RIntro.Rproj&quot;           &quot;tmp.RData&quot;</code></pre>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="intro.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>()</span></code></pre></div>
-<pre><code>##  [1] &quot;_bookdown.yml&quot;          &quot;_bookdown_files&quot;        &quot;_output.yml&quot;           
-##  [4] &quot;01-chapter1.Rmd&quot;        &quot;01-chapter1_files&quot;      &quot;01-intro_files&quot;        
-##  [7] &quot;02-references.Rmd&quot;      &quot;02-references.utf8.md&quot;  &quot;book.bib&quot;              
-## [10] &quot;css&quot;                    &quot;favicon.ico&quot;            &quot;images&quot;                
-## [13] &quot;inc&quot;                    &quot;index.md&quot;               &quot;index.Rmd&quot;             
-## [16] &quot;index.utf8.md&quot;          &quot;packages.bib&quot;           &quot;preamble.tex&quot;          
-## [19] &quot;r-intro.rds&quot;            &quot;README.md&quot;              &quot;render_commands&quot;       
-## [22] &quot;render23a07c814e58.rds&quot; &quot;RIntro.Rproj&quot;           &quot;tmp.RData&quot;</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="intro.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dir</span>()</span></code></pre></div>
+<pre><code>##  [1] &quot;_bookdown.yml&quot;         &quot;_bookdown_files&quot;       &quot;_output.yml&quot;          
+##  [4] &quot;01-chapter1.Rmd&quot;       &quot;01-chapter1_files&quot;     &quot;01-intro_files&quot;       
+##  [7] &quot;02-references.Rmd&quot;     &quot;book.bib&quot;              &quot;css&quot;                  
+## [10] &quot;favicon.ico&quot;           &quot;images&quot;                &quot;inc&quot;                  
+## [13] &quot;index.md&quot;              &quot;index.Rmd&quot;             &quot;index.utf8.md&quot;        
+## [16] &quot;packages.bib&quot;          &quot;preamble.tex&quot;          &quot;r-intro.rds&quot;          
+## [19] &quot;README.md&quot;             &quot;render_commands&quot;       &quot;render1ac8b2b56d1.rds&quot;
+## [22] &quot;RIntro.Rproj&quot;          &quot;tmp.RData&quot;</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="intro.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>()</span></code></pre></div>
+<pre><code>##  [1] &quot;_bookdown.yml&quot;         &quot;_bookdown_files&quot;       &quot;_output.yml&quot;          
+##  [4] &quot;01-chapter1.Rmd&quot;       &quot;01-chapter1_files&quot;     &quot;01-intro_files&quot;       
+##  [7] &quot;02-references.Rmd&quot;     &quot;book.bib&quot;              &quot;css&quot;                  
+## [10] &quot;favicon.ico&quot;           &quot;images&quot;                &quot;inc&quot;                  
+## [13] &quot;index.md&quot;              &quot;index.Rmd&quot;             &quot;index.utf8.md&quot;        
+## [16] &quot;packages.bib&quot;          &quot;preamble.tex&quot;          &quot;r-intro.rds&quot;          
+## [19] &quot;README.md&quot;             &quot;render_commands&quot;       &quot;render1ac8b2b56d1.rds&quot;
+## [22] &quot;RIntro.Rproj&quot;          &quot;tmp.RData&quot;</code></pre>
 </div>
 <div id="допомога-help" class="section level4" number="1.3.1.5">
 <h4><span class="header-section-number">1.3.1.5</span> Допомога (help/?)</h4>
 <p>Для отримання швидкої довідки в <code>R</code> варто скористатися функціє <code>help(назва_об'єкта_або_функції)</code> або <code>?назва_об'єкта_або_функції</code>:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="intro.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get help for intersect() function</span></span>
-<span id="cb22-2"><a href="intro.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(intersect)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="intro.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get help for intersect() function</span></span>
+<span id="cb21-2"><a href="intro.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(intersect)</span></code></pre></div>
 <p>Якщо є потреба отримати інформацію про пакет скористайтеся:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="intro.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="at">package =</span> <span class="st">&quot;stats&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="intro.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="at">package =</span> <span class="st">&quot;stats&quot;</span>)</span></code></pre></div>
 </div>
 </div>
 <div id="робота-з-r-studio" class="section level3" number="1.3.2">
 <h3><span class="header-section-number">1.3.2</span> Робота з R Studio</h3>
 <div id="завантаження-та-інсталяція-rstudio-desktop" class="section level4" number="1.3.2.1">
 <h4><span class="header-section-number">1.3.2.1</span> Завантаження та інсталяція RStudio Desktop</h4>
-<p><strong>RStudio</strong> - це інтегроване середовище розробки для <code>R</code>. Воно включає у себе консоль, підсвічування синтаксису (підказки), прямий запуск коду, інструменти для візуалізації графіків, html-коду, історію виконаних команд, відлагоджування коду, управління робочими просторами, підтримка різних видів розмітки та багато іншого. RStudio має версію з відкритим кодом та комерційну версію для <code>Windows</code>, <code>Linux</code> та <code>Mac</code>, а також веб-версію для серверів на Linux <code>RStudio Server</code> та <code>RStudio Server Pro</code>.</p>
+<p><strong>RStudio</strong> - це інтегроване середовище розробки для <code>R</code>. Воно включає у себе консоль, підсвічування синтаксису (підказки), прямий запуск коду, інструменти для візуалізації графіків, html-коду, історію виконаних команд, відлагоджування коду, управління робочими просторами, підтримка різних видів розмітки та багато іншого. RStudio має версію з відкритим кодом та комерційну версію для <code>Windows</code>, <code>Linux</code> та <code>Mac</code>, а також веб-версію для серверів на Linux <code>RStudio Server</code> та <code>RStudio Server Pro</code> <span class="citation">(<a href="-e-.html#ref-R-studio-site" role="doc-biblioref"><em>RStudio Official Website</em> 2021</a>)</span>.</p>
 <div class="alert alert-info">
 <p><i class="fas fa-2x fa-info-circle fa-alert"></i>
 IDE (<code>integrated development environment</code>) - комплексне програмне рішення для розробки програмного забезпечення. Зазвичай, складається з редактора початкового коду, інструментів для автоматизації складання та відлагодження програм. Більшість сучасних середовищ розробки мають можливість автодоповнення коду. <a href="https://uk.wikipedia.org/wiki/%D0%86%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B5_%D1%81%D0%B5%D1%80%D0%B5%D0%B4%D0%BE%D0%B2%D0%B8%D1%89%D0%B5_%D1%80%D0%BE%D0%B7%D1%80%D0%BE%D0%B1%D0%BA%D0%B8" target="_blank" >Wikipedia</a></p>
@@ -399,24 +399,24 @@ IDE (<code>integrated development environment</code>) - комплексне п�
 <p>Написати програму, що генерує вектор з 20-ти випадкових чисел у межах [1;5], обчислює середнє та суму чисел, а також виводить гістограму частоти кожного значення (скільки разів дане число повторюється у векторі).</p>
 </blockquote>
 <p>Код для генерації 20-ти випадкових чесел у діапазоні [1;5] матиме наступний вигляд:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="intro.html#cb24-1" aria-hidden="true" tabindex="-1"></a>vtr <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">20</span>, <span class="at">replace=</span><span class="cn">TRUE</span>)</span>
-<span id="cb24-2"><a href="intro.html#cb24-2" aria-hidden="true" tabindex="-1"></a>vtr</span></code></pre></div>
-<pre><code>##  [1] 2 2 1 5 1 5 2 2 4 3 5 5 3 3 3 1 2 2 3 5</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="intro.html#cb23-1" aria-hidden="true" tabindex="-1"></a>vtr <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">20</span>, <span class="at">replace=</span><span class="cn">TRUE</span>)</span>
+<span id="cb23-2"><a href="intro.html#cb23-2" aria-hidden="true" tabindex="-1"></a>vtr</span></code></pre></div>
+<pre><code>##  [1] 4 5 3 4 2 2 3 1 5 3 4 5 2 2 1 1 3 4 4 5</code></pre>
 <div class="alert alert-danger">
 <p><i class="fas fa-bell fa-2x fa-alert"></i>
 Результати виконання на Вашому ПК будуть іншими, адже <strong>псевдо</strong>генератор випадкових чисел буде брати іншу “точку відліку” для генерування чисел. Рекомендую перегляду функцію <code>set.seed(точка відліку - число)</code>.</p>
 <p><em>P.S. Також зустрічав у мережі інформацію, що робота <code>set.seed()</code> для <code>R</code> у <code>4+</code> версії може відрізнятися від <code>3+</code>. Після перевірки інформації оновлю даний текст.</em></p>
 </div>
 <p>Обчислення та виведення на консоль інформації про суму та середнє значення:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="intro.html#cb26-1" aria-hidden="true" tabindex="-1"></a>vtr_sum <span class="ot">&lt;-</span> <span class="fu">sum</span>(vtr)</span>
-<span id="cb26-2"><a href="intro.html#cb26-2" aria-hidden="true" tabindex="-1"></a>vtr_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(vtr)</span>
-<span id="cb26-3"><a href="intro.html#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-4"><a href="intro.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;Sum: &quot;</span>, vtr_sum))</span></code></pre></div>
-<pre><code>## [1] &quot;Sum: 59&quot;</code></pre>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="intro.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;Mean: &quot;</span>, vtr_mean))</span></code></pre></div>
-<pre><code>## [1] &quot;Mean: 2.95&quot;</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="intro.html#cb25-1" aria-hidden="true" tabindex="-1"></a>vtr_sum <span class="ot">&lt;-</span> <span class="fu">sum</span>(vtr)</span>
+<span id="cb25-2"><a href="intro.html#cb25-2" aria-hidden="true" tabindex="-1"></a>vtr_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(vtr)</span>
+<span id="cb25-3"><a href="intro.html#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="intro.html#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;Sum: &quot;</span>, vtr_sum))</span></code></pre></div>
+<pre><code>## [1] &quot;Sum: 63&quot;</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="intro.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;Mean: &quot;</span>, vtr_mean))</span></code></pre></div>
+<pre><code>## [1] &quot;Mean: 3.15&quot;</code></pre>
 <p>Виведемо гістограму:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="intro.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(vtr, <span class="at">breaks =</span> <span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="intro.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(vtr, <span class="at">breaks =</span> <span class="dv">5</span>)</span></code></pre></div>
 <p><img src="01-chapter1_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p><em>Примітка. Детальніше про параметри функції <code>hist()</code> можна почитати тут: <a href="https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/hist">https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/hist</a></em>.</p>
 <p>Орієнтовний вигляд вікна <code>RStudio</code> після викоання усіх описаних вище операцій матиме настпуний вигляд:
@@ -430,7 +430,7 @@ IDE (<code>integrated development environment</code>) - комплексне п�
 <p>_*Примітка. Лекційні матеріали даного курсу виконані саме у ноутбуках._</p>
 <p>Використання ноутбуків у навчальному процесі дозволяє описати не лише теоретичний матеріал, але приклади коду, що будуть виконувати безпосередньо під час ознайомлення з лекцією. Також слухач курсу може відредагувати наявний код та перевірити результати його виконання.</p>
 <p>Розгялнемо процес інсталяції та запуску <code>Anaconda</code> (середовище з відкритим кодом для вирішення задач <code>Data Science</code>) та <code>Jupyter Notebook</code> на ПК.</p>
-<p>Для встановлення середовища <code>Anaconda</code> потрібно перейти на сайт проекту та завантажити індивідуальну версію продукту: <a href="https://www.anaconda.com/products/individual" class="uri">https://www.anaconda.com/products/individual</a>.</p>
+<p>Для встановлення середовища <code>Anaconda</code> потрібно перейти на сайт проекту та завантажити індивідуальну версію продукту: <a href="https://www.anaconda.com/products/individual" class="uri">https://www.anaconda.com/products/individual</a> <span class="citation">(<a href="-e-.html#ref-Anaconda-site" role="doc-biblioref"><em>Anaconda. The World’s Most Popular Data Science Platform</em> 2021</a>)</span>.</p>
 <p>_*Примітка. Усі операції у даному курсі виконуються під операційну систему <code>Windows 10 Education</code>_.</p>
 <p>Процес інсталяції середовища Anaconda не відрізняється від стандарного покрокового вставнолення програм у <code>Windows</code>.</p>
 <p>Після запуску <code>Anaconda Navigator</code> для початку потрібно створити нове середовище та налаштувати роботу <code>R</code>: <img src="images/chapter1/anaconda_1.png" alt="Anaconda" /></p>
@@ -450,10 +450,10 @@ IDE (<code>integrated development environment</code>) - комплексне п�
 <img src="images/chapter1/anaconda_6.png" alt="JN" />
 ### Огляд додаткових IDE та сервісів для роботи з R</p>
 <p>Окрім середовищ описаних вище існує ряд досить цікавих інструментів, що роблять досить зручною роботу з <code>R</code>-кодом. Розглянемо ці інструменти.</p>
-<p><strong>Visual Studio Code</strong> - безкоштовний редактор коду від <code>Microsoft</code>, орієнтовний на велику кількість мов програмування та фреймворків. Серед інших іструментів у VS Code доступні також розширення для роботи з <code>R</code>:</p>
+<p><strong>Visual Studio Code</strong> - безкоштовний редактор коду від <code>Microsoft</code>, орієнтовний на велику кількість мов програмування та фреймворків <span class="citation">(<a href="-e-.html#ref-vs-code" role="doc-biblioref"><em>Visual Studio Code</em> 2021</a>)</span>. Серед інших іструментів у VS Code доступні також розширення для роботи з <code>R</code>:</p>
 <p><img src="images/chapter1/vs_code.png" alt="Vs Code" />
-<strong>Visual Studio Community Edition</strong> - безкоштовне середовище розробки від компаній Microsoft. VS створено з самого початку для розробки під платформу .NET та мови програмування C#, VB.NET, F# тощо, але з часом отримало багато розширень, що дозволяють у тому числі, працювати і з проектами в <code>R</code>.</p>
-<p><strong>Google Collab</strong> - онлайн сервіс для роботи з ноутбуками для <code>Data Science</code> від компанії <code>Google</code>:
+<strong>Visual Studio Community Edition</strong> - безкоштовне середовище розробки від компаній Microsoft. VS створено з самого початку для розробки під платформу .NET та мови програмування C#, VB.NET, F# тощо, але з часом отримало багато розширень, що дозволяють у тому числі, працювати і з проектами в <code>R</code> <span class="citation">(<a href="-e-.html#ref-visual-studio" role="doc-biblioref"><em>Visual Studio Community Edition</em> 2021</a>)</span>.</p>
+<p><strong>Google Collab</strong> - онлайн сервіс для роботи з ноутбуками для <code>Data Science</code> від компанії <code>Google</code> <span class="citation">(<a href="-e-.html#ref-google-collab" role="doc-biblioref"><em>Google Colaboratory</em> 2021</a>)</span>:
 <img src="images/chapter1/google_collab.png" alt="Google Collab" />
 <em>Примітка. Код у прикладі вище написаний на <code>Python</code>.</em></p>
 <p><a href="https://kaggle.com"><strong>kaggle.com</strong></a> - сервіс для змагань з <code>Data Science</code> та <code>Machine Learning</code>. Окрім переліку змагань, наборів даних сервіс має досить зручні ноутбуки.</p>
@@ -468,12 +468,12 @@ IDE (<code>integrated development environment</code>) - комплексне п�
 <h3><span class="header-section-number">1.4.1</span> Команди для роботи з пакетами</h3>
 <p>Своєю популярністю <code>R</code> завдячує, у тому числі, і можливості швидко реалізувати досить складні дослідження за допомогою наборів уже готових функції. Такі функції обєднуються у пакети та публікуються вченими, досліджниками та розробниками зі всього світу.</p>
 <p><strong>Пакети в R</strong> - організовані набори методів та класів для виконання вузького набору задач під час програмування на <code>R</code>. Вони містять як функції так і опис способів їх використання, а чтакож дані для відтворення прикладів коду.</p>
-<p>Пакети можуть бути завантажені з офіційного сайту проекту <a href="https://cran.r-project.org/web/packages/available_packages_by_name.html">cran.r-project.org</a> або інших джерел (dev-версії є доступні на <code>github</code>). Завантаження пакетів у <code>R</code> можна здійснювати як з локального диска, так і з серверів у мережі інтернет.</p>
+<p>Пакети можуть бути завантажені з офіційного сайту проекту <a href="https://cran.r-project.org/web/packages/available_packages_by_name.html">cran.r-project.org</a> / <span class="citation">(<a href="-e-.html#ref-R-base" role="doc-biblioref">R Core Team 2020</a>)</span> або інших джерел (dev-версії є доступні на <code>github</code>). Завантаження пакетів у <code>R</code> можна здійснювати як з локального диска, так і з серверів у мережі інтернет.</p>
 <p>Для встановлення пакету використовується команда <strong><code>install.packages()</code></strong>:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="intro.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;fun&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="intro.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;fun&quot;</span>)</span></code></pre></div>
 <p>Для підключення пакету та його використання варто скористатися <code>library()</code>:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="intro.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packageDescription</span>(<span class="st">&quot;fun&quot;</span>)</span>
-<span id="cb32-2"><a href="intro.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="at">package =</span> <span class="st">&quot;fun&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="intro.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packageDescription</span>(<span class="st">&quot;fun&quot;</span>)</span>
+<span id="cb31-2"><a href="intro.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="at">package =</span> <span class="st">&quot;fun&quot;</span>)</span></code></pre></div>
 <div class="alert alert-success">
 <p><i class="fas fa-book fa-2x fa-alert"></i>
 Дуже рекомендую почитати детальніше про пакети у статті на <code>DataCamp</code>:
@@ -507,7 +507,7 @@ IDE (<code>integrated development environment</code>) - комплексне п�
 <!-- ``` -->
 <!-- You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015]. -->
 
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="intro.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setlocale</span>(<span class="st">&quot;LC_CTYPE&quot;</span>, <span class="st">&quot;ukrainian&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="intro.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setlocale</span>(<span class="st">&quot;LC_CTYPE&quot;</span>, <span class="st">&quot;ukrainian&quot;</span>)</span></code></pre></div>
 </div>
 </div>
 </div>
