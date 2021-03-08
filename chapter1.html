@@ -178,7 +178,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3" data-path="chapter2.html"><a href="chapter2.html#chapter23"><i class="fa fa-check"></i><b>2.3</b> Оператори</a>
 <ul>
 <li class="chapter" data-level="2.3.1" data-path="chapter2.html"><a href="chapter2.html#chapter231"><i class="fa fa-check"></i><b>2.3.1</b> Арифметичні оператори</a></li>
+<li class="chapter" data-level="2.3.2" data-path="chapter2.html"><a href="chapter2.html#chapter232"><i class="fa fa-check"></i><b>2.3.2</b> Оператори відношення</a></li>
+<li class="chapter" data-level="2.3.3" data-path="chapter2.html"><a href="chapter2.html#chapter233"><i class="fa fa-check"></i><b>2.3.3</b> Логічні оператори</a></li>
 </ul></li>
+<li class="chapter" data-level="2.4" data-path="chapter2.html"><a href="chapter2.html#chapter24"><i class="fa fa-check"></i><b>2.4</b> Корисні математичні функції</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="chapter2.html"><a href="chapter2.html#chapter241"><i class="fa fa-check"></i><b>2.4.1</b> Заокруглення чисел (round, ceiling, floor, trunc, signif)</a></li>
+<li class="chapter" data-level="2.4.2" data-path="chapter2.html"><a href="chapter2.html#chapter242"><i class="fa fa-check"></i><b>2.4.2</b> Послідовності чисел (seq, rep)</a></li>
+<li class="chapter" data-level="2.4.3" data-path="chapter2.html"><a href="chapter2.html#chapter243"><i class="fa fa-check"></i><b>2.4.3</b> Генерація псевдовипадкових чисел</a></li>
+<li class="chapter" data-level="2.4.4" data-path="chapter2.html"><a href="chapter2.html#chapter244"><i class="fa fa-check"></i><b>2.4.4</b> Інші математичні функції та константи R</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="chapter2.html"><a href="chapter2.html#chapter245"><i class="fa fa-check"></i><b>2.5</b> Введення-виведння даних</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="-e-.html"><a href="-e-.html"><i class="fa fa-check"></i>Джeрела</a></li>
 <li class="divider"></li>
@@ -391,7 +401,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ## [13] &quot;images&quot;                 &quot;inc&quot;                    &quot;index.md&quot;              
 ## [16] &quot;index.Rmd&quot;              &quot;index.utf8.md&quot;          &quot;packages.bib&quot;          
 ## [19] &quot;preamble.tex&quot;           &quot;r-intro.rds&quot;            &quot;README.md&quot;             
-## [22] &quot;render_commands&quot;        &quot;render224464c21cf9.rds&quot; &quot;RIntro.Rproj&quot;          
+## [22] &quot;render_commands&quot;        &quot;render16782bae4470.rds&quot; &quot;RIntro.Rproj&quot;          
 ## [25] &quot;tmp.RData&quot;</code></pre>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="chapter1.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>()</span></code></pre></div>
 <pre><code>##  [1] &quot;_bookdown.yml&quot;          &quot;_bookdown_files&quot;        &quot;_output.yml&quot;           
@@ -401,7 +411,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ## [13] &quot;images&quot;                 &quot;inc&quot;                    &quot;index.md&quot;              
 ## [16] &quot;index.Rmd&quot;              &quot;index.utf8.md&quot;          &quot;packages.bib&quot;          
 ## [19] &quot;preamble.tex&quot;           &quot;r-intro.rds&quot;            &quot;README.md&quot;             
-## [22] &quot;render_commands&quot;        &quot;render224464c21cf9.rds&quot; &quot;RIntro.Rproj&quot;          
+## [22] &quot;render_commands&quot;        &quot;render16782bae4470.rds&quot; &quot;RIntro.Rproj&quot;          
 ## [25] &quot;tmp.RData&quot;</code></pre>
 </div>
 <div id="chapter1315" class="section level4" number="1.3.1.5">
@@ -502,7 +512,7 @@ IDE (<code>integrated development environment</code>) - комплексне п�
 <p>Код для генерації 20-ти випадкових чесел у діапазоні [1;5] матиме наступний вигляд:</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="chapter1.html#cb23-1" aria-hidden="true" tabindex="-1"></a>vtr <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">20</span>, <span class="at">replace=</span><span class="cn">TRUE</span>)</span>
 <span id="cb23-2"><a href="chapter1.html#cb23-2" aria-hidden="true" tabindex="-1"></a>vtr</span></code></pre></div>
-<pre><code>##  [1] 3 5 2 1 2 3 4 4 5 5 1 1 5 5 3 3 1 5 4 2</code></pre>
+<pre><code>##  [1] 1 1 1 5 5 2 5 2 4 2 3 3 5 2 3 1 4 3 4 4</code></pre>
 <div class="alert alert-danger">
 <p><i class="fas fa-bell fa-2x fa-alert"></i>
 Результати виконання на Вашому ПК будуть іншими, адже <strong>псевдо</strong>генератор випадкових чисел буде брати іншу “точку відліку” для генерування чисел. Рекомендую перегляду функцію <code>set.seed(точка відліку - число)</code>.</p>
@@ -513,9 +523,9 @@ IDE (<code>integrated development environment</code>) - комплексне п�
 <span id="cb25-2"><a href="chapter1.html#cb25-2" aria-hidden="true" tabindex="-1"></a>vtr_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(vtr)</span>
 <span id="cb25-3"><a href="chapter1.html#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-4"><a href="chapter1.html#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;Sum: &quot;</span>, vtr_sum))</span></code></pre></div>
-<pre><code>## [1] &quot;Sum: 64&quot;</code></pre>
+<pre><code>## [1] &quot;Sum: 60&quot;</code></pre>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="chapter1.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;Mean: &quot;</span>, vtr_mean))</span></code></pre></div>
-<pre><code>## [1] &quot;Mean: 3.2&quot;</code></pre>
+<pre><code>## [1] &quot;Mean: 3&quot;</code></pre>
 <p>Виведемо гістограму:</p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="chapter1.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(vtr, <span class="at">breaks =</span> <span class="dv">5</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:unnamed-chunk-22"></span>
@@ -708,7 +718,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["r-intro.epub", "r-intro.pdf", "r-intro.docx"],
+"download": ["r-intro.pdf", "r-intro.epub"],
 "toc": {
 "collapse": "subsection",
 "scroll_highlight": true
