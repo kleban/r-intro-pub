@@ -262,12 +262,12 @@ dir()
 ##  [1] "_bookdown.yml"          "_bookdown_files"        "_output.yml"           
 ##  [4] "01-chapter1.Rmd"        "01-chapter1_files"      "01-intro_files"        
 ##  [7] "02-chapter2.Rmd"        "02-chapter2_files"      "02-references.Rmd"     
-## [10] "book.bib"               "css"                    "favicon.ico"           
-## [13] "images"                 "inc"                    "index.md"              
-## [16] "index.Rmd"              "index.utf8.md"          "packages.bib"          
-## [19] "preamble.tex"           "r-intro.rds"            "README.md"             
-## [22] "render_commands"        "render16782bae4470.rds" "RIntro.Rproj"          
-## [25] "tmp.RData"
+## [10] "03-chapter3.Rmd"        "book.bib"               "css"                   
+## [13] "favicon.ico"            "images"                 "inc"                   
+## [16] "index.md"               "index.Rmd"              "index.utf8.md"         
+## [19] "packages.bib"           "preamble.tex"           "r-intro.rds"           
+## [22] "README.md"              "render_commands"        "render181c26b22fd6.rds"
+## [25] "RIntro.Rproj"           "tmp.RData"
 ```
 
 ```r
@@ -278,12 +278,12 @@ list.files()
 ##  [1] "_bookdown.yml"          "_bookdown_files"        "_output.yml"           
 ##  [4] "01-chapter1.Rmd"        "01-chapter1_files"      "01-intro_files"        
 ##  [7] "02-chapter2.Rmd"        "02-chapter2_files"      "02-references.Rmd"     
-## [10] "book.bib"               "css"                    "favicon.ico"           
-## [13] "images"                 "inc"                    "index.md"              
-## [16] "index.Rmd"              "index.utf8.md"          "packages.bib"          
-## [19] "preamble.tex"           "r-intro.rds"            "README.md"             
-## [22] "render_commands"        "render16782bae4470.rds" "RIntro.Rproj"          
-## [25] "tmp.RData"
+## [10] "03-chapter3.Rmd"        "book.bib"               "css"                   
+## [13] "favicon.ico"            "images"                 "inc"                   
+## [16] "index.md"               "index.Rmd"              "index.utf8.md"         
+## [19] "packages.bib"           "preamble.tex"           "r-intro.rds"           
+## [22] "README.md"              "render_commands"        "render181c26b22fd6.rds"
+## [25] "RIntro.Rproj"           "tmp.RData"
 ```
 
 #### Допомога (help/?) {#chapter1315}
@@ -394,7 +394,7 @@ vtr
 ```
 
 ```
-##  [1] 1 1 1 5 5 2 5 2 4 2 3 3 5 2 3 1 4 3 4 4
+##  [1] 5 3 4 2 4 4 5 3 1 3 4 4 4 3 5 2 4 2 1 3
 ```
 
 <div class="alert alert-danger">
@@ -415,7 +415,7 @@ print(paste0("Sum: ", vtr_sum))
 ```
 
 ```
-## [1] "Sum: 60"
+## [1] "Sum: 66"
 ```
 
 ```r
@@ -423,7 +423,7 @@ print(paste0("Mean: ", vtr_mean))
 ```
 
 ```
-## [1] "Mean: 3"
+## [1] "Mean: 3.3"
 ```
 
 Виведемо гістограму:
