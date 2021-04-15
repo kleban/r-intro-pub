@@ -68,32 +68,28 @@ R має ряд корисних властивостей, серед яких �
 
 На сайті обираємо завантаження `R` для потрібної операційної системи. У межах курсу ми вокристовуємо `ОС Windows`, проте на синтаксис мови програмування та процес написання коду це не впливає: 
 
-<div class="figure">
-<img src="images/chapter1/r_gui_1.png" alt="Завантаження R. Вибір ОС" width="366" />
-<p class="caption">(\#fig:unnamed-chunk-1)Завантаження R. Вибір ОС</p>
-</div>
+\begin{figure}
+\includegraphics[width=10.15in]{images/chapter1/r_gui_1} \caption{Завантаження R. Вибір ОС}(\#fig:unnamed-chunk-1)
+\end{figure}
 
 У наступному вікні клікаємо на **install R for the first time**:
 
 
-<div class="figure">
-<img src="images/chapter1/r_gui_2.png" alt="Завантаження R. Перша інсталяція" width="372" />
-<p class="caption">(\#fig:unnamed-chunk-2)Завантаження R. Перша інсталяція</p>
-</div>
+\begin{figure}
+\includegraphics[width=10.32in]{images/chapter1/r_gui_2} \caption{Завантаження R. Перша інсталяція}(\#fig:unnamed-chunk-2)
+\end{figure}
 
 Далі обираємо **Download R 4.X.X for Windows**, де `4.X.X` версія `R`, яка може бути відмінною на момент вивчення курсу: 
 
-<div class="figure">
-<img src="images/chapter1/r_gui_3.png" alt="Завантаження R. Завантаження версії для ОС" width="393" />
-<p class="caption">(\#fig:unnamed-chunk-3)Завантаження R. Завантаження версії для ОС</p>
-</div>
+\begin{figure}
+\includegraphics[width=10.92in]{images/chapter1/r_gui_3} \caption{Завантаження R. Завантаження версії для ОС}(\#fig:unnamed-chunk-3)
+\end{figure}
 
 Після завантаження файлу інсталяції потрібно його запустити. Зазвичай завантажений файл можна побачити у лівому нижному кутку браузера або у розділі "Завантаження" Вашого браузера. Наприклад, у браузері `Google Chrome` знайти цей пункт меню так:
 
-<div class="figure">
-<img src="images/chapter1/chrome_download_button.png" alt="Завантаження R. Розділ &quot;Завантаження&quot; у Google Chrome" width="164" />
-<p class="caption">(\#fig:unnamed-chunk-4)Завантаження R. Розділ "Завантаження" у Google Chrome</p>
-</div>
+\begin{figure}
+\includegraphics[width=4.56in]{images/chapter1/chrome_download_button} \caption{Завантаження R. Розділ "Завантаження" у Google Chrome}(\#fig:unnamed-chunk-4)
+\end{figure}
 
 Процес інсталяції ПЗ не відрізняється від інших програм і детального опису не потребує. Основним тут є запам'ятати шлях встановлення проекту або "відмітити галочками" пункти щодо публікації на *Робочий стіл* чи у меню швидкого доступу ярликів  для того, щоб знайти файли запуску. 
 
@@ -105,10 +101,9 @@ R має ряд корисних властивостей, серед яких �
 
 Вигляд вікна `R GUI` зображено нижче:
 
-<div class="figure">
-<img src="images/chapter1/r_gui_4.png" alt="Вигляд головного вікна RGui" width="346" />
-<p class="caption">(\#fig:unnamed-chunk-5)Вигляд головного вікна RGui</p>
-</div>
+\begin{figure}
+\includegraphics[width=9.61in]{images/chapter1/r_gui_4} \caption{Вигляд головного вікна RGui}(\#fig:unnamed-chunk-5)
+\end{figure}
 
 <div class="alert alert-info">
 <i class="fas fa-info-circle fa-alert fa-2x"></i>
@@ -119,10 +114,9 @@ R має ряд корисних властивостей, серед яких �
 
 Результати виконання команд зберігаються у памяті програми і можуть бути використані у наступних блоках коду:
 
-<div class="figure">
-<img src="images/chapter1/r_gui_5.png" alt="Вигляд консолі для команд RGui" width="314" />
-<p class="caption">(\#fig:unnamed-chunk-6)Вигляд консолі для команд RGui</p>
-</div>
+\begin{figure}
+\includegraphics[width=8.71in]{images/chapter1/r_gui_5} \caption{Вигляд консолі для команд RGui}(\#fig:unnamed-chunk-6)
+\end{figure}
 Середовище `R GUI` має широкий спектр функцій і дозволяє написати будь-якого рівня складності проекти на R, проте він є лише базовою графічною обгорткою для `R`. Розглянемо інші зручніші середовища для написання `R`-коду.
 
 #### Поняття робочого простору {#chapter1313}
@@ -258,15 +252,15 @@ dir()
 ```
 
 ```
-##  [1] "_bookdown.yml"         "_bookdown_files"       "_output.yml"          
-##  [4] "01-chapter1.Rmd"       "01-chapter1_files"     "01-intro_files"       
-##  [7] "02-chapter2.Rmd"       "02-chapter2_files"     "03-chapter3.Rmd"      
-## [10] "06-chapter6.Rmd"       "07-references.Rmd"     "book.bib"             
-## [13] "css"                   "favicon.ico"           "images"               
-## [16] "inc"                   "index.md"              "index.Rmd"            
-## [19] "index.utf8.md"         "packages.bib"          "preamble.tex"         
-## [22] "r-intro.log"           "r-intro.rds"           "README.md"            
-## [25] "render_commands"       "renderba01f062385.rds" "RIntro.Rproj"         
+##  [1] "_bookdown.yml"          "_bookdown_files"        "_output.yml"           
+##  [4] "01-chapter1.Rmd"        "01-chapter1_files"      "01-intro_files"        
+##  [7] "02-chapter2.Rmd"        "02-chapter2_files"      "03-chapter3.Rmd"       
+## [10] "06-chapter6.Rmd"        "07-references.Rmd"      "book.bib"              
+## [13] "css"                    "favicon.ico"            "images"                
+## [16] "inc"                    "index.md"               "index.Rmd"             
+## [19] "index.utf8.md"          "packages.bib"           "preamble.tex"          
+## [22] "r-intro.log"            "r-intro.rds"            "README.md"             
+## [25] "render_commands"        "render1c1c527a163e.rds" "RIntro.Rproj"          
 ## [28] "tmp.RData"
 ```
 
@@ -275,15 +269,15 @@ list.files()
 ```
 
 ```
-##  [1] "_bookdown.yml"         "_bookdown_files"       "_output.yml"          
-##  [4] "01-chapter1.Rmd"       "01-chapter1_files"     "01-intro_files"       
-##  [7] "02-chapter2.Rmd"       "02-chapter2_files"     "03-chapter3.Rmd"      
-## [10] "06-chapter6.Rmd"       "07-references.Rmd"     "book.bib"             
-## [13] "css"                   "favicon.ico"           "images"               
-## [16] "inc"                   "index.md"              "index.Rmd"            
-## [19] "index.utf8.md"         "packages.bib"          "preamble.tex"         
-## [22] "r-intro.log"           "r-intro.rds"           "README.md"            
-## [25] "render_commands"       "renderba01f062385.rds" "RIntro.Rproj"         
+##  [1] "_bookdown.yml"          "_bookdown_files"        "_output.yml"           
+##  [4] "01-chapter1.Rmd"        "01-chapter1_files"      "01-intro_files"        
+##  [7] "02-chapter2.Rmd"        "02-chapter2_files"      "03-chapter3.Rmd"       
+## [10] "06-chapter6.Rmd"        "07-references.Rmd"      "book.bib"              
+## [13] "css"                    "favicon.ico"            "images"                
+## [16] "inc"                    "index.md"               "index.Rmd"             
+## [19] "index.utf8.md"          "packages.bib"           "preamble.tex"          
+## [22] "r-intro.log"            "r-intro.rds"            "README.md"             
+## [25] "render_commands"        "render1c1c527a163e.rds" "RIntro.Rproj"          
 ## [28] "tmp.RData"
 ```
 
@@ -317,17 +311,15 @@ IDE (`integrated development environment`) - комплексне програм
 1. У головному меню сайту обрати `Products > RStudio`.
 2. Знаходимо на сторінці кнопку для завантаження програми `RStudio Desktop` версії `Open Source` та натискаємо **DOWNLOAD RSTUDIO DESKTOP**:
 
-<div class="figure">
-<img src="images/chapter1/rstudio_1.png" alt="Вибір версії RStudio Desktop" width="410" />
-<p class="caption">(\#fig:unnamed-chunk-13)Вибір версії RStudio Desktop</p>
-</div>
+\begin{figure}
+\includegraphics[width=11.4in]{images/chapter1/rstudio_1} \caption{Вибір версії RStudio Desktop}(\#fig:unnamed-chunk-13)
+\end{figure}
 
 3. Далі обираємо завантаження безкоштовної версії `RStudio Desktop` з наданого переліку:
 
-<div class="figure">
-<img src="images/chapter1/rstudio_2.png" alt="Завантаження RStudio Desktop" width="482" />
-<p class="caption">(\#fig:unnamed-chunk-14)Завантаження RStudio Desktop</p>
-</div>
+\begin{figure}
+\includegraphics[width=13.38in]{images/chapter1/rstudio_2} \caption{Завантаження RStudio Desktop}(\#fig:unnamed-chunk-14)
+\end{figure}
 
 Після завантаження запускаємо інсталятор `RStudio`. Особливих кроків у цьому процесі немає.
 
@@ -337,16 +329,14 @@ IDE (`integrated development environment`) - комплексне програм
 * Змінні середовища (`Environment`) (справа зверху) + Історія команд (`History`), Зєднання з зовнішніми ресурсами даних, наприклад, бази даних (`Connections`), навчальна інструкція (`Tutorial`).
 * Файли каталогу або проекту (`Files`), Інстальовані пакети (`Packages`), Допомога (`Help`), Візуалізація результатів (`Plots`, `Viewer`).
 
-<div class="figure">
-<img src="images/chapter1/rstudio_3.png" alt="Головне вікно RStudio Desktop" width="499" />
-<p class="caption">(\#fig:unnamed-chunk-15)Головне вікно RStudio Desktop</p>
-</div>
+\begin{figure}
+\includegraphics[width=13.86in]{images/chapter1/rstudio_3} \caption{Головне вікно RStudio Desktop}(\#fig:unnamed-chunk-15)
+\end{figure}
 
 Для першої демонстрації роботи виконаємо у консолі 2 рядки коду:
-<div class="figure">
-<img src="images/chapter1/rstudio_4.png" alt="Приклад написання коду в RStudio Desktop" width="338" />
-<p class="caption">(\#fig:unnamed-chunk-16)Приклад написання коду в RStudio Desktop</p>
-</div>
+\begin{figure}
+\includegraphics[width=9.4in]{images/chapter1/rstudio_4} \caption{Приклад написання коду в RStudio Desktop}(\#fig:unnamed-chunk-16)
+\end{figure}
 
 Перший рядок з кодом `data <- c(3,7,1,6,3,4,5,4,2)` створює у пам'яті колекцію чисел. Зверніть увагу, що у блоці **Environments** відобраюаться усі змінні, що уснують у поточному робочому просторі (про це буде далі).
 
@@ -366,24 +356,21 @@ IDE (`integrated development environment`) - комплексне програм
 
 Для початку оберемо з верхнього меню пункт `File > New Project`. У вікні вибору способу створення проекту клікаємо `New Directory`. Такий спосіб передбачає, що жодного файлу проекту поки не існує або ми пізніше туди скопіюємо уже готовий код.
 
-<div class="figure">
-<img src="images/chapter1/rstudio_6.png" alt="RStudio Desktop. Новий проект" width="271" />
-<p class="caption">(\#fig:unnamed-chunk-17)RStudio Desktop. Новий проект</p>
-</div>
+\begin{figure}
+\includegraphics[width=7.53in]{images/chapter1/rstudio_6} \caption{RStudio Desktop. Новий проект}(\#fig:unnamed-chunk-17)
+\end{figure}
 
 На наступному кроці обираємо `New Project`: 
 
-<div class="figure">
-<img src="images/chapter1/rstudio_7.png" alt="RStudio Desktop. Новий проект. Тип проекту" width="270" />
-<p class="caption">(\#fig:unnamed-chunk-18)RStudio Desktop. Новий проект. Тип проекту</p>
-</div>
+\begin{figure}
+\includegraphics[width=7.5in]{images/chapter1/rstudio_7} \caption{RStudio Desktop. Новий проект. Тип проекту}(\#fig:unnamed-chunk-18)
+\end{figure}
 
 Після кліку на `Create Project` буде створено папку за попередньо обраним шляхом. Для запуску проекту або швидкого перемикання між проектами можна скористатися як пунктами головного меню, так і підменю проектів справа. Також відкрити проект можна запуском файлу `*.Rproj` у провіднику `Windows`.
 
-<div class="figure">
-<img src="images/chapter1/rstudio_8.png" alt="RStudio Desktop. Новий проект" width="271" />
-<p class="caption">(\#fig:unnamed-chunk-19)RStudio Desktop. Новий проект</p>
-</div>
+\begin{figure}
+\includegraphics[width=7.53in]{images/chapter1/rstudio_8} \caption{RStudio Desktop. Новий проект}(\#fig:unnamed-chunk-19)
+\end{figure}
 
 Щоб додати новий файл з кодом `R` потрібно обрати з головного меню `File > New file > R Script` або скористатися командою `Ctrl+Shift+N`. Новий файл буде створено з назвою `Untitled[X]`, тому рекомендую одразу його зберегти, наприклад, як `TestCode.R`
 
@@ -400,7 +387,7 @@ vtr
 ```
 
 ```
-##  [1] 1 1 2 3 1 4 2 4 5 4 2 4 2 2 3 4 2 1 5 3
+##  [1] 5 1 1 3 3 2 4 3 1 3 4 4 3 4 4 1 4 2 5 3
 ```
 
 <div class="alert alert-danger">
@@ -421,7 +408,7 @@ print(paste0("Sum: ", vtr_sum))
 ```
 
 ```
-## [1] "Sum: 55"
+## [1] "Sum: 60"
 ```
 
 ```r
@@ -429,7 +416,7 @@ print(paste0("Mean: ", vtr_mean))
 ```
 
 ```
-## [1] "Mean: 2.75"
+## [1] "Mean: 3"
 ```
 
 Виведемо гістограму:
@@ -439,19 +426,15 @@ print(paste0("Mean: ", vtr_mean))
 hist(vtr, breaks = 5)
 ```
 
-<div class="figure">
-<img src="01-chapter1_files/figure-html/unnamed-chunk-22-1.png" alt="Приклад візуалізації гістрограми в R" width="672" />
-<p class="caption">(\#fig:unnamed-chunk-22)Приклад візуалізації гістрограми в R</p>
-</div>
+![(\#fig:unnamed-chunk-22)Приклад візуалізації гістрограми в R](01-chapter1_files/figure-latex/unnamed-chunk-22-1.pdf) 
 
 _Примітка. Детальніше про параметри функції `hist()` можна почитати тут:  [https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/hist](https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/hist)_.
 
 Орієнтовний вигляд вікна `RStudio` після викоання усіх описаних вище операцій матиме настпуний вигляд:
 
-<div class="figure">
-<img src="images/chapter1/rstudio_10.png" alt="RStudio Desktop. Перегляд змінних" width="385" />
-<p class="caption">(\#fig:unnamed-chunk-23)RStudio Desktop. Перегляд змінних</p>
-</div>
+\begin{figure}
+\includegraphics[width=10.69in]{images/chapter1/rstudio_10} \caption{RStudio Desktop. Перегляд змінних}(\#fig:unnamed-chunk-23)
+\end{figure}
 
 Варто звернути увагу на виділений блок `Environment`, де можна переглянути усі доступні змінні, що є на даний момент у `пам'яті`. До цих параметрів можна звертатися у коді чи з консолі у будь, який момент. _Детальну інформацію про робоче середовище розглянуто нижче._
 
@@ -477,31 +460,27 @@ _*Примітка. Усі операції у даному курсі вико�
 
 Для початку потрібно перейти на вкладку `Environments` та натиснути `Create`:
 
-<div class="figure">
-<img src="images/chapter1/anaconda_2.png" alt="Anaconda. Головне вікно" width="508" />
-<p class="caption">(\#fig:unnamed-chunk-24)Anaconda. Головне вікно</p>
-</div>
+\begin{figure}
+\includegraphics[width=14.12in]{images/chapter1/anaconda_2} \caption{Anaconda. Головне вікно}(\#fig:unnamed-chunk-24)
+\end{figure}
 
 У вікні, що відкрилося потрібно відмітити [x] вставновлення інструментів для роботи з `R`:
 
-<div class="figure">
-<img src="images/chapter1/anaconda_3.png" alt="Anaconda. Створення нового середовища на основі R" width="234" />
-<p class="caption">(\#fig:unnamed-chunk-25)Anaconda. Створення нового середовища на основі R</p>
-</div>
+\begin{figure}
+\includegraphics[width=6.49in]{images/chapter1/anaconda_3} \caption{Anaconda. Створення нового середовища на основі R}(\#fig:unnamed-chunk-25)
+\end{figure}
 
 Після встановлення R-інструментів оптрібно переключитися на вкладку `Home` та робочий простір:
 
-<div class="figure">
-<img src="images/chapter1/anaconda_4.png" alt="Anaconda. Зміна середовища" width="528" />
-<p class="caption">(\#fig:unnamed-chunk-26)Anaconda. Зміна середовища</p>
-</div>
+\begin{figure}
+\includegraphics[width=14.67in]{images/chapter1/anaconda_4} \caption{Anaconda. Зміна середовища}(\#fig:unnamed-chunk-26)
+\end{figure}
 
 Після завантаження робочого простору оберіть `Launch` для запуску `Jupyter Notebook` з переліку встановлених засобів. `Jupyter Notebook` буде запущено у браузері за замовчеванням Вашого ПК. Відкрити ноутбук можна обравши потрібний файл, а створити новий у меню справа `New` > `Notebook` > `R`:
 
-<div class="figure">
-<img src="images/chapter1/anaconda_6.png" alt="Jupyter Notebook. Створення нового ноутбука" width="347" />
-<p class="caption">(\#fig:unnamed-chunk-27)Jupyter Notebook. Створення нового ноутбука</p>
-</div>
+\begin{figure}
+\includegraphics[width=9.64in]{images/chapter1/anaconda_6} \caption{Jupyter Notebook. Створення нового ноутбука}(\#fig:unnamed-chunk-27)
+\end{figure}
 
 ### Огляд додаткових IDE та сервісів для роботи з R {#chapter134}
 
@@ -509,28 +488,25 @@ _*Примітка. Усі операції у даному курсі вико�
 
 **Visual Studio Code** - безкоштовний редактор коду від `Microsoft`, орієнтовний на велику кількість мов програмування та фреймворків [@vs-code]. Серед інших іструментів у VS Code доступні також розширення для роботи з `R`:
 
-<div class="figure">
-<img src="images/chapter1/vs_code.png" alt="Visual Studio Code. Інсталяція RTools" width="451" />
-<p class="caption">(\#fig:unnamed-chunk-28)Visual Studio Code. Інсталяція RTools</p>
-</div>
+\begin{figure}
+\includegraphics[width=12.53in]{images/chapter1/vs_code} \caption{Visual Studio Code. Інсталяція RTools}(\#fig:unnamed-chunk-28)
+\end{figure}
 
 **Visual Studio Community Edition** - безкоштовне середовище розробки від компаній Microsoft. VS створено з самого початку для розробки під платформу .NET та мови програмування C#, VB.NET, F# тощо, але з часом отримало багато розширень, що дозволяють у тому числі, працювати і з проектами в `R` [@visual-studio].
 
 **Google Collab** - онлайн сервіс для роботи з ноутбуками для `Data Science` від компанії `Google` [@google-collab]:
 
-<div class="figure">
-<img src="images/chapter1/google_collab.png" alt="Google Collab" width="360" />
-<p class="caption">(\#fig:unnamed-chunk-29)Google Collab</p>
-</div>
+\begin{figure}
+\includegraphics[width=9.99in]{images/chapter1/google_collab} \caption{Google Collab}(\#fig:unnamed-chunk-29)
+\end{figure}
 
 _Примітка. Код у прикладі вище написаний на `Python`._
 
 [**kaggle.com**](https://kaggle.com) - сервіс для змагань з `Data Science` та `Machine Learning`. Окрім переліку змагань, наборів даних сервіс має досить зручні ноутбуки.
 
-<div class="figure">
-<img src="images/chapter1/kaggle.png" alt="Kaggle.com" width="429" />
-<p class="caption">(\#fig:unnamed-chunk-30)Kaggle.com</p>
-</div>
+\begin{figure}
+\includegraphics[width=11.92in]{images/chapter1/kaggle} \caption{Kaggle.com}(\#fig:unnamed-chunk-30)
+\end{figure}
 
 Загалом сервісів та середовищ для розробки в `R` існує досить багато і їх кількість зростає, але це не впливає на принципи написання коду та роботу з даними.
 
@@ -572,30 +548,26 @@ help(package = "fun")
 
 Для інсталяції та оновлення пакетів можна скористатися меню `Tools`:
 
-<div class="figure">
-<img src="images/chapter1/packages_1.png" alt="RStudio Desktop. Меню інсталяції пакетів" width="380" />
-<p class="caption">(\#fig:unnamed-chunk-31)RStudio Desktop. Меню інсталяції пакетів</p>
-</div>
+\begin{figure}
+\includegraphics[width=10.57in]{images/chapter1/packages_1} \caption{RStudio Desktop. Меню інсталяції пакетів}(\#fig:unnamed-chunk-31)
+\end{figure}
 
 Після вибору `Install Packages...` відкриється вікно, де можна обрати як джерело інсталяції пакету так і сам пакет з переліку, ввівши кілька перших букв його назви: 
 
-<div class="figure">
-<img src="images/chapter1/packages_2.png" alt="RStudio Desktop. Вибір пакету для інсталяції" width="384" />
-<p class="caption">(\#fig:unnamed-chunk-32)RStudio Desktop. Вибір пакету для інсталяції</p>
-</div>
+\begin{figure}
+\includegraphics[width=10.65in]{images/chapter1/packages_2} \caption{RStudio Desktop. Вибір пакету для інсталяції}(\#fig:unnamed-chunk-32)
+\end{figure}
 
 `RStudio` дозволяє також переглянути інстальовані пакети/бібліотеки, розроблені іншими користувачами та завантажені у пам'ять ("галочка" навпроти назви пакету):
 
-<div class="figure">
-<img src="images/chapter1/packages_3.png" alt="RStudio Desktop. Перегляд інстальованих пакетів" width="143" />
-<p class="caption">(\#fig:unnamed-chunk-33)RStudio Desktop. Перегляд інстальованих пакетів</p>
-</div>
+\begin{figure}
+\includegraphics[width=3.97in]{images/chapter1/packages_3} \caption{RStudio Desktop. Перегляд інстальованих пакетів}(\#fig:unnamed-chunk-33)
+\end{figure}
 
 Доступ до функцій та інших елементів пакету можна здійснювати використавши запис `назва_пакету::назва_функції()` без підключення бібліотеки за допомогою `library()`:
 
-<div class="figure">
-<img src="images/chapter1/packages_4.png" alt="RStudio Desktop. Приклад використання пакету `fun`" width="382" />
-<p class="caption">(\#fig:unnamed-chunk-34)RStudio Desktop. Приклад використання пакету `fun`</p>
-</div>
+\begin{figure}
+\includegraphics[width=10.62in]{images/chapter1/packages_4} \caption{RStudio Desktop. Приклад використання пакету `fun`}(\#fig:unnamed-chunk-34)
+\end{figure}
 
 Користувачі можуть не тільки завантажувати існуючі пакети,але істворювати власні та роботи їх доступними для дослідників зі всього світу.
