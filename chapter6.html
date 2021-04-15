@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Джeрела | Вступ до R</title>
+  <title>Розділ 4 Приклади задач та їх розв’язки | Вступ до R</title>
   <meta name="description" content="Курс вступ до програмування в R, Проект DataClass" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Джeрела | Вступ до R" />
+  <meta property="og:title" content="Розділ 4 Приклади задач та їх розв’язки | Вступ до R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="images/cover.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="kleban/r-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Джeрела | Вступ до R" />
+  <meta name="twitter:title" content="Розділ 4 Приклади задач та їх розв’язки | Вступ до R" />
   
   <meta name="twitter:description" content="Курс вступ до програмування в R, Проект DataClass" />
   <meta name="twitter:image" content="images/cover.png" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="prev" href="chapter6.html"/>
-
+<link rel="prev" href="chapter3.html"/>
+<link rel="next" href="-e-.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -235,30 +235,114 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="джeрела" class="section level1 unnumbered">
-<h1>Джeрела</h1>
+<div id="chapter6" class="section level1" number="4">
+<h1><span class="header-section-number">Розділ 4</span> Приклади задач та їх розв’язки</h1>
+<hr />
+<ul>
+<li><a href="chapter6.html#chapter61">Задачі</a>
+<ul>
+<li><a href="chapter6.html#chapter611">Послідовності</a></li>
+</ul></li>
+<li><a href="chapter6.html#chapter62">Рішення задач</a>
+<ul>
+<li><a href="chapter6.html#chapter621">Послідовності</a></li>
+</ul></li>
+</ul>
+<hr />
+<div id="chapter61" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Задачі</h2>
+<div id="chapter611" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Послідовності</h3>
+<div id="task1" class="section level4" number="4.1.1.1">
+<h4><span class="header-section-number">4.1.1.1</span> Задача</h4>
+<p>Написати програму, що обчислює <span class="math inline">\(y = (x+2)^2 + ln(x)\)</span>, де <span class="math inline">\(x\)</span> число з послідовності <code>100, 105, 110, ..., 200</code>. Результат вивести у вигляді <code>data.fame</code> з колонками <span class="math inline">\(X\)</span> та <span class="math inline">\(Y\)</span>.</p>
+</div>
+<div id="task2" class="section level4" number="4.1.1.2">
+<h4><span class="header-section-number">4.1.1.2</span> Задача</h4>
+<p>Написати програму, що обчислює <span class="math inline">\(y = \frac{\sqrt{x+2}}{z}\)</span>, де <span class="math inline">\(x\)</span> число з послідовності <code>10, 15, 20, ..., 100</code>, а <span class="math inline">\(z\)</span> - випадкові значення з діапазону <code>[-10, 10]</code>, що відповідає кількості елементів у <span class="math inline">\(x\)</span>. Результат вивести у вигляді <code>data.fame</code> з колонками <span class="math inline">\(X\)</span>, <span class="math inline">\(Z\)</span> та <span class="math inline">\(Y\)</span>.</p>
+</div>
+<div id="task3" class="section level4" number="4.1.1.3">
+<h4><span class="header-section-number">4.1.1.3</span> Задача</h4>
+<p>Без використання спеціальних функцій написати програму, що сортує вектор за зростанням та спаданням. Елементи вектора є випадковими числами з діапазону <code>[10,100)</code>. Кількість елементів у векторі <code>10</code>.</p>
+</div>
+<div id="task4" class="section level4" number="4.1.1.4">
+<h4><span class="header-section-number">4.1.1.4</span> Задача</h4>
+<p>Відсортувати вектор таким чином, щоб всі додатні елементи знаходилися на початку, а всі від’ємні – вкінці, і при цьому зберігся початковий порядок елементів в обох групах. Елементи вектора є випадковими числами з діапазону <code>[-100,100]</code>. Кількість елементів у векторі <code>10</code>.</p>
+<p>Наприклад, якщо початковий вектор <code>x</code> складається з елементів:</p>
+<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="chapter6.html#cb157-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">10</span>, <span class="sc">-</span><span class="dv">8</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="sc">-</span><span class="dv">9</span>)</span></code></pre></div>
+<p>то після “сортування” він матиме вигляд:</p>
+<pre><code>## [1]  1 10  5  4 -5 -8 -2 -9</code></pre>
+</div>
+<div id="task5" class="section level4" number="4.1.1.5">
+<h4><span class="header-section-number">4.1.1.5</span> Задача</h4>
+<p>Написати функцію, що обчислює для поданого вектора суму, середнє, медіану, мінімум та максимум. Результат роботи функції повертається у вигляді списку (<code>list</code>).</p>
+</div>
+<div id="task6" class="section level4" number="4.1.1.6">
+<h4><span class="header-section-number">4.1.1.6</span> Задача</h4>
+<p>Задано натуральне число <span class="math inline">\(N\)</span> (вводиться з клавіатури). Знайти суму його цифр.</p>
+</div>
+<div id="task7" class="section level4" number="4.1.1.7">
+<h4><span class="header-section-number">4.1.1.7</span> Задача</h4>
+<p>Знайти найбільший спільний дільник двох натуральних чисел, використавши алгоритм
+Евкліда. Алгоритм Евкліда полягає в наступному: від більшого числа віднімається менше до тих пір,
+поки вони не стануть рівними; отримане в результаті число і буде найбільшим спільним дільником.</p>
+</div>
+<div id="task8" class="section level4" number="4.1.1.8">
+<h4><span class="header-section-number">4.1.1.8</span> Задача</h4>
+<p>Задано одновимірний масив. Знайти два серед його елементів, модуль різниці яких має
+найменше значення.</p>
+</div>
+<div id="task9" class="section level4" number="4.1.1.9">
+<h4><span class="header-section-number">4.1.1.9</span> Задача</h4>
+<p>Знайти мінімальний елемент серед тих елементів масиву <span class="math inline">\(A\)</span>, які не є елементами масиву <span class="math inline">\(B\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="chapter62" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Рішення задач</h2>
+<div id="chapter621" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Послідовності</h3>
+<hr />
+<p>Рішення до <a href="chapter6.html#task3">задачі 3</a>:</p>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="chapter6.html#cb159-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">10</span><span class="sc">:</span><span class="dv">100</span>, <span class="at">size =</span> <span class="dv">10</span>)</span>
+<span id="cb159-2"><a href="chapter6.html#cb159-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb159-3"><a href="chapter6.html#cb159-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(<span class="fu">length</span>(x)<span class="sc">-</span><span class="dv">1</span>)) {</span>
+<span id="cb159-4"><a href="chapter6.html#cb159-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb159-5"><a href="chapter6.html#cb159-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(<span class="fu">length</span>(x)<span class="sc">-</span><span class="dv">1</span>)) {</span>
+<span id="cb159-6"><a href="chapter6.html#cb159-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb159-7"><a href="chapter6.html#cb159-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(x[i] <span class="sc">&gt;</span> x[i<span class="sc">+</span><span class="dv">1</span>]) {</span>
+<span id="cb159-8"><a href="chapter6.html#cb159-8" aria-hidden="true" tabindex="-1"></a>      tmp <span class="ot">=</span> x[i]</span>
+<span id="cb159-9"><a href="chapter6.html#cb159-9" aria-hidden="true" tabindex="-1"></a>      x[i] <span class="ot">=</span> x[i<span class="sc">+</span><span class="dv">1</span>]</span>
+<span id="cb159-10"><a href="chapter6.html#cb159-10" aria-hidden="true" tabindex="-1"></a>      x[i<span class="sc">+</span><span class="dv">1</span>] <span class="ot">=</span> tmp</span>
+<span id="cb159-11"><a href="chapter6.html#cb159-11" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb159-12"><a href="chapter6.html#cb159-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb159-13"><a href="chapter6.html#cb159-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb159-14"><a href="chapter6.html#cb159-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb159-15"><a href="chapter6.html#cb159-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
+<pre><code>##  [1] 10 34 37 41 55 73 80 81 82 90</code></pre>
+<p>Рішення до <a href="chapter6.html#task4">задачі 4</a>:</p>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="chapter6.html#cb161-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="sc">-</span><span class="dv">100</span><span class="sc">:</span><span class="dv">100</span>, <span class="at">size =</span> <span class="dv">10</span>)</span>
+<span id="cb161-2"><a href="chapter6.html#cb161-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;Vector before sort:&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Vector before sort:&quot;</code></pre>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="chapter6.html#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
+<pre><code>##  [1] -13  29  54 -75   2 -88   1  60  33 -65</code></pre>
+<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="chapter6.html#cb165-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(<span class="fu">length</span>(x)<span class="sc">-</span><span class="dv">1</span>)) {</span>
+<span id="cb165-2"><a href="chapter6.html#cb165-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb165-3"><a href="chapter6.html#cb165-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(<span class="fu">length</span>(x)<span class="sc">-</span><span class="dv">1</span>)) {</span>
+<span id="cb165-4"><a href="chapter6.html#cb165-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb165-5"><a href="chapter6.html#cb165-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(x[i] <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> x[i<span class="sc">+</span><span class="dv">1</span>] <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb165-6"><a href="chapter6.html#cb165-6" aria-hidden="true" tabindex="-1"></a>      tmp <span class="ot">=</span> x[i]</span>
+<span id="cb165-7"><a href="chapter6.html#cb165-7" aria-hidden="true" tabindex="-1"></a>      x[i] <span class="ot">=</span> x[i<span class="sc">+</span><span class="dv">1</span>]</span>
+<span id="cb165-8"><a href="chapter6.html#cb165-8" aria-hidden="true" tabindex="-1"></a>      x[i<span class="sc">+</span><span class="dv">1</span>] <span class="ot">=</span> tmp</span>
+<span id="cb165-9"><a href="chapter6.html#cb165-9" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb165-10"><a href="chapter6.html#cb165-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb165-11"><a href="chapter6.html#cb165-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb165-12"><a href="chapter6.html#cb165-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;Vector after sort:&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Vector after sort:&quot;</code></pre>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="chapter6.html#cb167-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
+<pre><code>##  [1]  29  54   2   1  60  33 -13 -75 -88 -65</code></pre>
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-Anaconda-site" class="csl-entry">
-<em>Anaconda. The World’s Most Popular Data Science Platform</em>. 2021. 206 379 Broadway Ave., Suite 310 New York, NY 10013, USA: Anaconda Inc. <a href="https://www.anaconda.com/">https://www.anaconda.com/</a>.
-</div>
-<div id="ref-google-collab" class="csl-entry">
-<em>Google Colaboratory</em>. 2021. Google LLC. <a href="https://colab.research.google.com/">https://colab.research.google.com/</a>.
-</div>
-<div id="ref-R-base" class="csl-entry">
-R Core Team. 2020. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
-</div>
-<div id="ref-R-studio-site" class="csl-entry">
-<em>RStudio Official Website</em>. 2021. 250 Northern Ave, Boston, MA 02210: RStudio, PBC. <a href="https://rstudio.com/">https://rstudio.com/</a>.
-</div>
-<div id="ref-vs-code" class="csl-entry">
-<em>Visual Studio Code</em>. 2021. Microsoft. <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>.
-</div>
-<div id="ref-visual-studio" class="csl-entry">
-<em>Visual Studio Community Edition</em>. 2021. Microsoft. <a href="https://visualstudio.microsoft.com/">https://visualstudio.microsoft.com/</a>.
-</div>
-<div id="ref-R-stats-book" class="csl-entry">
-А.Б. Шипунов, Е.М. Балдин, П.А. Волкова, А.И. Коробейников, С.А. Назарова, С.В. Петров, В.Г. Суфиянов. 2012. <em>Наглядная статистика. Используем r!</em> Москва, Росія: ДМК Пресс.
+<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="chapter6.html#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setlocale</span>(<span class="st">&quot;LC_CTYPE&quot;</span>, <span class="st">&quot;ukrainian&quot;</span>)</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -267,8 +351,8 @@ R Core Team. 2020. <em>R: A Language and Environment for Statistical Computing</
           </div>
         </div>
       </div>
-<a href="chapter6.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="chapter3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="-e-.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,7 +1,7 @@
 --- 
 title: "Вступ до R"
 author: "Юрій Клебан"
-date: "2021-03-08"
+date: "2021-04-15"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]

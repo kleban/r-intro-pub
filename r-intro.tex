@@ -118,7 +118,7 @@
 
 \title{Вступ до R}
 \author{Юрій Клебан}
-\date{2021-03-08}
+\date{2021-04-15}
 
 \begin{document}
 \maketitle
@@ -255,33 +255,25 @@ R має ряд корисних властивостей, серед яких �
 На сайті обираємо завантаження \texttt{R} для потрібної операційної системи. У межах курсу ми вокристовуємо \texttt{ОС\ Windows}, проте на синтаксис мови програмування та процес написання коду це не впливає:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/r_gui_1.png}
-\caption{\label{fig:unnamed-chunk-1}Завантаження R. Вибір ОС}
+\includegraphics[width=10.15in]{images/chapter1/r_gui_1} \caption{Завантаження R. Вибір ОС}\label{fig:unnamed-chunk-1}
 \end{figure}
 
 У наступному вікні клікаємо на \textbf{install R for the first time}:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/r_gui_2.png}
-\caption{\label{fig:unnamed-chunk-2}Завантаження R. Перша інсталяція}
+\includegraphics[width=10.32in]{images/chapter1/r_gui_2} \caption{Завантаження R. Перша інсталяція}\label{fig:unnamed-chunk-2}
 \end{figure}
 
 Далі обираємо \textbf{Download R 4.X.X for Windows}, де \texttt{4.X.X} версія \texttt{R}, яка може бути відмінною на момент вивчення курсу:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/r_gui_3.png}
-\caption{\label{fig:unnamed-chunk-3}Завантаження R. Завантаження версії для ОС}
+\includegraphics[width=10.92in]{images/chapter1/r_gui_3} \caption{Завантаження R. Завантаження версії для ОС}\label{fig:unnamed-chunk-3}
 \end{figure}
 
 Після завантаження файлу інсталяції потрібно його запустити. Зазвичай завантажений файл можна побачити у лівому нижному кутку браузера або у розділі ``Завантаження'' Вашого браузера. Наприклад, у браузері \texttt{Google\ Chrome} знайти цей пункт меню так:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/chrome_download_button.png}
-\caption{\label{fig:unnamed-chunk-4}Завантаження R. Розділ ``Завантаження'' у Google Chrome}
+\includegraphics[width=4.56in]{images/chapter1/chrome_download_button} \caption{Завантаження R. Розділ "Завантаження" у Google Chrome}\label{fig:unnamed-chunk-4}
 \end{figure}
 
 Процес інсталяції ПЗ не відрізняється від інших програм і детального опису не потребує. Основним тут є запам'ятати шлях встановлення проекту або ``відмітити галочками'' пункти щодо публікації на \emph{Робочий стіл} чи у меню швидкого доступу ярликів для того, щоб знайти файли запуску.
@@ -296,9 +288,7 @@ R має ряд корисних властивостей, серед яких �
 Вигляд вікна \texttt{R\ GUI} зображено нижче:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/r_gui_4.png}
-\caption{\label{fig:unnamed-chunk-5}Вигляд головного вікна RGui}
+\includegraphics[width=9.61in]{images/chapter1/r_gui_4} \caption{Вигляд головного вікна RGui}\label{fig:unnamed-chunk-5}
 \end{figure}
 
 \emph{GUI} (\emph{G}raphical \emph{U}ser \emph{I}nterface) - набір візуальних компонентів для інтерактивної взаємодії користувача з програмним забезпеченням.
@@ -307,7 +297,10 @@ R має ряд корисних властивостей, серед яких �
 
 Результати виконання команд зберігаються у памяті програми і можуть бути використані у наступних блоках коду:
 
-\includegraphics{images/chapter1/r_gui_5.png}
+\begin{figure}
+\includegraphics[width=8.71in]{images/chapter1/r_gui_5} \caption{Вигляд консолі для команд RGui}\label{fig:unnamed-chunk-6}
+\end{figure}
+
 Середовище \texttt{R\ GUI} має широкий спектр функцій і дозволяє написати будь-якого рівня складності проекти на R, проте він є лише базовою графічною обгорткою для \texttt{R}. Розглянемо інші зручніші середовища для написання \texttt{R}-коду.
 
 \hypertarget{chapter1313}{%
@@ -461,15 +454,16 @@ R має ряд корисних властивостей, серед яких �
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] "_bookdown.yml"          "_bookdown_files"        "_output.yml"           
-##  [4] "01-chapter1.Rmd"        "01-chapter1_files"      "01-intro_files"        
-##  [7] "02-chapter2.Rmd"        "02-chapter2_files"      "03-chapter3.Rmd"       
-## [10] "04-references.Rmd"      "book.bib"               "css"                   
-## [13] "favicon.ico"            "images"                 "inc"                   
-## [16] "index.md"               "index.Rmd"              "index.utf8.md"         
-## [19] "packages.bib"           "preamble.tex"           "r-intro.rds"           
-## [22] "README.md"              "render_commands"        "render470456f5254a.rds"
-## [25] "RIntro.Rproj"           "tmp.RData"
+##  [1] "_bookdown.yml"         "_bookdown_files"       "_output.yml"          
+##  [4] "01-chapter1.Rmd"       "01-chapter1_files"     "01-intro_files"       
+##  [7] "02-chapter2.Rmd"       "02-chapter2_files"     "03-chapter3.Rmd"      
+## [10] "06-chapter6.Rmd"       "07-references.Rmd"     "book.bib"             
+## [13] "css"                   "favicon.ico"           "images"               
+## [16] "inc"                   "index.md"              "index.Rmd"            
+## [19] "index.utf8.md"         "packages.bib"          "preamble.tex"         
+## [22] "r-intro.log"           "r-intro.rds"           "README.md"            
+## [25] "render_commands"       "render6a4719d5bdf.rds" "RIntro.Rproj"         
+## [28] "tmp.RData"
 \end{verbatim}
 
 \begin{Shaded}
@@ -479,15 +473,16 @@ R має ряд корисних властивостей, серед яких �
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] "_bookdown.yml"          "_bookdown_files"        "_output.yml"           
-##  [4] "01-chapter1.Rmd"        "01-chapter1_files"      "01-intro_files"        
-##  [7] "02-chapter2.Rmd"        "02-chapter2_files"      "03-chapter3.Rmd"       
-## [10] "04-references.Rmd"      "book.bib"               "css"                   
-## [13] "favicon.ico"            "images"                 "inc"                   
-## [16] "index.md"               "index.Rmd"              "index.utf8.md"         
-## [19] "packages.bib"           "preamble.tex"           "r-intro.rds"           
-## [22] "README.md"              "render_commands"        "render470456f5254a.rds"
-## [25] "RIntro.Rproj"           "tmp.RData"
+##  [1] "_bookdown.yml"         "_bookdown_files"       "_output.yml"          
+##  [4] "01-chapter1.Rmd"       "01-chapter1_files"     "01-intro_files"       
+##  [7] "02-chapter2.Rmd"       "02-chapter2_files"     "03-chapter3.Rmd"      
+## [10] "06-chapter6.Rmd"       "07-references.Rmd"     "book.bib"             
+## [13] "css"                   "favicon.ico"           "images"               
+## [16] "inc"                   "index.md"              "index.Rmd"            
+## [19] "index.utf8.md"         "packages.bib"          "preamble.tex"         
+## [22] "r-intro.log"           "r-intro.rds"           "README.md"            
+## [25] "render_commands"       "render6a4719d5bdf.rds" "RIntro.Rproj"         
+## [28] "tmp.RData"
 \end{verbatim}
 
 \hypertarget{chapter1315}{%
@@ -532,9 +527,7 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 \end{enumerate}
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/rstudio_1.png}
-\caption{\label{fig:unnamed-chunk-13}Вибір версії RStudio Desktop}
+\includegraphics[width=11.4in]{images/chapter1/rstudio_1} \caption{Вибір версії RStudio Desktop}\label{fig:unnamed-chunk-13}
 \end{figure}
 
 \begin{enumerate}
@@ -546,9 +539,7 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 \end{enumerate}
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/rstudio_2.png}
-\caption{\label{fig:unnamed-chunk-14}Завантаження RStudio Desktop}
+\includegraphics[width=13.38in]{images/chapter1/rstudio_2} \caption{Завантаження RStudio Desktop}\label{fig:unnamed-chunk-14}
 \end{figure}
 
 Після завантаження запускаємо інсталятор \texttt{RStudio}. Особливих кроків у цьому процесі немає.
@@ -560,13 +551,14 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 * Файли каталогу або проекту (\texttt{Files}), Інстальовані пакети (\texttt{Packages}), Допомога (\texttt{Help}), Візуалізація результатів (\texttt{Plots}, \texttt{Viewer}).
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/rstudio_3.png}
-\caption{\label{fig:unnamed-chunk-15}Головне вікно RStudio Desktop}
+\includegraphics[width=13.86in]{images/chapter1/rstudio_3} \caption{Головне вікно RStudio Desktop}\label{fig:unnamed-chunk-15}
 \end{figure}
 
 Для першої демонстрації роботи виконаємо у консолі 2 рядки коду:
-\includegraphics{images/chapter1/rstudio_4.png}
+
+\begin{figure}
+\includegraphics[width=9.4in]{images/chapter1/rstudio_4} \caption{Приклад написання коду в RStudio Desktop}\label{fig:unnamed-chunk-16}
+\end{figure}
 
 Перший рядок з кодом \texttt{data\ \textless{}-\ c(3,7,1,6,3,4,5,4,2)} створює у пам'яті колекцію чисел. Зверніть увагу, що у блоці \textbf{Environments} відобраюаться усі змінні, що уснують у поточному робочому просторі (про це буде далі).
 
@@ -587,25 +579,19 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 Для початку оберемо з верхнього меню пункт \texttt{File\ \textgreater{}\ New\ Project}. У вікні вибору способу створення проекту клікаємо \texttt{New\ Directory}. Такий спосіб передбачає, що жодного файлу проекту поки не існує або ми пізніше туди скопіюємо уже готовий код.
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/rstudio_6.png}
-\caption{\label{fig:unnamed-chunk-17}RStudio Desktop. Новий проект}
+\includegraphics[width=7.53in]{images/chapter1/rstudio_6} \caption{RStudio Desktop. Новий проект}\label{fig:unnamed-chunk-17}
 \end{figure}
 
 На наступному кроці обираємо \texttt{New\ Project}:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/rstudio_7.png}
-\caption{\label{fig:unnamed-chunk-18}RStudio Desktop. Новий проект. Тип проекту}
+\includegraphics[width=7.5in]{images/chapter1/rstudio_7} \caption{RStudio Desktop. Новий проект. Тип проекту}\label{fig:unnamed-chunk-18}
 \end{figure}
 
 Після кліку на \texttt{Create\ Project} буде створено папку за попередньо обраним шляхом. Для запуску проекту або швидкого перемикання між проектами можна скористатися як пунктами головного меню, так і підменю проектів справа. Також відкрити проект можна запуском файлу \texttt{*.Rproj} у провіднику \texttt{Windows}.
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/rstudio_8.png}
-\caption{\label{fig:unnamed-chunk-19}RStudio Desktop. Новий проект}
+\includegraphics[width=7.53in]{images/chapter1/rstudio_8} \caption{RStudio Desktop. Новий проект}\label{fig:unnamed-chunk-19}
 \end{figure}
 
 Щоб додати новий файл з кодом \texttt{R} потрібно обрати з головного меню \texttt{File\ \textgreater{}\ New\ file\ \textgreater{}\ R\ Script} або скористатися командою \texttt{Ctrl+Shift+N}. Новий файл буде створено з назвою \texttt{Untitled{[}X{]}}, тому рекомендую одразу його зберегти, наприклад, як \texttt{TestCode.R}
@@ -626,7 +612,7 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 1 3 5 3 5 5 2 2 4 2 3 2 3 5 2 5 3 2 4 3
+##  [1] 1 5 2 3 1 1 1 3 1 3 4 4 4 3 1 3 1 2 1 3
 \end{verbatim}
 
 Результати виконання на Вашому ПК будуть іншими, адже \textbf{псевдо}генератор випадкових чисел буде брати іншу ``точку відліку'' для генерування чисел. Рекомендую перегляду функцію \texttt{set.seed(точка\ відліку\ -\ число)}.
@@ -645,7 +631,7 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "Sum: 64"
+## [1] "Sum: 47"
 \end{verbatim}
 
 \begin{Shaded}
@@ -655,7 +641,7 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "Mean: 3.2"
+## [1] "Mean: 2.35"
 \end{verbatim}
 
 Виведемо гістограму:
@@ -677,9 +663,7 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 Орієнтовний вигляд вікна \texttt{RStudio} після викоання усіх описаних вище операцій матиме настпуний вигляд:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/rstudio_10.png}
-\caption{\label{fig:unnamed-chunk-23}RStudio Desktop. Перегляд змінних}
+\includegraphics[width=10.69in]{images/chapter1/rstudio_10} \caption{RStudio Desktop. Перегляд змінних}\label{fig:unnamed-chunk-23}
 \end{figure}
 
 Варто звернути увагу на виділений блок \texttt{Environment}, де можна переглянути усі доступні змінні, що є на даний момент у \texttt{пам\textquotesingle{}яті}. До цих параметрів можна звертатися у коді чи з консолі у будь, який момент. \emph{Детальну інформацію про робоче середовище розглянуто нижче.}
@@ -712,33 +696,25 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 Для початку потрібно перейти на вкладку \texttt{Environments} та натиснути \texttt{Create}:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/anaconda_2.png}
-\caption{\label{fig:unnamed-chunk-24}Anaconda. Головне вікно}
+\includegraphics[width=14.12in]{images/chapter1/anaconda_2} \caption{Anaconda. Головне вікно}\label{fig:unnamed-chunk-24}
 \end{figure}
 
 У вікні, що відкрилося потрібно відмітити {[}x{]} вставновлення інструментів для роботи з \texttt{R}:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/anaconda_3.png}
-\caption{\label{fig:unnamed-chunk-25}Anaconda. Створення нового середовища на основі R}
+\includegraphics[width=6.49in]{images/chapter1/anaconda_3} \caption{Anaconda. Створення нового середовища на основі R}\label{fig:unnamed-chunk-25}
 \end{figure}
 
 Після встановлення R-інструментів оптрібно переключитися на вкладку \texttt{Home} та робочий простір:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/anaconda_4.png}
-\caption{\label{fig:unnamed-chunk-26}Anaconda. Зміна середовища}
+\includegraphics[width=14.67in]{images/chapter1/anaconda_4} \caption{Anaconda. Зміна середовища}\label{fig:unnamed-chunk-26}
 \end{figure}
 
 Після завантаження робочого простору оберіть \texttt{Launch} для запуску \texttt{Jupyter\ Notebook} з переліку встановлених засобів. \texttt{Jupyter\ Notebook} буде запущено у браузері за замовчеванням Вашого ПК. Відкрити ноутбук можна обравши потрібний файл, а створити новий у меню справа \texttt{New} \textgreater{} \texttt{Notebook} \textgreater{} \texttt{R}:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/anaconda_6.png}
-\caption{\label{fig:unnamed-chunk-27}Jupyter Notebook. Створення нового ноутбука}
+\includegraphics[width=9.64in]{images/chapter1/anaconda_6} \caption{Jupyter Notebook. Створення нового ноутбука}\label{fig:unnamed-chunk-27}
 \end{figure}
 
 \hypertarget{chapter134}{%
@@ -749,9 +725,7 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 \textbf{Visual Studio Code} - безкоштовний редактор коду від \texttt{Microsoft}, орієнтовний на велику кількість мов програмування та фреймворків \citep{vs-code}. Серед інших іструментів у VS Code доступні також розширення для роботи з \texttt{R}:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/vs_code.png}
-\caption{\label{fig:unnamed-chunk-28}Visual Studio Code. Інсталяція RTools}
+\includegraphics[width=12.53in]{images/chapter1/vs_code} \caption{Visual Studio Code. Інсталяція RTools}\label{fig:unnamed-chunk-28}
 \end{figure}
 
 \textbf{Visual Studio Community Edition} - безкоштовне середовище розробки від компаній Microsoft. VS створено з самого початку для розробки під платформу .NET та мови програмування C\#, VB.NET, F\# тощо, але з часом отримало багато розширень, що дозволяють у тому числі, працювати і з проектами в \texttt{R} \citep{visual-studio}.
@@ -759,9 +733,7 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 \textbf{Google Collab} - онлайн сервіс для роботи з ноутбуками для \texttt{Data\ Science} від компанії \texttt{Google} \citep{google-collab}:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/google_collab.png}
-\caption{\label{fig:unnamed-chunk-29}Google Collab}
+\includegraphics[width=9.99in]{images/chapter1/google_collab} \caption{Google Collab}\label{fig:unnamed-chunk-29}
 \end{figure}
 
 \emph{Примітка. Код у прикладі вище написаний на \texttt{Python}.}
@@ -769,9 +741,7 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 \href{https://kaggle.com}{\textbf{kaggle.com}} - сервіс для змагань з \texttt{Data\ Science} та \texttt{Machine\ Learning}. Окрім переліку змагань, наборів даних сервіс має досить зручні ноутбуки.
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/kaggle.png}
-\caption{\label{fig:unnamed-chunk-30}Kaggle.com}
+\includegraphics[width=11.92in]{images/chapter1/kaggle} \caption{Kaggle.com}\label{fig:unnamed-chunk-30}
 \end{figure}
 
 Загалом сервісів та середовищ для розробки в \texttt{R} існує досить багато і їх кількість зростає, але це не впливає на принципи написання коду та роботу з даними.
@@ -818,33 +788,25 @@ R Packages: A Beginner's Guide.
 Для інсталяції та оновлення пакетів можна скористатися меню \texttt{Tools}:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/packages_1.png}
-\caption{\label{fig:unnamed-chunk-31}RStudio Desktop. Меню інсталяції пакетів}
+\includegraphics[width=10.57in]{images/chapter1/packages_1} \caption{RStudio Desktop. Меню інсталяції пакетів}\label{fig:unnamed-chunk-31}
 \end{figure}
 
 Після вибору \texttt{Install\ Packages...} відкриється вікно, де можна обрати як джерело інсталяції пакету так і сам пакет з переліку, ввівши кілька перших букв його назви:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/packages_2.png}
-\caption{\label{fig:unnamed-chunk-32}RStudio Desktop. Вибір пакету для інсталяції}
+\includegraphics[width=10.65in]{images/chapter1/packages_2} \caption{RStudio Desktop. Вибір пакету для інсталяції}\label{fig:unnamed-chunk-32}
 \end{figure}
 
 \texttt{RStudio} дозволяє також переглянути інстальовані пакети/бібліотеки, розроблені іншими користувачами та завантажені у пам'ять (``галочка'' навпроти назви пакету):
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/packages_3.png}
-\caption{\label{fig:unnamed-chunk-33}RStudio Desktop. Перегляд інстальованих пакетів}
+\includegraphics[width=3.97in]{images/chapter1/packages_3} \caption{RStudio Desktop. Перегляд інстальованих пакетів}\label{fig:unnamed-chunk-33}
 \end{figure}
 
 Доступ до функцій та інших елементів пакету можна здійснювати використавши запис \texttt{назва\_пакету::назва\_функції()} без підключення бібліотеки за допомогою \texttt{library()}:
 
 \begin{figure}
-\centering
-\includegraphics{images/chapter1/packages_4.png}
-\caption{\label{fig:unnamed-chunk-34}RStudio Desktop. Приклад використання пакету \texttt{fun}}
+\includegraphics[width=10.62in]{images/chapter1/packages_4} \caption{RStudio Desktop. Приклад використання пакету `fun`}\label{fig:unnamed-chunk-34}
 \end{figure}
 
 Користувачі можуть не тільки завантажувати існуючі пакети,але істворювати власні та роботи їх доступними для дослідників зі всього світу.
@@ -1780,8 +1742,8 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 0.4009616 0.3032759 0.3505328 0.3252013 0.1319094 0.8920692 0.3198216
-##  [8] 0.9054272 0.3148805 0.3556425
+##  [1] 0.6241194 0.1438434 0.5703844 0.5251220 0.7093778 0.7723589 0.4359051
+##  [8] 0.3714391 0.2976364 0.4219864
 \end{verbatim}
 
 \begin{Shaded}
@@ -1791,12 +1753,12 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \end{Shaded}
 
 \begin{verbatim}
-##   [1]  40  88  69  89  72   1  11  13  49  17  36  74  14  37  81  70  85  64
-##  [19]  63 100  97  55  82  34  46  33  29  96  53  78   9  28  27   5  15  38
-##  [37]  83   2  18  86  35   8  57  32  19  23  77  59   7  50  99  94  58  21
-##  [55]  26  79  56  68  51  47  25  41  71  10  66  75  84  87  92  39  12  22
-##  [73]  16  42  93   4  44  90  30  98  62   6  65  76  95  60  31  20  73  54
-##  [91]  45  61  80  67   3  91  43  48  24  52
+##   [1]  50  84   4  86  77  70   9   2  95  24  15  62  71  78  93  29  81  44
+##  [19]  30  19  32   6  99  11  40  27  28  66  94  75  87  69  47  42  46  68
+##  [37]   8  90  59  64  36  72  39  88  57  63  58  55 100  65  49  31  26  54
+##  [55]  18  98  45  76  96  53   5  74  37  73   3  82  14  38  51  92   7  21
+##  [73]  12  17  56  83  52  89  80  34  48  43  22  91  61  13  79  60  33   1
+##  [91]  20  25  67  85  16  23  35  41  10  97
 \end{verbatim}
 
 \hypertarget{chapter244}{%
@@ -1963,6 +1925,135 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 
 \hypertarget{chapter323}{%
 \subsection{Операції над векторами}\label{chapter323}}
+
+\hypertarget{chapter6}{%
+\chapter{Приклади задач та їх розв'язки}\label{chapter6}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  \protect\hyperlink{chapter61}{Задачі}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \protect\hyperlink{chapter611}{Послідовності}
+  \end{itemize}
+\item
+  \protect\hyperlink{chapter62}{Рішення задач}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \protect\hyperlink{chapter621}{Послідовності}
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{chapter61}{%
+\section{Задачі}\label{chapter61}}
+
+\hypertarget{chapter611}{%
+\subsection{Послідовності}\label{chapter611}}
+
+\hypertarget{task1}{%
+\subsubsection{Задача}\label{task1}}
+
+Написати програму, що обчислює \(y = (x+2)^2 + ln(x)\), де \(x\) число з послідовності \texttt{100,\ 105,\ 110,\ ...,\ 200}. Результат вивести у вигляді \texttt{data.fame} з колонками \(X\) та \(Y\).
+
+\hypertarget{task2}{%
+\subsubsection{Задача}\label{task2}}
+
+Написати програму, що обчислює \(y = \frac{\sqrt{x+2}}{z}\), де \(x\) число з послідовності \texttt{10,\ 15,\ 20,\ ...,\ 100}, а \(z\) - випадкові значення з діапазону \texttt{{[}-10,\ 10{]}}, що відповідає кількості елементів у \(x\). Результат вивести у вигляді \texttt{data.fame} з колонками \(X\), \(Z\) та \(Y\).
+
+\hypertarget{task3}{%
+\subsubsection{Задача}\label{task3}}
+
+Без використання спеціальних функцій написати програму, що сортує вектор за зростанням та спаданням. Елементи вектора є випадковими числами з діапазону \texttt{{[}10,100)}. Кількість елементів у векторі \texttt{10}.
+
+\hypertarget{task4}{%
+\subsubsection{Задача}\label{task4}}
+
+Відсортувати вектор таким чином, щоб всі додатні елементи знаходилися на початку, а всі від'ємні -- вкінці, і при цьому зберігся початковий порядок елементів в обох групах. Елементи вектора є випадковими числами з діапазону \texttt{{[}-100,100{]}}. Кількість елементів у векторі \texttt{10}.
+
+Наприклад, якщо початковий вектор \texttt{x} складається з елементів:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\SpecialCharTok{{-}}\DecValTok{5}\NormalTok{, }\DecValTok{10}\NormalTok{, }\SpecialCharTok{{-}}\DecValTok{8}\NormalTok{, }\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{4}\NormalTok{, }\SpecialCharTok{{-}}\DecValTok{9}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+то після ``сортування'' він матиме вигляд:
+
+\begin{verbatim}
+## [1]  1 10  5  4 -5 -8 -2 -9
+\end{verbatim}
+
+\hypertarget{task5}{%
+\subsubsection{Задача}\label{task5}}
+
+Написати функцію, що обчислює для поданого вектора суму, середнє, медіану, мінімум та максимум. Результат роботи функції повертається у вигляді списку (\texttt{list}).
+
+\hypertarget{task6}{%
+\subsubsection{Задача}\label{task6}}
+
+Задано натуральне число \(N\) (вводиться з клавіатури). Знайти суму його цифр.
+
+\hypertarget{task7}{%
+\subsubsection{Задача}\label{task7}}
+
+Знайти найбільший спільний дільник двох натуральних чисел, використавши алгоритм
+Евкліда. Алгоритм Евкліда полягає в наступному: від більшого числа віднімається менше до тих пір,
+поки вони не стануть рівними; отримане в результаті число і буде найбільшим спільним дільником.
+
+\hypertarget{task8}{%
+\subsubsection{Задача}\label{task8}}
+
+Задано одновимірний масив. Знайти два серед його елементів, модуль різниці яких має
+найменше значення.
+
+\hypertarget{task9}{%
+\subsubsection{Задача}\label{task9}}
+
+Знайти мінімальний елемент серед тих елементів масиву \(A\), які не є елементами масиву \(B\).
+
+\hypertarget{chapter62}{%
+\section{Рішення задач}\label{chapter62}}
+
+\hypertarget{chapter621}{%
+\subsection{Послідовності}\label{chapter621}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Рішення до \protect\hyperlink{task3}{задачі 3}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{sample}\NormalTok{(}\DecValTok{10}\SpecialCharTok{:}\DecValTok{100}\NormalTok{, }\AttributeTok{size =} \DecValTok{10}\NormalTok{)}
+  
+\ControlFlowTok{for}\NormalTok{(j }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\NormalTok{(}\FunctionTok{length}\NormalTok{(x)}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{)) \{}
+  
+  \ControlFlowTok{for}\NormalTok{(i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\NormalTok{(}\FunctionTok{length}\NormalTok{(x)}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{)) \{}
+    
+    \ControlFlowTok{if}\NormalTok{(x[i] }\SpecialCharTok{\textgreater{}}\NormalTok{ x[i}\SpecialCharTok{+}\DecValTok{1}\NormalTok{]) \{}
+\NormalTok{      tmp }\OtherTok{=}\NormalTok{ x[i]}
+\NormalTok{      x[i] }\OtherTok{=}\NormalTok{ x[i}\SpecialCharTok{+}\DecValTok{1}\NormalTok{]}
+\NormalTok{      x[i}\SpecialCharTok{+}\DecValTok{1}\NormalTok{] }\OtherTok{=}\NormalTok{ tmp}
+\NormalTok{    \}}
+\NormalTok{  \}}
+\NormalTok{\}}
+
+\FunctionTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1]  29  63  64  78  80  82  86  87  99 100
+\end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
