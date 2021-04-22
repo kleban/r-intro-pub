@@ -260,7 +260,7 @@ dir()
 ## [16] "inc"                    "index.md"               "index.Rmd"             
 ## [19] "index.utf8.md"          "packages.bib"           "preamble.tex"          
 ## [22] "r-intro.log"            "r-intro.rds"            "README.md"             
-## [25] "render_commands"        "render1c1c527a163e.rds" "RIntro.Rproj"          
+## [25] "render_commands"        "render581819cb22c1.rds" "RIntro.Rproj"          
 ## [28] "tmp.RData"
 ```
 
@@ -277,7 +277,7 @@ list.files()
 ## [16] "inc"                    "index.md"               "index.Rmd"             
 ## [19] "index.utf8.md"          "packages.bib"           "preamble.tex"          
 ## [22] "r-intro.log"            "r-intro.rds"            "README.md"             
-## [25] "render_commands"        "render1c1c527a163e.rds" "RIntro.Rproj"          
+## [25] "render_commands"        "render581819cb22c1.rds" "RIntro.Rproj"          
 ## [28] "tmp.RData"
 ```
 
@@ -387,7 +387,7 @@ vtr
 ```
 
 ```
-##  [1] 5 1 1 3 3 2 4 3 1 3 4 4 3 4 4 1 4 2 5 3
+##  [1] 5 2 4 2 5 1 1 5 1 4 1 3 3 4 4 1 2 4 3 4
 ```
 
 <div class="alert alert-danger">
@@ -408,7 +408,7 @@ print(paste0("Sum: ", vtr_sum))
 ```
 
 ```
-## [1] "Sum: 60"
+## [1] "Sum: 59"
 ```
 
 ```r
@@ -416,7 +416,7 @@ print(paste0("Mean: ", vtr_mean))
 ```
 
 ```
-## [1] "Mean: 3"
+## [1] "Mean: 2.95"
 ```
 
 Виведемо гістограму:
