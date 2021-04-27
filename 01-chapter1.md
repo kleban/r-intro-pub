@@ -252,15 +252,15 @@ dir()
 ```
 
 ```
-##  [1] "_bookdown.yml"          "_bookdown_files"        "_output.yml"           
-##  [4] "01-chapter1.Rmd"        "01-chapter1_files"      "01-intro_files"        
-##  [7] "02-chapter2.Rmd"        "02-chapter2_files"      "03-chapter3.Rmd"       
-## [10] "06-chapter6.Rmd"        "07-references.Rmd"      "book.bib"              
-## [13] "css"                    "favicon.ico"            "images"                
-## [16] "inc"                    "index.md"               "index.Rmd"             
-## [19] "index.utf8.md"          "packages.bib"           "preamble.tex"          
-## [22] "r-intro.log"            "r-intro.rds"            "README.md"             
-## [25] "render_commands"        "render581819cb22c1.rds" "RIntro.Rproj"          
+##  [1] "_bookdown.yml"       "_bookdown_files"     "_output.yml"        
+##  [4] "01-chapter1.Rmd"     "01-chapter1_files"   "01-intro_files"     
+##  [7] "02-chapter2.Rmd"     "02-chapter2_files"   "03-chapter3.Rmd"    
+## [10] "06-chapter6.Rmd"     "07-references.Rmd"   "book.bib"           
+## [13] "css"                 "favicon.ico"         "images"             
+## [16] "inc"                 "index.md"            "index.Rmd"          
+## [19] "index.utf8.md"       "packages.bib"        "preamble.tex"       
+## [22] "r-intro.log"         "r-intro.rds"         "README.md"          
+## [25] "render_commands"     "renderf147d616f.rds" "RIntro.Rproj"       
 ## [28] "tmp.RData"
 ```
 
@@ -269,15 +269,15 @@ list.files()
 ```
 
 ```
-##  [1] "_bookdown.yml"          "_bookdown_files"        "_output.yml"           
-##  [4] "01-chapter1.Rmd"        "01-chapter1_files"      "01-intro_files"        
-##  [7] "02-chapter2.Rmd"        "02-chapter2_files"      "03-chapter3.Rmd"       
-## [10] "06-chapter6.Rmd"        "07-references.Rmd"      "book.bib"              
-## [13] "css"                    "favicon.ico"            "images"                
-## [16] "inc"                    "index.md"               "index.Rmd"             
-## [19] "index.utf8.md"          "packages.bib"           "preamble.tex"          
-## [22] "r-intro.log"            "r-intro.rds"            "README.md"             
-## [25] "render_commands"        "render581819cb22c1.rds" "RIntro.Rproj"          
+##  [1] "_bookdown.yml"       "_bookdown_files"     "_output.yml"        
+##  [4] "01-chapter1.Rmd"     "01-chapter1_files"   "01-intro_files"     
+##  [7] "02-chapter2.Rmd"     "02-chapter2_files"   "03-chapter3.Rmd"    
+## [10] "06-chapter6.Rmd"     "07-references.Rmd"   "book.bib"           
+## [13] "css"                 "favicon.ico"         "images"             
+## [16] "inc"                 "index.md"            "index.Rmd"          
+## [19] "index.utf8.md"       "packages.bib"        "preamble.tex"       
+## [22] "r-intro.log"         "r-intro.rds"         "README.md"          
+## [25] "render_commands"     "renderf147d616f.rds" "RIntro.Rproj"       
 ## [28] "tmp.RData"
 ```
 
@@ -387,7 +387,7 @@ vtr
 ```
 
 ```
-##  [1] 5 2 4 2 5 1 1 5 1 4 1 3 3 4 4 1 2 4 3 4
+##  [1] 2 5 5 4 2 4 1 1 1 2 3 5 3 3 3 5 2 2 2 3
 ```
 
 <div class="alert alert-danger">
@@ -408,7 +408,7 @@ print(paste0("Sum: ", vtr_sum))
 ```
 
 ```
-## [1] "Sum: 59"
+## [1] "Sum: 58"
 ```
 
 ```r
@@ -416,7 +416,7 @@ print(paste0("Mean: ", vtr_mean))
 ```
 
 ```
-## [1] "Mean: 2.95"
+## [1] "Mean: 2.9"
 ```
 
 Виведемо гістограму:
