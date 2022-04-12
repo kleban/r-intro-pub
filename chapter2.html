@@ -24,7 +24,7 @@
 <meta name="author" content="Юрій Клебан" />
 
 
-<meta name="date" content="2021-04-26" />
+<meta name="date" content="2021-04-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -201,17 +201,25 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2.3" data-path="chapter3.html"><a href="chapter3.html#chapter323"><i class="fa fa-check"></i><b>3.2.3</b> Операції над векторами</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="chapter6.html"><a href="chapter6.html"><i class="fa fa-check"></i><b>4</b> Приклади задач та їх розв’язки</a>
+<li class="chapter" data-level="4" data-path="chapter4.html"><a href="chapter4.html"><i class="fa fa-check"></i><b>4</b> Читання та запис даних у R</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="chapter6.html"><a href="chapter6.html#chapter61"><i class="fa fa-check"></i><b>4.1</b> Задачі</a>
-<ul>
-<li class="chapter" data-level="4.1.1" data-path="chapter6.html"><a href="chapter6.html#chapter611"><i class="fa fa-check"></i><b>4.1.1</b> Послідовності</a></li>
-<li class="chapter" data-level="4.1.2" data-path="chapter6.html"><a href="chapter6.html#chapter612"><i class="fa fa-check"></i><b>4.1.2</b> Функції</a></li>
+<li class="chapter" data-level="" data-path="chapter4.html"><a href="chapter4.html#план-3"><i class="fa fa-check"></i>План</a></li>
+<li class="chapter" data-level="4.1" data-path="chapter4.html"><a href="chapter4.html#chapter41"><i class="fa fa-check"></i><b>4.1</b> Загальний опис структури даних</a></li>
+<li class="chapter" data-level="4.2" data-path="chapter4.html"><a href="chapter4.html#chapter42"><i class="fa fa-check"></i><b>4.2</b> Опис набору даних <code>Telecom Users</code></a></li>
+<li class="chapter" data-level="4.3" data-path="chapter3.html"><a href="chapter3.html#chapter321"><i class="fa fa-check"></i><b>4.3</b> Імпорт даних засобами RStudio</a></li>
+<li class="chapter" data-level="4.4" data-path="chapter3.html"><a href="chapter3.html#chapter321"><i class="fa fa-check"></i><b>4.4</b> CSV-файли: читання,</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="chapter6.html"><a href="chapter6.html#chapter62"><i class="fa fa-check"></i><b>4.2</b> Рішення задач</a>
+<li class="chapter" data-level="5" data-path="chapter6.html"><a href="chapter6.html"><i class="fa fa-check"></i><b>5</b> Приклади задач та їх розв’язки</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="chapter6.html"><a href="chapter6.html#chapter621"><i class="fa fa-check"></i><b>4.2.1</b> Послідовності та вектори</a></li>
-<li class="chapter" data-level="4.2.2" data-path="chapter6.html"><a href="chapter6.html#chapter622"><i class="fa fa-check"></i><b>4.2.2</b> Функції</a></li>
+<li class="chapter" data-level="5.1" data-path="chapter6.html"><a href="chapter6.html#chapter61"><i class="fa fa-check"></i><b>5.1</b> Задачі</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="chapter6.html"><a href="chapter6.html#chapter611"><i class="fa fa-check"></i><b>5.1.1</b> Послідовності</a></li>
+<li class="chapter" data-level="5.1.2" data-path="chapter6.html"><a href="chapter6.html#chapter612"><i class="fa fa-check"></i><b>5.1.2</b> Функції</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="chapter6.html"><a href="chapter6.html#chapter62"><i class="fa fa-check"></i><b>5.2</b> Рішення задач</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="chapter6.html"><a href="chapter6.html#chapter621"><i class="fa fa-check"></i><b>5.2.1</b> Послідовності та вектори</a></li>
+<li class="chapter" data-level="5.2.2" data-path="chapter6.html"><a href="chapter6.html#chapter622"><i class="fa fa-check"></i><b>5.2.2</b> Функції</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="-e-.html"><a href="-e-.html"><i class="fa fa-check"></i>Джeрела</a></li>
@@ -697,15 +705,15 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 Матеріали розділу у процесі підготовки.</p>
 </div>
 <div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="chapter2.html#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1] 0.75146930 0.19584724 0.30001271 0.90529646 0.07562144 0.75136663
-##  [7] 0.32071665 0.54619155 0.99994204 0.33251030</code></pre>
+<pre><code>##  [1] 0.1761734 0.3699948 0.5602969 0.1273173 0.4263255 0.6613163 0.6477818
+##  [8] 0.8138045 0.3938717 0.3068390</code></pre>
 <div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="chapter2.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">100</span>)</span></code></pre></div>
-<pre><code>##   [1]  61  85  81  51  76   5  67  39  41  87  30   7  49  16  73  13  28  94
-##  [19]  59  75  31  10  96  48  21  77  79  53  86  71  84  89  33  45  42  70
-##  [37]  66  20   9  36  99  92  17  47  15  22  35  29  11  68  90   6  52  44
-##  [55]  40  82  26  38  57  54  60  63   1   4  55  97  65   2  32  78  95  50
-##  [73]  98  14   8  25   3  91  88  24  43  62  93  46  80 100  27  58  64  12
-##  [91]  69  37  19  18  83  56  34  72  23  74</code></pre>
+<pre><code>##   [1]  36  24  86  67  28  31  16  18  98  37  99  53  97  72  90  23  84  50
+##  [19]  79  48  14  74  81  77  51  57  58  92  89  17  25  75  42  44  71   2
+##  [37]  27  80  65  52  33  69   5  21  68  95  43  35  19  22   3   1  26  94
+##  [55]  61  40  15  47  63  66   9  78  87  12  20   4  10   6  13  73  11  34
+##  [73]  82  49  96  56  91  70  62  64  41  29  45  46  54  85  60  32  88  83
+##  [91]  38  30   7  76  55 100   8  59  93  39</code></pre>
 </div>
 <div id="chapter244" class="section level3" number="2.4.4">
 <h3><span class="header-section-number">2.4.4</span> Інші математичні функції та константи R</h3>

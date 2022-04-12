@@ -118,7 +118,7 @@
 
 \title{Вступ до R}
 \author{Юрій Клебан}
-\date{2021-04-26}
+\date{2021-04-29}
 
 \begin{document}
 \maketitle
@@ -454,16 +454,17 @@ R має ряд корисних властивостей, серед яких �
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] "_bookdown.yml"       "_bookdown_files"     "_output.yml"        
-##  [4] "01-chapter1.Rmd"     "01-chapter1_files"   "01-intro_files"     
-##  [7] "02-chapter2.Rmd"     "02-chapter2_files"   "03-chapter3.Rmd"    
-## [10] "06-chapter6.Rmd"     "07-references.Rmd"   "book.bib"           
-## [13] "css"                 "favicon.ico"         "images"             
-## [16] "inc"                 "index.md"            "index.Rmd"          
-## [19] "index.utf8.md"       "packages.bib"        "preamble.tex"       
-## [22] "r-intro.log"         "r-intro.rds"         "README.md"          
-## [25] "render_commands"     "renderf147d616f.rds" "RIntro.Rproj"       
-## [28] "tmp.RData"
+##  [1] "_bookdown.yml"          "_bookdown_files"        "_output.yml"           
+##  [4] "01-chapter1.Rmd"        "01-chapter1_files"      "01-intro_files"        
+##  [7] "02-chapter2.Rmd"        "02-chapter2_files"      "03-chapter3.Rmd"       
+## [10] "04-chapter4.Rmd"        "06-chapter6.Rmd"        "07-references.Rmd"     
+## [13] "book.bib"               "css"                    "favicon.ico"           
+## [16] "images"                 "inc"                    "index.md"              
+## [19] "index.Rmd"              "index.utf8.md"          "packages.bib"          
+## [22] "preamble.tex"           "r-intro.log"            "r-intro.pdf"           
+## [25] "r-intro.rds"            "r-intro.tex"            "README.md"             
+## [28] "render_commands"        "render495863e057f3.rds" "RIntro.Rproj"          
+## [31] "tmp.RData"
 \end{verbatim}
 
 \begin{Shaded}
@@ -473,16 +474,17 @@ R має ряд корисних властивостей, серед яких �
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] "_bookdown.yml"       "_bookdown_files"     "_output.yml"        
-##  [4] "01-chapter1.Rmd"     "01-chapter1_files"   "01-intro_files"     
-##  [7] "02-chapter2.Rmd"     "02-chapter2_files"   "03-chapter3.Rmd"    
-## [10] "06-chapter6.Rmd"     "07-references.Rmd"   "book.bib"           
-## [13] "css"                 "favicon.ico"         "images"             
-## [16] "inc"                 "index.md"            "index.Rmd"          
-## [19] "index.utf8.md"       "packages.bib"        "preamble.tex"       
-## [22] "r-intro.log"         "r-intro.rds"         "README.md"          
-## [25] "render_commands"     "renderf147d616f.rds" "RIntro.Rproj"       
-## [28] "tmp.RData"
+##  [1] "_bookdown.yml"          "_bookdown_files"        "_output.yml"           
+##  [4] "01-chapter1.Rmd"        "01-chapter1_files"      "01-intro_files"        
+##  [7] "02-chapter2.Rmd"        "02-chapter2_files"      "03-chapter3.Rmd"       
+## [10] "04-chapter4.Rmd"        "06-chapter6.Rmd"        "07-references.Rmd"     
+## [13] "book.bib"               "css"                    "favicon.ico"           
+## [16] "images"                 "inc"                    "index.md"              
+## [19] "index.Rmd"              "index.utf8.md"          "packages.bib"          
+## [22] "preamble.tex"           "r-intro.log"            "r-intro.pdf"           
+## [25] "r-intro.rds"            "r-intro.tex"            "README.md"             
+## [28] "render_commands"        "render495863e057f3.rds" "RIntro.Rproj"          
+## [31] "tmp.RData"
 \end{verbatim}
 
 \hypertarget{chapter1315}{%
@@ -612,7 +614,7 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 2 5 5 4 2 4 1 1 1 2 3 5 3 3 3 5 2 2 2 3
+##  [1] 3 1 3 5 5 4 4 1 4 1 5 1 1 4 1 2 1 5 5 4
 \end{verbatim}
 
 Результати виконання на Вашому ПК будуть іншими, адже \textbf{псевдо}генератор випадкових чисел буде брати іншу ``точку відліку'' для генерування чисел. Рекомендую перегляду функцію \texttt{set.seed(точка\ відліку\ -\ число)}.
@@ -631,7 +633,7 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "Sum: 58"
+## [1] "Sum: 60"
 \end{verbatim}
 
 \begin{Shaded}
@@ -641,7 +643,7 @@ IDE (\texttt{integrated\ development\ environment}) - комплексне пр�
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "Mean: 2.9"
+## [1] "Mean: 3"
 \end{verbatim}
 
 Виведемо гістограму:
@@ -1742,8 +1744,8 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 0.09125617 0.28922002 0.29474867 0.44290966 0.16358988 0.54594240
-##  [7] 0.08778667 0.96161253 0.86583787 0.48742442
+##  [1] 0.5820384 0.5764813 0.8094566 0.2291202 0.9518727 0.8454559 0.6103594
+##  [8] 0.5062632 0.4811258 0.3078075
 \end{verbatim}
 
 \begin{Shaded}
@@ -1753,12 +1755,12 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \end{Shaded}
 
 \begin{verbatim}
-##   [1]  72  52  92  70  77   3   9  26  29  60  24  11  61  42  79  41  69  95
-##  [19]  89  25  37   1  38   2   8  58  46  35  68  51  40  67  65  96  64  15
-##  [37]  16  22  49  78  39  66  84  76  18  91  63  43   4  93  56  21  53  50
-##  [55]  45  12  23 100  30  17  34  74  80   5  10  36  94  33  44  14  54  57
-##  [73]  28  13   7  90  47  20  55  62  85  81   6  59  83  31  87  32  99  71
-##  [91]  27  97  19  75  82  73  88  98  48  86
+##   [1]  36  59  66   5  77  64  37  72  60   1  79  52  12  99  10  13  96  51
+##  [19]  86  18  69  84  40   6  74  45  11   9  19  91  75  26  83  49  29  70
+##  [37]  62  92  32  58  95  65  23  71  78  31  44  43  82  33  17  38  27  25
+##  [55]  30  85  55  81   2  76  46  63  41  80  97  93  53  98  57  94  47   4
+##  [73]  22  50  61  39  87  35  89   3  34 100  56   8  24  42  88  20  16  90
+##  [91]  14  28  67  73  68  54   7  15  48  21
 \end{verbatim}
 
 \hypertarget{chapter244}{%
@@ -1926,6 +1928,167 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \hypertarget{chapter323}{%
 \subsection{Операції над векторами}\label{chapter323}}
 
+\hypertarget{chapter4}{%
+\chapter{Читання та запис даних у R}\label{chapter4}}
+
+\hypertarget{ux43fux43bux430ux43d-3}{%
+\section*{План}\label{ux43fux43bux430ux43d-3}}
+\addcontentsline{toc}{section}{План}
+
+\begin{itemize}
+\tightlist
+\item
+  \protect\hyperlink{chapter41}{Загальний опис структури даних}
+\item
+  \protect\hyperlink{chapter42}{Опис набору даних \texttt{TelecomUsers}}
+\item
+  \protect\hyperlink{chapter43}{Імпорт даних засобами RStudio}
+\item
+  \protect\hyperlink{chapter42}{CSV: поняття, читання та запис}
+\item
+  \protect\hyperlink{chapter44}{XLSX: поняття, читання та запис}
+\item
+  \protect\hyperlink{chapter45}{JSON: поняття, читання та запис}
+\item
+  \protect\hyperlink{chapter46}{API: поняття, читання}
+\item
+  \protect\hyperlink{chapter47}{HTML: поняття, читання}
+\item
+  \protect\hyperlink{chapter48}{PDF: поняття, читання}
+\item
+  \protect\hyperlink{chapter48}{Сервіси Google}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \protect\hyperlink{chapter48}{Spreadsheets}
+  \item
+    \protect\hyperlink{chapter48}{Keywords}
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{chapter41}{%
+\section{Загальний опис структури даних}\label{chapter41}}
+
+Матеріали розділу у процесі підготовки.
+
+Усі дані, що використовуються для наукових досліджень можна розділити на 3 блоки:
+
+\begin{itemize}
+\tightlist
+\item[$\boxtimes$]
+  Структуровані
+\item[$\boxtimes$]
+  Слабоструктуровані
+\item[$\boxtimes$]
+  Неструктуровані
+\end{itemize}
+
+\textbf{Структуровані дані} зазвичай зрозумілі для користувача, сформовані відповідно до певних вимог та дозволяють швидко їх вивчити, без додаткових процедур підготовки.
+
+Важливою для нас характеристикою \textbf{структурованих даних} є те, що вони досить просто піддаються машинній обробці, аналізу та візуалізації.
+
+\textbf{Слабоструктуровані дані} часто можуть бути сприйняті людиною, проте форма їх подачі не дозволяє швидко проаналізувати її машиною.
+
+Найпростішим прикладом структурованих даних є табличні дані, наприклад, в Microsoft Excel, де кожен рядок - це одне спостереження, а кожен стовпець - це одна характеристика.
+
+Слабоструктуровані дані можуть бути перетворені до структурованих за допомогою підготовлених спеціалістом з по роботі з дадними алгоритмом. Подібний етап зазвчай потребує детального аналізу полів, форми по дання, визначення шаблонів помилок у даних тощо.
+
+\textbf{Неструктуровані дані}
+
+\hypertarget{chapter42}{%
+\section{\texorpdfstring{Опис набору даних \texttt{Telecom\ Users}}{Опис набору даних Telecom Users}}\label{chapter42}}
+
+Опис інформації про набір даних взято з сервісу \href{https://kaggle.com}{\texttt{kaggle.com}}.
+Оригінальний набір розміщений за адресою \href{https://www.kaggle.com/radmirzosimov/telecom-users-dataset}{\texttt{https://www.kaggle.com/radmirzosimov/telecom-users-dataset}}.
+
+\textbf{Призначення}:
+
+Описаний датасет призначений для практикування спеціалістами з машинного навчання розв'язування задач класифікації.
+
+\textbf{Опис:}
+
+Any business wants to maximize the number of customers. To achieve this goal, it is important not only to try to attract new ones, but also to retain existing ones. Retaining a client will cost the company less than attracting a new one. In addition, a new client may be weakly interested in business services and it will be difficult to work with him, while old clients already have the necessary data on interaction with the service.
+
+Accordingly, predicting the churn, we can react in time and try to keep the client who wants to leave. Based on the data about the services that the client uses, we can make him a special offer, trying to change his decision to leave the operator. This will make the task of retention easier to implement than the task of attracting new users, about which we do not know anything yet.
+
+You are provided with a dataset from a telecommunications company. The data contains information about almost six thousand users, their demographic characteristics, the services they use, the duration of using the operator's services, the method of payment, and the amount of payment.
+
+The task is to analyze the data and predict the churn of users (to identify people who will and will not renew their contract). The work should include the following mandatory items:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Description of the data (with the calculation of basic statistics);
+\item
+  Research of dependencies and formulation of hypotheses;
+\item
+  Building models for predicting the outflow (with justification for the choice of a particular model) 4. based on tested hypotheses and identified relationships;
+\item
+  Comparison of the quality of the obtained models.
+\end{enumerate}
+
+\textbf{Опис полів набору даних:}
+
+\begin{itemize}
+\tightlist
+\item[$\boxtimes$]
+  \texttt{customerID} - customer id
+\item[$\boxtimes$]
+  \texttt{gender} - client gender (male / female)
+\item[$\boxtimes$]
+  \texttt{SeniorCitizen} - is the client retired (1, 0)
+\item[$\boxtimes$]
+  \texttt{Partner} - is the client married (Yes, No)
+\item[$\boxtimes$]
+  \texttt{tenure} - how many months a person has been a client of the company
+\item[$\boxtimes$]
+  \texttt{PhoneService} - is the telephone service connected (Yes, No)
+\item[$\boxtimes$]
+  \texttt{MultipleLines} - are multiple phone lines connected (Yes, No, No phone service)
+\item[$\boxtimes$]
+  \texttt{InternetService} - client's Internet service provider (DSL, Fiber optic, No)
+\item[$\boxtimes$]
+  \texttt{OnlineSecurity} - is the online security service connected (Yes, No, No internet service)
+\item[$\boxtimes$]
+  \texttt{OnlineBackup} - is the online backup service activated (Yes, No, No internet service)
+\item[$\boxtimes$]
+  \texttt{DeviceProtection} - does the client have equipment insurance (Yes, No, No internet service)
+\item[$\boxtimes$]
+  \texttt{TechSupport} - is the technical support service connected (Yes, No, No internet service)
+\item[$\boxtimes$]
+  \texttt{StreamingTV} - is the streaming TV service connected (Yes, No, No internet service)
+\item[$\boxtimes$]
+  \texttt{StreamingMovies} - is the streaming cinema service activated (Yes, No, No internet service)
+\item[$\boxtimes$]
+  \texttt{Contract} - type of customer contract (Month-to-month, One year, Two year)
+\item[$\boxtimes$]
+  \texttt{PaperlessBilling} - whether the client uses paperless billing (Yes, No)
+\item[$\boxtimes$]
+  \texttt{PaymentMethod} - payment method (Electronic check, Mailed check, Bank transfer (automatic), Credit card (automatic))
+\item[$\boxtimes$]
+  \texttt{MonthlyCharges} - current monthly payment
+\item[$\boxtimes$]
+  \texttt{TotalCharges} - the total amount that the client paid for the services for the entire time
+\item[$\boxtimes$]
+  \texttt{Churn\ -\ whether} there was a churn (Yes or No)
+\end{itemize}
+
+\hypertarget{chapter321}{%
+\section{Імпорт даних засобами RStudio}\label{chapter321}}
+
+\texttt{RStudio} має ряд засобів для
+
+\hypertarget{chapter321}{%
+\section{CSV-файли: читання,}\label{chapter321}}
+
+\textbf{CSV} - це тип файлів, у якому інформація розділена комами (\texttt{Comma\ Separated\ Values}). CSV є досить зручним форматом даних для передачі між різними машинами, адже по суті є текстовим файлом і дозволяє легко його зчитати.
+
+\emph{Примітка. Наспрвді кома не завжди є роздільником CSV-файлів. Це можуть бути і інші символи.}
+
 \hypertarget{chapter6}{%
 \chapter{Приклади задач та їх розв'язки}\label{chapter6}}
 
@@ -2028,7 +2191,45 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \hypertarget{task6120}{%
 \subsubsection{Задача}\label{task6120}}
 
-Написати програму, що знаходить середнє значення елементів вектора. Елементи вектора генеруються випадковим чином у діапазоні \([100; 200]\). Усі елменти вектора повинні бути кратними \(7\)-ми. Генерацію випадкового числа кратного \(7\)-ми винести в окрему функцію.
+Написати програму, що знаходить середнє значення елементів вектора. Елементи вектора генеруються випадковим чином у діапазоні \([100; 200]\). Усі елменти вектора повинні бути кратними \(7\)-ми.
+
+Підзавдання 1. Генерацію випадкового числа кратного \(7\)-ми винести в окрему функцію.
+
+Підзавдання 2. Написати функцію, що приймає 1 значення size (довжина вектора) і повертає вектор цієї довжини.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{func.genMod7 }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{() \{}
+\NormalTok{  x }\OtherTok{\textless{}{-}} \DecValTok{8}
+  \ControlFlowTok{while}\NormalTok{(x }\SpecialCharTok{\%\%} \DecValTok{7} \SpecialCharTok{!=} \DecValTok{0}\NormalTok{) \{}
+\NormalTok{    x }\OtherTok{\textless{}{-}} \FunctionTok{sample}\NormalTok{(}\DecValTok{100}\SpecialCharTok{:}\DecValTok{200}\NormalTok{, }\AttributeTok{size =} \DecValTok{1}\NormalTok{)}
+\NormalTok{  \}}
+  \FunctionTok{return}\NormalTok{(x)}
+\NormalTok{\}}
+
+\NormalTok{func.genVectorMod7 }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(size) \{}
+\NormalTok{  v }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{()}
+  
+  \ControlFlowTok{for}\NormalTok{(i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\NormalTok{size) \{}
+\NormalTok{    v }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(v, }\FunctionTok{func.genMod7}\NormalTok{())}
+\NormalTok{  \}}
+  
+  \FunctionTok{return}\NormalTok{(v)}
+\NormalTok{\}}
+
+\NormalTok{vector }\OtherTok{\textless{}{-}} \FunctionTok{func.genVectorMod7}\NormalTok{(}\DecValTok{100}\NormalTok{)}
+\NormalTok{vector}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   [1] 189 119 119 175 154 161 105 154 119 154 133 105 168 189 105 140 112 168
+##  [19] 154 182 147 168 189 154 182 161 133 196 119 168 140 175 147 189 175 140
+##  [37] 105 175 112 105 133 168 133 161 147 126 133 133 126 175 105 105 126 133
+##  [55] 112 168 140 140 105 112 119 175 189 126 126 196 168 140 140 154 112 196
+##  [73] 182 119 182 147 133 189 161 119 112 105 140 175 119 133 105 119 133 182
+##  [91] 182 189 126 126 196 147 196 154 126 112
+\end{verbatim}
 
 \hypertarget{task6121}{%
 \subsubsection{Задача}\label{task6121}}
@@ -2070,7 +2271,7 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \hypertarget{task6123}{%
 \subsubsection{Задача}\label{task6123}}
 
-Написати функцію, що
+Написати функцію, що\ldots{}
 
 \hypertarget{task6124}{%
 \subsubsection{Задача}\label{task6124}}
@@ -2114,7 +2315,7 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 15 17 26 38 46 51 62 69 91 99
+##  [1]  16  25  27  50  55  79  90  92  95 100
 \end{verbatim}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -2139,7 +2340,7 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  59   3  71  -9 -28  39  64  79 -72 -34
+##  [1]  -6 -65  94 -38  24 -91 -35  42 -78 -77
 \end{verbatim}
 
 \begin{Shaded}
@@ -2170,7 +2371,7 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  59   3  71  39  64  79  -9 -28 -72 -34
+##  [1]  94  24  42  -6 -65 -38 -91 -35 -78 -77
 \end{verbatim}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -2212,7 +2413,7 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 2 8 4 5
+## [1] 1 1 3 6
 \end{verbatim}
 
 \begin{Shaded}
@@ -2232,7 +2433,7 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 4.666667
+## [1] 6
 \end{verbatim}
 
 Рішення до \protect\hyperlink{task6119}{задачі 6.1.1.\textbf{9}} (спосіб 2):
@@ -2245,7 +2446,7 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  3  1 10  3 10  5  3  2  2  9
+##  [1] 7 3 6 9 3 5 8 7 7 8
 \end{verbatim}
 
 \begin{Shaded}
@@ -2268,7 +2469,7 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 6
+## [1] 7.333333
 \end{verbatim}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -2286,7 +2487,7 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 85 39 78 91 40 99 67 22 64 14
+##  [1] 92 27 26 87 30 93 46 81 65 18
 \end{verbatim}
 
 \begin{Shaded}
@@ -2307,19 +2508,19 @@ TRUE & TRUE & TRUE & TRUE & FALSE\tabularnewline
 
 \begin{verbatim}
 ## $Sum
-## [1] 599
+## [1] 565
 ## 
 ## $Mean
-## [1] 59.9
+## [1] 56.5
 ## 
 ## $Median
-## [1] 65.5
+## [1] 55.5
 ## 
 ## $Min
-## [1] 14
+## [1] 18
 ## 
 ## $Max
-## [1] 99
+## [1] 93
 \end{verbatim}
 
 \begin{Shaded}

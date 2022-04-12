@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Розділ 4 Задачі | Вступ до R</title>
+  <title>Розділ 4 Читання та запис даних у R | Вступ до R</title>
   <meta name="description" content="Курс вступ до програмування в R, Проект DataClass" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Розділ 4 Задачі | Вступ до R" />
+  <meta property="og:title" content="Розділ 4 Читання та запис даних у R | Вступ до R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="images/cover.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="kleban/r-intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Розділ 4 Задачі | Вступ до R" />
+  <meta name="twitter:title" content="Розділ 4 Читання та запис даних у R | Вступ до R" />
   
   <meta name="twitter:description" content="Курс вступ до програмування в R, Проект DataClass" />
   <meta name="twitter:image" content="images/cover.png" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Юрій Клебан" />
 
 
-<meta name="date" content="2021-04-09" />
+<meta name="date" content="2021-04-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="prev" href="chapter3.html"/>
-<link rel="next" href="-e-.html"/>
+<link rel="next" href="chapter6.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -201,15 +201,25 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2.3" data-path="chapter3.html"><a href="chapter3.html#chapter323"><i class="fa fa-check"></i><b>3.2.3</b> Операції над векторами</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="chapter4.html"><a href="chapter4.html"><i class="fa fa-check"></i><b>4</b> Задачі</a>
+<li class="chapter" data-level="4" data-path="chapter4.html"><a href="chapter4.html"><i class="fa fa-check"></i><b>4</b> Читання та запис даних у R</a>
 <ul>
 <li class="chapter" data-level="" data-path="chapter4.html"><a href="chapter4.html#план-3"><i class="fa fa-check"></i>План</a></li>
-<li class="chapter" data-level="4.1" data-path="chapter3.html"><a href="chapter3.html#chapter31"><i class="fa fa-check"></i><b>4.1</b> Набори даних</a></li>
-<li class="chapter" data-level="4.2" data-path="chapter3.html"><a href="chapter3.html#chapter32"><i class="fa fa-check"></i><b>4.2</b> Вектори (vectors)</a>
+<li class="chapter" data-level="4.1" data-path="chapter4.html"><a href="chapter4.html#chapter41"><i class="fa fa-check"></i><b>4.1</b> Загальний опис структури даних</a></li>
+<li class="chapter" data-level="4.2" data-path="chapter4.html"><a href="chapter4.html#chapter42"><i class="fa fa-check"></i><b>4.2</b> Опис набору даних <code>Telecom Users</code></a></li>
+<li class="chapter" data-level="4.3" data-path="chapter3.html"><a href="chapter3.html#chapter321"><i class="fa fa-check"></i><b>4.3</b> Імпорт даних засобами RStudio</a></li>
+<li class="chapter" data-level="4.4" data-path="chapter3.html"><a href="chapter3.html#chapter321"><i class="fa fa-check"></i><b>4.4</b> CSV-файли: читання,</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="chapter6.html"><a href="chapter6.html"><i class="fa fa-check"></i><b>5</b> Приклади задач та їх розв’язки</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="chapter3.html"><a href="chapter3.html#chapter321"><i class="fa fa-check"></i><b>4.2.1</b> Послідовності</a></li>
-<li class="chapter" data-level="4.2.2" data-path="chapter3.html"><a href="chapter3.html#chapter322"><i class="fa fa-check"></i><b>4.2.2</b> Оголошення векторів</a></li>
-<li class="chapter" data-level="4.2.3" data-path="chapter3.html"><a href="chapter3.html#chapter323"><i class="fa fa-check"></i><b>4.2.3</b> Операції над векторами</a></li>
+<li class="chapter" data-level="5.1" data-path="chapter6.html"><a href="chapter6.html#chapter61"><i class="fa fa-check"></i><b>5.1</b> Задачі</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="chapter6.html"><a href="chapter6.html#chapter611"><i class="fa fa-check"></i><b>5.1.1</b> Послідовності</a></li>
+<li class="chapter" data-level="5.1.2" data-path="chapter6.html"><a href="chapter6.html#chapter612"><i class="fa fa-check"></i><b>5.1.2</b> Функції</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="chapter6.html"><a href="chapter6.html#chapter62"><i class="fa fa-check"></i><b>5.2</b> Рішення задач</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="chapter6.html"><a href="chapter6.html#chapter621"><i class="fa fa-check"></i><b>5.2.1</b> Послідовності та вектори</a></li>
+<li class="chapter" data-level="5.2.2" data-path="chapter6.html"><a href="chapter6.html#chapter622"><i class="fa fa-check"></i><b>5.2.2</b> Функції</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="-e-.html"><a href="-e-.html"><i class="fa fa-check"></i>Джeрела</a></li>
@@ -236,73 +246,121 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="chapter4" class="section level1" number="4">
-<h1><span class="header-section-number">Розділ 4</span> Задачі</h1>
+<h1><span class="header-section-number">Розділ 4</span> Читання та запис даних у R</h1>
 <div id="план-3" class="section level2 unnumbered">
 <h2>План</h2>
 <ul>
-<li><a href="chapter3.html#chapter31">Набори даних</a></li>
-<li><a href="chapter3.html#chapter32">Вектори (vectors)</a>
+<li><a href="chapter4.html#chapter41">Загальний опис структури даних</a></li>
+<li><a href="chapter4.html#chapter42">Опис набору даних <code>TelecomUsers</code></a></li>
+<li><a href="#chapter43">Імпорт даних засобами RStudio</a></li>
+<li><a href="chapter4.html#chapter42">CSV: поняття, читання та запис</a></li>
+<li><a href="#chapter44">XLSX: поняття, читання та запис</a></li>
+<li><a href="#chapter45">JSON: поняття, читання та запис</a></li>
+<li><a href="#chapter46">API: поняття, читання</a></li>
+<li><a href="#chapter47">HTML: поняття, читання</a></li>
+<li><a href="#chapter48">PDF: поняття, читання</a></li>
+<li><a href="#chapter48">Сервіси Google</a>
 <ul>
-<li><a href="chapter3.html#chapter321">Поняття та спосіб представлення</a></li>
-<li><a href="chapter3.html#chapter322">Оголошення векторів</a></li>
-<li><a href="chapter3.html#chapter323">Операції над векторами</a></li>
+<li><a href="#chapter48">Spreadsheets</a></li>
+<li><a href="#chapter48">Keywords</a></li>
 </ul></li>
 </ul>
 <hr />
 </div>
-<div id="chapter31" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Набори даних</h2>
+<div id="chapter41" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Загальний опис структури даних</h2>
 <div class="alert alert-danger">
 <p><i class="fa-2x fas fa-alert fa-battery-quarter"></i>
 Матеріали розділу у процесі підготовки.</p>
 </div>
+<p>Усі дані, що використовуються для наукових досліджень можна розділити на 3 блоки:</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+Структуровані</li>
+<li><input type="checkbox" disabled="" checked="" />
+Слабоструктуровані</li>
+<li><input type="checkbox" disabled="" checked="" />
+Неструктуровані</li>
+</ul>
+<p><strong>Структуровані дані</strong> зазвичай зрозумілі для користувача, сформовані відповідно до певних вимог та дозволяють швидко їх вивчити, без додаткових процедур підготовки.</p>
+<p>Важливою для нас характеристикою <strong>структурованих даних</strong> є те, що вони досить просто піддаються машинній обробці, аналізу та візуалізації.</p>
+<p><strong>Слабоструктуровані дані</strong> часто можуть бути сприйняті людиною, проте форма їх подачі не дозволяє швидко проаналізувати її машиною.</p>
+<p>Найпростішим прикладом структурованих даних є табличні дані, наприклад, в Microsoft Excel, де кожен рядок - це одне спостереження, а кожен стовпець - це одна характеристика.</p>
+<p>Слабоструктуровані дані можуть бути перетворені до структурованих за допомогою підготовлених спеціалістом з по роботі з дадними алгоритмом. Подібний етап зазвчай потребує детального аналізу полів, форми по дання, визначення шаблонів помилок у даних тощо.</p>
+<p><strong>Неструктуровані дані</strong></p>
 </div>
-<div id="chapter32" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Вектори (vectors)</h2>
-<div id="chapter321" class="section level3" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Послідовності</h3>
-<p><strong>Задача 1</strong>. Написати програму, що обчислює <span class="math inline">\(y = (x+2)^2 + ln(x)\)</span>, де <span class="math inline">\(x\)</span> число з послідовності <code>100, 105, 110, ..., 200</code>. Результат вивести у вигляді <code>data.fame</code> з колонками <span class="math inline">\(X\)</span> та <span class="math inline">\(Y\)</span>.</p>
-<p><strong>Задача 2</strong>. Написати програму, що обчислює <span class="math inline">\(y = \frac{\sqrt{x+2}}{z}\)</span>, де <span class="math inline">\(x\)</span> число з послідовності <code>10, 15, 20, ..., 100</code>, а <span class="math inline">\(z\)</span> - випадкове значення з діапазону <code>[-10, 10]</code> Результат вивести у вигляді <code>data.fame</code> з колонками <span class="math inline">\(X\)</span>, <span class="math inline">\(Z\)</span> та <span class="math inline">\(Y\)</span>.</p>
-<p><strong>Задача 3</strong>. Написати програму, що сортує вектор за зростанням та спаданням. Елементи вектора є випадковими числами з діапазону <code>[10,100)</code>. Кількість елментів у векторі <code>10</code>.</p>
-<p><strong>Задача 4</strong>. Відсортувати вектор таким чином, щоб всі додатні елементи знаходилися на початку, а всі від’ємні – вкінці, і при цьому зберігся початковий порядок елементів в обох групах. Елементи вектора є випадковими числами з діапазону <code>[-100,100]</code>. Кількість елментів у векторі <code>10</code>.</p>
+<div id="chapter42" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Опис набору даних <code>Telecom Users</code></h2>
+<div class="alert alert-info">
+<p>Опис інформації про набір даних взято з сервісу <a href="https://kaggle.com"><code>kaggle.com</code></a>.<br>
+Оригінальний набір розміщений за адресою <a href="https://www.kaggle.com/radmirzosimov/telecom-users-dataset"><code>https://www.kaggle.com/radmirzosimov/telecom-users-dataset</code></a>.</p>
 </div>
-<div id="chapter322" class="section level3" number="4.2.2">
-<h3><span class="header-section-number">4.2.2</span> Оголошення векторів</h3>
-<p>Вектор - базовий тип даних у <code>R</code>, що дозволяє записати колекцію елементів одного типу за допомогою <code>c()</code> або без нього, якщо це послідовність значень.</p>
-<p><em>Примітка. По суті функція <code>c()</code> дозволяє об’єднати кілька векторів.</em></p>
-<p>Розглянемо для прикладу звичайну змінну <code>x</code>:</p>
-<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="chapter4.html#cb157-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span></code></pre></div>
-<p>По своїй суті <code>x</code> у даному випадку є вектором, що складається з одного значення <code>10</code>. Ми можемо також записати кілька елементів у змінну <code>x</code>:</p>
-<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="chapter4.html#cb158-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="fl">2.5</span>, <span class="dv">3</span>)</span>
-<span id="cb158-2"><a href="chapter4.html#cb158-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>## [1] 1.0 2.0 2.5 3.0</code></pre>
-<p>Елементами вектора можуть бути значення будь якого типу: <code>numeric</code>, <code>character</code>, <code>logical</code> тощо:</p>
-<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="chapter4.html#cb160-1" aria-hidden="true" tabindex="-1"></a>v1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">7</span>)</span>
-<span id="cb160-2"><a href="chapter4.html#cb160-2" aria-hidden="true" tabindex="-1"></a>v2 <span class="ot">&lt;-</span> <span class="fu">c</span>(T, F, F, T, F)</span>
-<span id="cb160-3"><a href="chapter4.html#cb160-3" aria-hidden="true" tabindex="-1"></a>v3 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Hello&quot;</span>, <span class="st">&quot;my&quot;</span>, <span class="st">&quot;friend&quot;</span>, <span class="st">&quot;!&quot;</span>)</span></code></pre></div>
-<p>Елементами вектора також послідовності, створені на за допомогою функцій <code>rep()</code>, <code>seq()</code> та оператора <code>:</code>:</p>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="chapter4.html#cb161-1" aria-hidden="true" tabindex="-1"></a>vtr <span class="ot">&lt;-</span>  <span class="dv">2</span><span class="sc">:</span><span class="dv">7</span></span>
-<span id="cb161-2"><a href="chapter4.html#cb161-2" aria-hidden="true" tabindex="-1"></a>vtr</span></code></pre></div>
-<pre><code>## [1] 2 3 4 5 6 7</code></pre>
-<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="chapter4.html#cb163-1" aria-hidden="true" tabindex="-1"></a>vtr <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">:</span><span class="dv">2</span></span>
-<span id="cb163-2"><a href="chapter4.html#cb163-2" aria-hidden="true" tabindex="-1"></a>vtr</span></code></pre></div>
-<pre><code>## [1] 7 6 5 4 3 2</code></pre>
-<p>Якщо є потреба об’єднати кілька векторів, скористайтеся функцією <code>c()</code>:</p>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="chapter4.html#cb165-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">3</span></span>
-<span id="cb165-2"><a href="chapter4.html#cb165-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">9</span>)</span>
-<span id="cb165-3"><a href="chapter4.html#cb165-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(x, y, <span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>, <span class="dv">100</span>)</span>
-<span id="cb165-4"><a href="chapter4.html#cb165-4" aria-hidden="true" tabindex="-1"></a>z</span></code></pre></div>
-<pre><code>## [1]   2   3   4   6   9  10  11  12 100</code></pre>
-<p>Переглянути коротку описову статистику по вектору можна за допомогою функції <strong><code>summary()</code></strong>:</p>
-<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="chapter4.html#cb167-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(z)</span></code></pre></div>
-<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##    2.00    4.00    9.00   17.44   11.00  100.00</code></pre>
+<p><strong>Призначення</strong>:</p>
+<p>Описаний датасет призначений для практикування спеціалістами з машинного навчання розв’язування задач класифікації.</p>
+<p><strong>Опис:</strong></p>
+<p>Any business wants to maximize the number of customers. To achieve this goal, it is important not only to try to attract new ones, but also to retain existing ones. Retaining a client will cost the company less than attracting a new one. In addition, a new client may be weakly interested in business services and it will be difficult to work with him, while old clients already have the necessary data on interaction with the service.</p>
+<p>Accordingly, predicting the churn, we can react in time and try to keep the client who wants to leave. Based on the data about the services that the client uses, we can make him a special offer, trying to change his decision to leave the operator. This will make the task of retention easier to implement than the task of attracting new users, about which we do not know anything yet.</p>
+<p>You are provided with a dataset from a telecommunications company. The data contains information about almost six thousand users, their demographic characteristics, the services they use, the duration of using the operator’s services, the method of payment, and the amount of payment.</p>
+<p>The task is to analyze the data and predict the churn of users (to identify people who will and will not renew their contract). The work should include the following mandatory items:</p>
+<ol style="list-style-type: decimal">
+<li>Description of the data (with the calculation of basic statistics);</li>
+<li>Research of dependencies and formulation of hypotheses;</li>
+<li>Building models for predicting the outflow (with justification for the choice of a particular model) 4. based on tested hypotheses and identified relationships;</li>
+<li>Comparison of the quality of the obtained models.</li>
+</ol>
+<p><strong>Опис полів набору даних:</strong></p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+<code>customerID</code> - customer id</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>gender</code> - client gender (male / female)</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>SeniorCitizen</code> - is the client retired (1, 0)</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>Partner</code> - is the client married (Yes, No)</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>tenure</code> - how many months a person has been a client of the company</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>PhoneService</code> - is the telephone service connected (Yes, No)</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>MultipleLines</code> - are multiple phone lines connected (Yes, No, No phone service)</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>InternetService</code> - client’s Internet service provider (DSL, Fiber optic, No)</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>OnlineSecurity</code> - is the online security service connected (Yes, No, No internet service)</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>OnlineBackup</code> - is the online backup service activated (Yes, No, No internet service)</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>DeviceProtection</code> - does the client have equipment insurance (Yes, No, No internet service)</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>TechSupport</code> - is the technical support service connected (Yes, No, No internet service)</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>StreamingTV</code> - is the streaming TV service connected (Yes, No, No internet service)</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>StreamingMovies</code> - is the streaming cinema service activated (Yes, No, No internet service)</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>Contract</code> - type of customer contract (Month-to-month, One year, Two year)</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>PaperlessBilling</code> - whether the client uses paperless billing (Yes, No)</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>PaymentMethod</code> - payment method (Electronic check, Mailed check, Bank transfer (automatic), Credit card (automatic))</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>MonthlyCharges</code> - current monthly payment</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>TotalCharges</code> - the total amount that the client paid for the services for the entire time</li>
+<li><input type="checkbox" disabled="" checked="" />
+<code>Churn - whether</code> there was a churn (Yes or No)</li>
+</ul>
 </div>
-<div id="chapter323" class="section level3" number="4.2.3">
-<h3><span class="header-section-number">4.2.3</span> Операції над векторами</h3>
+<div id="chapter321" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Імпорт даних засобами RStudio</h2>
+<p><code>RStudio</code> має ряд засобів для</p>
+</div>
+<div id="chapter321" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> CSV-файли: читання,</h2>
+<p><strong>CSV</strong> - це тип файлів, у якому інформація розділена комами (<code>Comma Separated Values</code>). CSV є досить зручним форматом даних для передачі між різними машинами, адже по суті є текстовим файлом і дозволяє легко його зчитати.</p>
+<p><em>Примітка. Наспрвді кома не завжди є роздільником CSV-файлів. Це можуть бути і інші символи.</em></p>
 
-<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="chapter4.html#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setlocale</span>(<span class="st">&quot;LC_CTYPE&quot;</span>, <span class="st">&quot;ukrainian&quot;</span>)</span></code></pre></div>
-</div>
 </div>
 </div>
             </section>
@@ -311,7 +369,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="chapter3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="-e-.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chapter6.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
